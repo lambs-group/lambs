@@ -382,8 +382,36 @@
 }
 .fibre-draw.is-visible .fibre-draw__photon { opacity: 1; }
 
-/* --- Flow lines (Utilities signature) --- */
-.flow-lines { width: 100%; height: 100%; display: block; }
+/* --- Utility network (Utilities signature) --- */
+.utility-network { width: 100%; height: auto; display: block; overflow: visible; }
+.utility-network .un-pulse {
+  stroke-dasharray: 9 41; /* pathLength 100: two pulses per line */
+  animation: un-run 3.6s linear infinite;
+}
+.utility-network .un-water { animation-delay: -1.2s; }
+.utility-network .un-gas { animation-delay: -2.4s; animation-duration: 4.2s; }
+.utility-network .un-out { animation-duration: 2.4s; animation-delay: -0.6s; }
+@keyframes un-run {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -50; }
+}
+.utility-network .un-ripple {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: un-ripple 3.6s ease-out infinite;
+}
+.utility-network .un-ripple--2 { animation-delay: -1.8s; }
+@keyframes un-ripple {
+  0% { transform: scale(0.85); opacity: 0.55; }
+  100% { transform: scale(1.9); opacity: 0; }
+}
+.utility-network .un-core { animation: un-core 1.8s ease-in-out infinite; }
+@keyframes un-core {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+.utility-network .un-end { animation: un-core 2.4s ease-in-out infinite; }
 
 /* --- Before/After wipe (Private Works signature) --- */
 .before-after {
@@ -459,7 +487,9 @@
   .fibre-draw__line { stroke-dashoffset: 0 !important; transition: none !important; }
   .fibre-draw__photon { opacity: 1 !important; }
   .fibre-draw__photon animateMotion { display: none; }
-  /* Gas / wave animations use native SVG animations; no CSS opt-out needed */
+  .utility-network .un-pulse { animation: none !important; }
+  .utility-network .un-ripple { animation: none !important; opacity: 0 !important; }
+  .utility-network .un-core, .utility-network .un-end { animation: none !important; }
   .uk-map__pulse { animation: none !important; opacity: 0.25 !important; }
 }
 

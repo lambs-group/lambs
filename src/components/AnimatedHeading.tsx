@@ -51,7 +51,16 @@ export function AnimatedHeading({
     return () => observer.disconnect();
   }, []);
 
-  const words = children.split(/(\s+)/).filter((w) => w.trim().length > 0);
+  // Keep a lone dash ("power - laid") glued to the word before it so a line
+  // never starts with a dangling "-".
+  const words = children
+    .split(/(\s+)/)
+    .filter((w) => w.trim().length > 0)
+    .reduce<string[]>((acc, w) => {
+      if (/^[-–—]$/.test(w) && acc.length) acc[acc.length - 1] += "\u00a0" + w;
+      else acc.push(w);
+      return acc;
+    }, []);
 
   return (
     <Tag
