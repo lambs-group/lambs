@@ -9,7 +9,7 @@ const storyImage = "/images/hero/careers-crew.webp";
 const fieldImage = "/images/utilities/job-03.webp";
 
 const values = [
-  { number: "01", title: "Directly employed workforce", description: "75+ directly employed operatives and engineers. Not agency, not sub-sub. PAYE, trained, accountable.", chip: "75+ operatives" },
+  { number: "01", title: "A skilled workforce", description: "30+ people across our workforce, including operatives and engineers. Trained, supervised, accountable.", chip: "30+ people" },
   { number: "02", title: "Compliance-first delivery", description: "NRSWA-trained, NEBOSH-accredited supervision. 55 van audits per month. Audited, logged, actioned.", chip: "55 audits / month" },
   { number: "03", title: "Family-run, thirty-seven years", description: "Still run by Simon & Amanda Lamb. Still answering the phone. Still remembering every operative's name.", chip: "Est. 1988" },
   { number: "04", title: "Long client relationships", description: "Our clients come back year after year. Trust built one programme at a time.", chip: "Repeat clients" },
@@ -28,7 +28,7 @@ export function AboutPage() {
       <PageHero
         eyebrow="About Lambs Group"
         heading="Thirty-seven years delivering infrastructure."
-        lede="Lambs Group is a family-run infrastructure contractor based in Warrington. Telecoms, utilities and private works, delivered by directly employed crews across the UK since 1988."
+        lede="Lambs Group is a family-run infrastructure contractor based in Warrington. Telecoms, utilities and private works, delivered by teams across our workforce since 1988."
         image={storyImage}
         imageAlt="Lambs Group Warrington headquarters"
         sectionIndex="- / About"
@@ -46,7 +46,7 @@ export function AboutPage() {
                 <p>In 1988, Simon Lamb founded S Lamb Construction with a small team and a clear principle: employ the people who do the work. Subcontracting through multiple layers, he'd seen, undermines quality and safety.</p>
               </FadeIn>
               <FadeIn delay={260}>
-                <p>Today - now trading as Lambs Group - the company is still based in Warrington, still family-run by Simon and his wife Amanda Lamb, and still employing its operatives directly. Over 75 of them, delivering telecoms, utilities and private works from the North West to the south coast.</p>
+                <p>Today - now trading as Lambs Group - the company is still based in Warrington, still family-run by Simon and his wife Amanda Lamb, and still run by people who know the work. Today there are 30+ people across our workforce, in 12+ specialist delivery teams, delivering telecoms, utilities and private works across the North West, Yorkshire and West Midlands.</p>
               </FadeIn>
               <FadeIn delay={340}>
                 <p>Bigger projects. Same principles.</p>

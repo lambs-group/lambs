@@ -39,7 +39,7 @@ export function TelecomsPage() {
           </AnimatedHeading>
           <FadeIn delay={280}>
             <p className="text-white/80 text-lg md:text-xl leading-relaxed max-w-2xl">
-              Trusted fibre delivery for the UK's largest operators. FTTH, FTTP, blown fibre, splicing, directional drilling - delivered by directly employed crews, compliant to operator standard.
+              Trusted fibre delivery for the UK's largest operators. FTTH, FTTP, blown fibre, splicing, directional drilling - delivered by crews across our workforce, compliant to operator standard.
             </p>
           </FadeIn>
         </div>

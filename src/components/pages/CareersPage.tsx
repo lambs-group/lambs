@@ -11,7 +11,7 @@ import { withBase } from "../../utils/paths";
 import { VACANCIES } from "../../data/vacancies";
 
 const reasons = [
-  { number: "01", title: "Directly employed", body: "PAYE contracts, real training, career progression and long tenures. Not agency, not sub-sub." },
+  { number: "01", title: "Across our workforce", body: "Real training, career progression and long tenures." },
   { number: "02", title: "Proper training", body: "NRSWA, CSCS, NEBOSH - we invest in the tickets and the time it takes to earn them." },
   { number: "03", title: "Real progression", body: "Many of our managers started on a shovel. We promote from within." },
   { number: "04", title: "Family values", body: "Family-run since 1988. We look after our people because we know their names." },
@@ -32,9 +32,9 @@ export function CareersPage() {
       <PageHero
         eyebrow="Careers at Lambs Group"
         heading="Work with people who stick around."
-        lede="Directly employed operatives since 1988. If you want proper jobs, real trades, and to actually know who your boss is, we'd like to hear from you."
+        lede="Skilled people across our workforce since 1988. If you want proper jobs, real trades, and to actually know who your boss is, we'd like to hear from you."
         image="/images/hero/careers-crew.webp"
-        imageAlt="Lambs Group directly employed crew"
+        imageAlt="Lambs Group crew on site"
         sectionIndex="- / Careers"
       />
 

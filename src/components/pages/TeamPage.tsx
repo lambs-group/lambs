@@ -30,7 +30,7 @@ export function TeamPage() {
       <PageHero
         eyebrow="The team"
         heading="People you'll actually talk to."
-        lede="Lambs Group is built on long tenures. The directors founded the business. The managers have worked here for decades. The operatives are directly employed."
+        lede="Lambs Group is built on long tenures. The directors founded the business. The managers have worked here for decades. The operatives and engineers across our workforce are trained and accountable."
         sectionIndex="- / Team"
       />
 
