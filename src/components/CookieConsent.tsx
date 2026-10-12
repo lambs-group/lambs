@@ -41,7 +41,7 @@ export function CookieConsent() {
       className="fixed bottom-0 left-0 right-0 z-[70] p-4 sm:p-6 pointer-events-none"
     >
       <div className="pointer-events-auto max-w-[720px] mx-auto bg-[var(--color-dark-blue)] text-white border border-white/15 shadow-2xl p-6 sm:p-8">
-        <h2 className="text-[18px] font-semibold mb-3">Your privacy</h2>
+        <h2 className="text-white text-[18px] font-semibold mb-3">Your privacy</h2>
         <p className="text-[14px] leading-relaxed text-white/80">
           We use essential storage to keep the site and our forms working and secure. With your permission we'd also use
           analytics to see how the site is used so we can improve it. Read our{" "}
