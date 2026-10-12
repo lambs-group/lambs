@@ -59,9 +59,9 @@ const clients = [
 ];
 
 const stats = [
-  { value: 75, suffix: "+", label: "Directly employed" },
-  { value: 55, suffix: "", label: "Audits / month" },
-  { value: 2500, suffix: "+", label: "Motif jobs / week" },
+  { value: 30, suffix: "+", label: "People across our workforce" },
+  { value: 12, suffix: "+", label: "Specialist delivery teams" },
+  { value: 400, suffix: "+*", label: "Jobs per week capacity" },
   { value: 37, suffix: " yrs", label: "Est. 1988" },
 ];
 
@@ -84,7 +84,7 @@ export function HomePage() {
             <FadeIn delay={120}>
               <span className="hidden md:flex items-center gap-2 text-[11px] uppercase tracking-widest text-[var(--color-mid-blue)] font-medium">
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-cyan)] animate-pulse" />
-                Actively mobilising · UK-wide
+                Coverage: North West · Yorkshire · West Midlands
               </span>
             </FadeIn>
           </div>
@@ -106,8 +106,8 @@ export function HomePage() {
               <FadeIn delay={280}>
                 <p className="text-[var(--color-charcoal)] text-lg md:text-xl leading-relaxed max-w-xl">
                   Lambs Group is a Warrington-based, family-run contractor delivering
-                  telecoms, utilities and private groundworks through directly
-                  employed teams. Backed by industry expertise and a compliance-first
+                  telecoms, utilities and private groundworks through specialist
+                  teams across our workforce. Backed by industry expertise and a compliance-first
                   approach, we deliver safe, efficient and reliable results.
                 </p>
               </FadeIn>
@@ -146,6 +146,9 @@ export function HomePage() {
               </div>
             ))}
           </div>
+          <p className="mt-8 text-[12px] text-[var(--color-mid-blue)]">
+            *Based on full allocation and a five/six-day working week.
+          </p>
         </div>
       </section>
 
@@ -162,7 +165,7 @@ export function HomePage() {
               </AnimatedHeading>
               <FadeIn delay={280}>
                 <p className="text-[var(--color-charcoal)] text-lg leading-relaxed mt-8 max-w-2xl">
-                  Supporting national fibre rollouts and private projects, we focus on minor works and track works delivered by directly employed, fully qualified crews. With a strong operational and back-office team behind every job, we provide one contractor, one point of accountability.
+                  Supporting national fibre rollouts and private projects, we focus on minor works and track works delivered by fully qualified crews across our workforce. With a strong operational and back-office team behind every job, we provide one contractor, one point of accountability.
                 </p>
               </FadeIn>
             </div>
@@ -234,7 +237,7 @@ export function HomePage() {
               <AnimatedHeading as="h2" className="max-w-3xl">Where we're working this week.</AnimatedHeading>
               <FadeIn delay={200}>
                 <p className="text-[var(--color-charcoal)] text-lg leading-relaxed mt-6 max-w-2xl">
-                  We operate across the North West and Yorkshire, with the flexibility to support projects nationwide through our dedicated travelling crews. Updated weekly.
+                  We operate across the North West, Yorkshire and West Midlands, with the flexibility to support projects nationwide through our dedicated travelling crews. Updated weekly.
                 </p>
               </FadeIn>
             </div>
@@ -255,11 +258,11 @@ export function HomePage() {
             </div>
             <div className="lg:col-span-6">
               <FadeIn><span className="eyebrow mb-8">Who we are</span></FadeIn>
-              <AnimatedHeading as="h2" className="mt-6 mb-8">Family-run since 1988. Directly employed workforce.</AnimatedHeading>
+              <AnimatedHeading as="h2" className="mt-6 mb-8">Family-run since 1988. Skilled people across our workforce.</AnimatedHeading>
               <FadeIn delay={200}>
                 <div className="space-y-5 text-[var(--color-charcoal)] text-lg leading-relaxed max-w-xl">
-                  <p>Founded as S Lamb Construction in 1988 and now trading as Lambs Group, we deliver infrastructure services across the UK - directly employed operatives, NRSWA-trained, compliance-first.</p>
-                  <p>Over 75 directly employed operatives and engineers. 55 van audits a month. NEBOSH-accredited supervision on every site. Trusted by Fujitsu, Virgin Media, Barratt Developments and local authorities across the UK.</p>
+                  <p>Founded as S Lamb Construction in 1988 and now trading as Lambs Group, we deliver infrastructure services across the UK - operatives across our workforce, NRSWA-trained, compliance-first.</p>
+                  <p>30+ people across our workforce in 12+ specialist delivery teams. 55 van audits a month. NEBOSH-accredited supervision on every site. Trusted by Fujitsu, Virgin Media, Barratt Developments and local authorities across the UK.</p>
                 </div>
               </FadeIn>
               <FadeIn delay={320}>
