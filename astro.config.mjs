@@ -53,7 +53,7 @@ const redirects = Object.fromEntries(Object.entries({
 export default defineConfig({
   redirects,
   // production: site: 'https://lambsgroup.co.uk',
-  site: 'https://lng-boomworks.github.io',
+  site: 'https://lambs-group.github.io',
   base,
   integrations: [react(), sitemap()],
   output: 'static',

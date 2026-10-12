@@ -24,7 +24,7 @@ Thin relay that accepts form POSTs from the website (GitHub Pages) and sends the
    # paste the key when prompted
    ```
 
-5. Create a Cloudflare Turnstile widget (dashboard -> Turnstile -> Add widget). Add the hostnames `lambsgroup.co.uk`, `www.lambsgroup.co.uk` and `lng-boomworks.github.io`. Then store the **secret key** on the worker:
+5. Create a Cloudflare Turnstile widget (dashboard -> Turnstile -> Add widget). Add the hostnames `lambsgroup.co.uk`, `www.lambsgroup.co.uk` and `lambs-group.github.io`. Then store the **secret key** on the worker:
    ```bash
    wrangler secret put TURNSTILE_SECRET_KEY
    ```
