@@ -30,7 +30,7 @@ export function PrivacyPage() {
         <li><strong>Private Works quote requests</strong>: your name, email, phone, postcode, address, the work you want, timing, any notes and any photos you upload.</li>
         <li><strong>Job applications</strong>: your name, email, phone, location, cover note and your CV, which may include employment history, qualifications and tickets.</li>
         <li><strong>Security and technical data</strong>: your IP address and basic browser details are processed when you load the site and when you submit a form, so that we can keep the site secure and block automated abuse.</li>
-        <li><strong>Analytics</strong> (only if you accept them in our cookie banner): anonymous information about how pages are used. See our <A href="/cookies">Cookie Policy</A>.</li>
+        <li><strong>Analytics</strong> (only if you accept them in our cookie banner): aggregate information about how pages are used, collected by Cloudflare Web Analytics. See our <A href="/cookies">Cookie Policy</A>.</li>
       </UL>
       <P>Please do not send us sensitive information such as health details or criminal records in a form unless we have specifically asked for it.</P>
 
@@ -51,7 +51,7 @@ export function PrivacyPage() {
         <li><strong>Cloudflare</strong> - runs the service that receives form submissions and provides the Turnstile security check.</li>
         <li><strong>Our website hosting provider</strong> <Tbc>name the production host once chosen</Tbc>.</li>
         <li><strong>Our email provider</strong> (the mailboxes that receive enquiries and applications).</li>
-        <li><strong>Our analytics provider</strong>, only if you accept analytics <Tbc>name the tool if/when added</Tbc>.</li>
+        <li><strong>Cloudflare Web Analytics</strong>, only if you accept analytics. It reports page views, referrers and device and country information in aggregate, without cookies or local storage.</li>
       </UL>
       <P>We may also disclose information where the law requires it, or to professional advisers and insurers where necessary.</P>
 

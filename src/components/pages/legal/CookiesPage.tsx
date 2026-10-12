@@ -40,10 +40,10 @@ export function CookiesPage() {
               <td className="py-3">Session / short-lived</td>
             </tr>
             <tr>
-              <td className="py-3 pr-4">Analytics</td>
-              <td className="py-3 pr-4">Not in use at the moment. If we add it, it will only load after you accept analytics.</td>
+              <td className="py-3 pr-4">Cloudflare Web Analytics</td>
+              <td className="py-3 pr-4">Counts visits and shows which pages are used, so we can improve the site. It does not use cookies or local storage to track you. It only loads if you accept analytics.</td>
               <td className="py-3 pr-4">Optional</td>
-              <td className="py-3">Set by the provider, listed here before use</td>
+              <td className="py-3">No cookie or stored value is set</td>
             </tr>
           </tbody>
         </table>

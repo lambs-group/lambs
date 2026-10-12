@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { CONSENT_OPEN_EVENT, getConsent, setConsent } from "../utils/consent";
 import { withBase } from "../utils/paths";
+import { initAnalytics } from "../utils/analytics";
 
 type View = "closed" | "banner" | "manage";
 
@@ -9,6 +10,7 @@ export function CookieConsent() {
   const [analytics, setAnalytics] = useState(false);
 
   useEffect(() => {
+    initAnalytics();
     const existing = getConsent();
     if (!existing) setView("banner");
     else setAnalytics(existing.analytics);
