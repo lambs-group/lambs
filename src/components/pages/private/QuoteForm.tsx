@@ -43,7 +43,7 @@ export function QuoteForm({ id }: QuoteFormProps) {
             {status === "done" || status === "preview" ? (
               <FadeIn>
                 <div className="bg-[var(--color-dark-blue)] text-white p-10">
-                  <h3 className="text-2xl font-semibold mb-3">Thanks - we've got it.</h3>
+                  <h3 className="text-white text-2xl font-semibold mb-3">Thanks - we've got it.</h3>
                   <p className="text-white/80">
                     {status === "preview"
                       ? "Preview mode - this form isn't connected yet, so nothing has been sent."
