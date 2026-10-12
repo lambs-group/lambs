@@ -109,7 +109,7 @@ export function CareersPage() {
 
           <FadeIn delay={500}>
             <div className="mt-16 flex flex-col md:flex-row gap-4">
-              <Button href="/contact" variant="primary" size="lg">Send us your CV</Button>
+              <Button href="/careers/apply" variant="primary" size="lg">Send us your CV</Button>
             </div>
           </FadeIn>
         </div>

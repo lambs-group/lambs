@@ -25,6 +25,7 @@ const FIELD_ORDER = [
   "timing",
   "role",
   "role_slug",
+  "role_url",
   "message",
   "notes",
 ];
@@ -42,6 +43,7 @@ const FIELD_LABELS: Record<string, string> = {
   timing: "Timing",
   role: "Role",
   role_slug: "Role slug",
+  role_url: "Job page",
   message: "Message",
   notes: "Notes",
 };
