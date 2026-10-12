@@ -57,10 +57,11 @@ Add client images to `public/images/`. Replace:
 - OG image (`og-default.jpg` — 1200x630px)
 - Favicons (`favicon.ico`, `favicon-32.png`, `apple-touch-icon.png`)
 
-### 6. Contact Form (Web3Forms)
-1. Get a free access key at [web3forms.com](https://web3forms.com)
-2. In `src/components/pages/ContactPage.tsx`, replace `YOUR_WEB3FORMS_ACCESS_KEY` with your key
-3. Form submissions will be emailed to the address you registered
+### 6. Forms (Cloudflare Worker + Resend + Turnstile)
+All forms (contact, careers, Private Works quote) POST to a Cloudflare Worker in `workers/forms/`, which checks a Cloudflare Turnstile token and then emails the submission via [Resend](https://resend.com). No form key is stored in the site.
+- Setup and go-live steps: [`workers/forms/README.md`](workers/forms/README.md)
+- The site build reads two GitHub repo variables: `PUBLIC_FORM_ENDPOINT` (the worker URL) and `PUBLIC_TURNSTILE_SITE_KEY` (public Turnstile key)
+- Secrets (`RESEND_API_KEY`, `TURNSTILE_SECRET_KEY`) live on the worker only, set with `wrangler secret put`
 
 ### 7. SEO
 - **Per-page meta**: set `seo_title` and `seo_description` in each `.md` file
@@ -71,11 +72,13 @@ Add client images to `public/images/`. Replace:
 
 ## Deploying
 
+Pushes to `main` build and deploy the site to GitHub Pages via `.github/workflows/deploy.yml` (preview at https://lambs-group.github.io/lambs/). To build locally:
+
 ```bash
-npm run build
+npm run build   # output in dist/
 ```
 
-Upload the entire contents of the `dist/` folder to your web hosting via FTP/SFTP (e.g. FileZilla). Upload everything inside `dist/`, not the folder itself.
+For production on `lambsgroup.co.uk`, set `site` to `https://lambsgroup.co.uk` and `base` to `''` in `astro.config.mjs`. Old-URL redirects are in the same file.
 
 ## What's Included
 
@@ -84,7 +87,7 @@ Upload the entire contents of the `dist/` folder to your web hosting via FTP/SFT
 - **Tailwind CSS** — utility-first styling
 - **Sitemap** — auto-generated XML sitemap
 - **SEO** — meta tags, Open Graph, Twitter cards, canonical URLs, JSON-LD
-- **Web3Forms** — contact form (no backend needed)
+- **Cloudflare Worker + Resend + Turnstile** — form handling with bot protection (`workers/forms/`)
 - **Responsive** — mobile-first design
 - **Animations** — fade-in scroll animations
 - **Button icons** — auto calendar/phone/email icons based on link type

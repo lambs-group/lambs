@@ -38,11 +38,14 @@ Deliver to `public/images/` — filenames per component's `src` prop (search for
 ## 6. Live works data
 - [ ] Populate `src/data/live-works.json` with current active programmes
 
-## 7. Web3Forms access key
-- [ ] Get access key at https://web3forms.com
-- [ ] Replace `YOUR_WEB3FORMS_ACCESS_KEY` in:
-  - `src/components/pages/ContactPage.tsx`
-  - `src/components/pages/private/QuoteForm.tsx`
+## 7. Forms (Resend + Turnstile)
+- [x] Forms worker deployed to the customer Cloudflare account (`workers/forms/`)
+- [x] Turnstile widget created, `TURNSTILE_SECRET_KEY` set on the worker
+- [x] Repo variables `PUBLIC_FORM_ENDPOINT` and `PUBLIC_TURNSTILE_SITE_KEY` set
+- [ ] Resend account created and `lambsgroup.co.uk` sending domain verified (DNS records)
+- [ ] `RESEND_API_KEY` set on the worker (`wrangler secret put RESEND_API_KEY`)
+- [ ] Confirm contact@ and careers@ mailboxes exist and receive test submissions
+- [ ] Add `lambsgroup.co.uk` / `www.lambsgroup.co.uk` to the Turnstile widget hostnames if not already there
 
 ## 8. SEO copy per page
 - [ ] Review and approve meta titles/descriptions in each `.astro` page file
