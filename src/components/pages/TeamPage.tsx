@@ -15,7 +15,7 @@ interface PersonCard {
 const leadership: PersonCard[] = [
   { name: "Simon Lamb", role: "Managing Director", bio: "Founded the business in 1988 and remains actively involved in every level of delivery.", image: "/images/team/simon-lamb.webp" },
   { name: "Amanda Lamb", role: "Director", bio: "Oversees finance, HR and operations, working alongside Simon to drive the business forward.", image: "/images/team/amanda-lamb.webp" },
-  { name: "Ray Pennington", role: "Operations Director", bio: "Leads operational delivery across every live programme - telecoms, civils, utilities and domestic works.", image: "/images/team/ray-pennington.webp" },
+  { name: "Ray Pennington", role: "Operations Director", bio: "Leads operational delivery across every live programme - telecoms, utilities and private works.", image: "/images/team/ray-pennington.webp" },
 ];
 
 // TODO: add senior management members (names to be provided by client)

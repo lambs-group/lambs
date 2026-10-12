@@ -17,13 +17,13 @@ const afterSrc = "/images/private/tarmac-after.webp";
 export function PrivateWorksPage() {
   return (
     <PageShell>
-      <SectorIndex label="04 / PRIVATE WORKS" />
+      <SectorIndex label="03 / PRIVATE WORKS" />
 
       <section className="relative bg-white pt-[140px] pb-20 lg:pt-[180px] lg:pb-28 border-b border-[var(--color-border)]">
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5">
-              <FadeIn><span className="eyebrow mb-6">Sector 04 · Private Works · Domestic</span></FadeIn>
+              <FadeIn><span className="eyebrow mb-6">Sector 03 · Private Works · Domestic</span></FadeIn>
               <AnimatedHeading as="h1" className="mt-4 mb-8" stagger={40}>
                 Your driveway, finished right.
               </AnimatedHeading>

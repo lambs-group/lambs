@@ -118,7 +118,6 @@ export function Navbar({ darkHero = false }: NavbarProps) {
         <div className="px-6 py-8 flex flex-col gap-5">
           <div className="eyebrow eyebrow-dark">Commercial</div>
           <a href={withBase("/telecoms")} className="block py-2 text-[22px] text-white font-semibold hover:text-[var(--color-cyan)]">Telecoms</a>
-          <a href={withBase("/civil-works")} className="block py-2 text-[22px] text-white font-semibold hover:text-[var(--color-cyan)]">Civil Works</a>
           <a href={withBase("/utilities")} className="block py-2 text-[22px] text-white font-semibold hover:text-[var(--color-cyan)]">Utilities</a>
 
           <div className="eyebrow eyebrow-dark mt-4">Domestic</div>

@@ -17,8 +17,7 @@ const values = [
 
 const timeline = [
   { year: "1988", title: "Founded as S Lamb Construction", body: "Simon Lamb starts the business with a single crew. Direct delivery, no subcontracting shuffle." },
-  { year: "1990s", title: "Civil works expansion", body: "Growing reputation across the North West for drainage, reinstatement and footway schemes." },
-  { year: "2000s", title: "Telecoms specialism", body: "First fibre contracts. Lambs becomes a trusted telecoms civils partner for national operators." },
+  { year: "2000s", title: "Telecoms specialism", body: "First fibre contracts. Lambs becomes a trusted telecoms partner for national operators." },
   { year: "2010s", title: "Utilities arm launched", body: "Expansion into water, gas and electricity connections across housing and industrial schemes." },
   { year: "Today", title: "Motif · Virgin Media", body: "One of the largest operational crews on Virgin Media's Motif programme. 2,500 jobs per week, 10,000 homes per month." },
 ];
@@ -29,7 +28,7 @@ export function AboutPage() {
       <PageHero
         eyebrow="About Lambs Group"
         heading="Thirty-seven years delivering infrastructure."
-        lede="Lambs Group is a family-run infrastructure contractor based in Warrington. Telecoms, civils, utilities and domestic works, delivered by directly employed crews across the UK since 1988."
+        lede="Lambs Group is a family-run infrastructure contractor based in Warrington. Telecoms, utilities and private works, delivered by directly employed crews across the UK since 1988."
         image={storyImage}
         imageAlt="Lambs Group Warrington headquarters"
         sectionIndex="- / About"
@@ -47,7 +46,7 @@ export function AboutPage() {
                 <p>In 1988, Simon Lamb founded S Lamb Construction with a small team and a clear principle: employ the people who do the work. Subcontracting through multiple layers, he'd seen, undermines quality and safety.</p>
               </FadeIn>
               <FadeIn delay={260}>
-                <p>Today - now trading as Lambs Group - the company is still based in Warrington, still family-run by Simon and his wife Amanda Lamb, and still employing its operatives directly. Over 75 of them, delivering civils, telecoms, utilities and domestic works from the North West to the south coast.</p>
+                <p>Today - now trading as Lambs Group - the company is still based in Warrington, still family-run by Simon and his wife Amanda Lamb, and still employing its operatives directly. Over 75 of them, delivering telecoms, utilities and private works from the North West to the south coast.</p>
               </FadeIn>
               <FadeIn delay={340}>
                 <p>Bigger projects. Same principles.</p>

@@ -80,6 +80,16 @@ export function CareersPage() {
             </div>
           </div>
 
+          {vacancies.length === 0 ? (
+            <FadeIn>
+              <div className="border-t border-b border-[var(--color-border-strong)] py-12 lg:py-16">
+                <p className="text-[var(--color-dark-blue)] text-[22px] lg:text-[28px] font-semibold mb-3">No vacancies at the moment.</p>
+                <p className="text-[var(--color-charcoal)] text-base leading-relaxed max-w-xl">
+                  We're always keen to hear from qualified operatives. Send us your CV and we'll keep it on file for when something comes up.
+                </p>
+              </div>
+            </FadeIn>
+          ) : (
           <ul className="border-t border-[var(--color-border-strong)]">
             {vacancies.map((v, i) => (
               <FadeIn key={v.slug} as="span" delay={i * 100} className="block border-b border-[var(--color-border-strong)]">
@@ -95,6 +105,7 @@ export function CareersPage() {
               </FadeIn>
             ))}
           </ul>
+          )}
 
           <FadeIn delay={500}>
             <div className="mt-16 flex flex-col md:flex-row gap-4">

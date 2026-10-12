@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUpRight, Radio, HardHat, Zap, Home } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Radio, Zap, Home } from "lucide-react";
 import { AnimatedHeading } from "../AnimatedHeading";
 import { FadeIn } from "../FadeIn";
 import { RevealImage } from "../RevealImage";
@@ -21,15 +21,8 @@ const commercialSectors = [
     href: "/telecoms",
   },
   {
-    icon: HardHat,
-    number: "02",
-    title: "Civil Works",
-    blurb: "Excavation, reinstatement, road works, footways, drainage, ducting and chamber installation - NRSWA-compliant, delivered by direct crews.",
-    href: "/civil-works",
-  },
-  {
     icon: Zap,
-    number: "03",
+    number: "02",
     title: "Utilities",
     blurb: "Water, gas and electricity supply works. Ducting, jointing, mains laying and service connections across housing, industrial and local authority sites.",
     href: "/utilities",
@@ -38,9 +31,9 @@ const commercialSectors = [
 
 const domesticSector = {
   icon: Home,
-  number: "04",
+  number: "03",
   title: "Private Works",
-  blurb: "Driveways, resin, block paving, patios, groundworks, drainage, dropped kerbs. Domestic civils with the same standards as our commercial programmes.",
+  blurb: "Driveways, resin, block paving, patios, groundworks, drainage, dropped kerbs. Domestic groundworks with the same standards as our commercial programmes.",
   href: "/private-works",
 };
 
@@ -113,7 +106,7 @@ export function HomePage() {
               <FadeIn delay={280}>
                 <p className="text-[var(--color-charcoal)] text-lg md:text-xl leading-relaxed max-w-xl">
                   Lambs Group is a Warrington-based, family-run contractor delivering
-                  telecoms, civils, utilities and domestic works through directly
+                  telecoms, utilities and private groundworks through directly
                   employed teams. Backed by industry expertise and a compliance-first
                   approach, we deliver safe, efficient and reliable results.
                 </p>
@@ -161,7 +154,7 @@ export function HomePage() {
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-20">
             <div className="lg:col-span-4">
-              <FadeIn><span className="eyebrow">Four sectors · One contractor</span></FadeIn>
+              <FadeIn><span className="eyebrow">Three sectors · One contractor</span></FadeIn>
             </div>
             <div className="lg:col-span-8">
               <AnimatedHeading as="h2" className="max-w-3xl">
@@ -169,14 +162,14 @@ export function HomePage() {
               </AnimatedHeading>
               <FadeIn delay={280}>
                 <p className="text-[var(--color-charcoal)] text-lg leading-relaxed mt-8 max-w-2xl">
-                  Supporting national fibre rollouts and private projects, we focus on minor civils and track works delivered by directly employed, fully qualified crews. With a strong operational and back-office team behind every job, we provide one contractor, one point of accountability.
+                  Supporting national fibre rollouts and private projects, we focus on minor works and track works delivered by directly employed, fully qualified crews. With a strong operational and back-office team behind every job, we provide one contractor, one point of accountability.
                 </p>
               </FadeIn>
             </div>
           </div>
 
           <div className="mb-6"><span className="eyebrow">Commercial</span></div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
             {commercialSectors.map((sector, i) => {
               const Icon = sector.icon;
               return (

@@ -2,11 +2,10 @@ import { useState } from "react";
 import liveWorks from "../../data/live-works.json";
 import { withBase } from "../../utils/paths";
 
-type Sector = "All" | "Telecoms" | "Civil Works" | "Utilities" | "Private Works";
+type Sector = "All" | "Telecoms" | "Utilities" | "Private Works";
 
 const sectorColour: Record<string, string> = {
   Telecoms: "#6CC5EA",
-  "Civil Works": "#7DA0C3",
   Utilities: "#264A88",
   "Private Works": "#B8CBDE",
 };
@@ -33,11 +32,10 @@ export function UKMap({ variant = "full" }: UKMapProps) {
   const counts: Record<Sector, number> = {
     All: liveWorks.dots.length,
     Telecoms: liveWorks.dots.filter((d) => d.sector === "Telecoms").length,
-    "Civil Works": liveWorks.dots.filter((d) => d.sector === "Civil Works").length,
     Utilities: liveWorks.dots.filter((d) => d.sector === "Utilities").length,
     "Private Works": liveWorks.dots.filter((d) => d.sector === "Private Works").length,
   };
-  const sectors: Sector[] = ["All", "Telecoms", "Civil Works", "Utilities", "Private Works"];
+  const sectors: Sector[] = ["All", "Telecoms", "Utilities", "Private Works"];
   const selected = selectedId ? liveWorks.dots.find((d) => d.id === selectedId) : null;
   const selectedPoint = selected ? project(selected.lat, selected.lng) : null;
 

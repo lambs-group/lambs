@@ -382,111 +382,6 @@
 }
 .fibre-draw.is-visible .fibre-draw__photon { opacity: 1; }
 
-/* --- Strat peel (Civils signature) --- */
-.strat-peel {
-  position: relative;
-  width: 100%;
-  height: 320px;
-  overflow: hidden;
-  background: var(--color-light-grey);
-  display: flex;
-  flex-direction: column;
-}
-.strat-peel__layer {
-  position: relative;
-  flex-shrink: 0;
-  transform: translateX(-100%);
-  transition: transform 0.9s var(--ease-silk);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 24px;
-  will-change: transform;
-  box-shadow: inset 0 0 0 transparent;
-}
-.strat-peel.is-visible .strat-peel__layer {
-  transform: translateX(0);
-  animation: strat-layer-compacted 1.2s ease forwards;
-}
-/* Each layer pulses a cyan top-border as it lands, showing "laid + compacted" */
-@keyframes strat-layer-compacted {
-  0%   { box-shadow: inset 0 0 0 transparent; }
-  15%  { box-shadow: inset 0 3px 0 var(--color-cyan); }
-  60%  { box-shadow: inset 0 3px 0 var(--color-cyan); }
-  100% { box-shadow: inset 0 0 0 transparent; }
-}
-.strat-peel__label {
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-/* Subgrade is light so switch text to dark */
-.strat-peel__layer:last-child .strat-peel__label,
-.strat-peel__layer:last-child .strat-peel__depth {
-  color: var(--color-dark-blue);
-}
-.strat-peel__depth {
-  color: rgba(255, 255, 255, 0.65);
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-variant-numeric: tabular-nums;
-}
-/* "Finished surface" line drawn across the top once every layer has landed */
-.strat-peel__tick {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 6px;
-  background: var(--color-cyan);
-  box-shadow: 0 0 10px rgba(108, 197, 234, 0.6), 0 1px 0 rgba(0, 0, 0, 0.1);
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 0.9s var(--ease-silk) 1.8s;
-  z-index: 3;
-  pointer-events: none;
-}
-.strat-peel.is-visible .strat-peel__tick { transform: scaleX(1); }
-
-/* Compacting roller that sweeps across the freshly laid wearing course */
-.strat-peel__roller {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  width: 80px;
-  height: 40px;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 2;
-}
-.strat-peel.is-visible .strat-peel__roller {
-  animation: strat-roller-sweep 7s ease-in-out 1.8s infinite;
-}
-@keyframes strat-roller-sweep {
-  0%   { transform: translateX(-90px); opacity: 0; }
-  6%   { opacity: 1; }
-  94%  { opacity: 1; }
-  100% { transform: translateX(900px); opacity: 0; }
-}
-.strat-peel__roller-drum {
-  transform-origin: center;
-  transform-box: fill-box;
-}
-.strat-peel.is-visible .strat-peel__roller-drum {
-  animation: strat-roller-spin 1.4s linear 1.8s infinite;
-}
-.strat-peel.is-visible .strat-peel__roller-drum--rear {
-  animation-delay: 1.95s;
-}
-@keyframes strat-roller-spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-
 /* --- Flow lines (Utilities signature) --- */
 .flow-lines { width: 100%; height: 100%; display: block; }
 
@@ -564,10 +459,6 @@
   .fibre-draw__line { stroke-dashoffset: 0 !important; transition: none !important; }
   .fibre-draw__photon { opacity: 1 !important; }
   .fibre-draw__photon animateMotion { display: none; }
-  .strat-peel__layer { transform: translateX(0) !important; transition: none !important; }
-  .strat-peel__tick { transform: scaleX(1) !important; transition: none !important; }
-  .strat-peel__roller { animation: none !important; opacity: 0 !important; }
-  .strat-peel__roller-drum { animation: none !important; }
   /* Gas / wave animations use native SVG animations; no CSS opt-out needed */
   .uk-map__pulse { animation: none !important; opacity: 0.25 !important; }
 }

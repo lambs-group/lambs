@@ -20,12 +20,12 @@ const utilitiesAccreditations = ["WIRS", "GIRS", "NERS", "NRSWA"];
 export function UtilitiesPage() {
   return (
     <PageShell>
-      <SectorIndex label="03 / UTILITIES" />
+      <SectorIndex label="02 / UTILITIES" />
 
       <section className="relative bg-white overflow-hidden pt-[140px] pb-16 lg:pt-[180px] lg:pb-24 border-b border-[var(--color-border)]">
         <div className="grid-bg absolute inset-0 opacity-40" aria-hidden="true" />
         <div className="relative max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
-          <FadeIn><span className="eyebrow mb-6">Sector 03 · Utilities</span></FadeIn>
+          <FadeIn><span className="eyebrow mb-6">Sector 02 · Utilities</span></FadeIn>
           <AnimatedHeading as="h1" className="max-w-4xl mt-4 mb-8" stagger={40}>
             Water, gas, power - laid and connected.
           </AnimatedHeading>

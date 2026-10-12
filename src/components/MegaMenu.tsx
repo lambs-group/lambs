@@ -1,4 +1,4 @@
-import { Radio, HardHat, Zap, Home } from "lucide-react";
+import { Radio, Zap, Home } from "lucide-react";
 import { withBase } from "../utils/paths";
 
 interface MegaMenuProps {
@@ -7,7 +7,6 @@ interface MegaMenuProps {
 
 const commercial = [
   { icon: Radio, title: "Telecoms", blurb: "FTTH, fibre, splicing, surveys.", href: "/telecoms" },
-  { icon: HardHat, title: "Civil Works", blurb: "Excavation, reinstatement, drainage.", href: "/civil-works" },
   { icon: Zap, title: "Utilities", blurb: "Water, gas, power. Mains to meter.", href: "/utilities" },
 ];
 
@@ -18,10 +17,10 @@ const domestic = [
 export function MegaMenu({ onClose }: MegaMenuProps) {
   return (
     <div
-      className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[760px] bg-white border border-[var(--color-border)] shadow-xl z-[60]"
+      className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[760px] z-[60]"
       onClick={onClose}
     >
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-0">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-0 bg-white border border-[var(--color-border)] shadow-xl">
         <div className="p-8">
           <div className="eyebrow mb-6">Commercial</div>
           <div className="grid grid-cols-1 gap-1">

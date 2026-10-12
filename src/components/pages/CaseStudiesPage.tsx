@@ -9,15 +9,13 @@ import { PageHero } from "../sections/PageHero";
 import { CTASection } from "../sections/CTASection";
 import { withBase } from "../../utils/paths";
 
-type Sector = "All" | "Telecoms" | "Civil Works" | "Utilities" | "Private Works";
+type Sector = "All" | "Telecoms" | "Utilities" | "Private Works";
 
 const studies = [
   { id: "motif", flagship: true, client: "Fujitsu · Virgin Media", title: "Virgin Media Motif - national fibre rollout", summary: "One of the largest operational crews on Virgin Media's Motif full-fibre programme. 2,500 jobs per week, 10,000 homes connected per month.", sector: "Telecoms" as Sector, image: "/images/utilities/job-02.webp", stats: [{ value: "2,500+", label: "Jobs / week" }, { value: "10k+", label: "Homes / month" }], href: "/work/motif" },
-  { id: "barratt", flagship: false, client: "Barratt Developments", title: "National housebuilder civils framework", summary: "Long-standing civils and reinstatement partner to one of the UK's largest housebuilders.", sector: "Civil Works" as Sector, image: "/images/utilities/job-11.webp", stats: [{ value: "Multi-site", label: "Live delivery" }, { value: "Repeat", label: "Framework client" }], href: "/contact" },
-  { id: "bury", flagship: false, client: "Bury Council", title: "Local authority highways reinstatement", summary: "NRSWA-compliant highway reinstatement programmes for Bury Council and other North West local authorities.", sector: "Civil Works" as Sector, image: "/images/utilities/job-01.webp", stats: [{ value: "NRSWA", label: "Compliant" }, { value: "UK-wide", label: "Authority work" }], href: "/contact" },
 ];
 
-const sectors: Sector[] = ["All", "Telecoms", "Civil Works", "Utilities", "Private Works"];
+const sectors: Sector[] = ["All", "Telecoms", "Utilities", "Private Works"];
 
 export function CaseStudiesPage() {
   const [filter, setFilter] = useState<Sector>("All");
