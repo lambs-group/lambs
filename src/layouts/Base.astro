@@ -1,7 +1,11 @@
 ---
 import '../styles/global.css';
+// Inter is self-hosted (no Google Fonts request, so no visitor IPs sent to Google).
+import '@fontsource/inter/latin-400.css';
+import '@fontsource/inter/latin-600.css';
 import { ClientRouter } from 'astro:transitions';
 import { PageTransition } from '../components/PageTransition';
+import { CookieConsent } from '../components/CookieConsent';
 
 interface Props {
   title: string;
@@ -13,7 +17,7 @@ interface Props {
 
 const {
   title,
-  description = 'Lambs Group - Infrastructure services across the UK since 1988. Telecoms, civil works, utilities and domestic works. Family-run, directly employed workforce, compliance-first.',
+  description = 'Lambs Group - Infrastructure services across the UK since 1988. Telecoms, utilities and private works. Family-run, directly employed workforce, compliance-first.',
   ogImage = '/images/og-default.jpg',
   type = 'website',
   noindex = false,
@@ -56,11 +60,6 @@ const ogImageURL = new URL(ogImage.startsWith('/') ? `${baseUrl}${ogImage}` : og
     <link rel="icon" type="image/png" sizes="16x16" href={`${baseUrl}/favicon-16.png`} />
     <link rel="apple-touch-icon" sizes="180x180" href={`${baseUrl}/apple-touch-icon.png`} />
 
-    <!-- Fonts - Inter only per brand guide (two fonts max) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
     <!-- JSON-LD: LocalBusiness + Organization -->
     <script is:inline type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
@@ -68,7 +67,7 @@ const ogImageURL = new URL(ogImage.startsWith('/') ? `${baseUrl}${ogImage}` : og
       "@id": "https://lambsgroup.co.uk/#business",
       "name": "Lambs Group",
       "alternateName": ["Lambs UK", "S Lamb Construction"],
-      "description": "Family-run UK infrastructure contractor delivering telecoms, civil works, utilities and domestic works with directly employed crews since 1988.",
+      "description": "Family-run UK infrastructure contractor delivering telecoms, utilities and private works with directly employed crews since 1988.",
       "url": "https://lambsgroup.co.uk",
       "logo": "https://lambsgroup.co.uk/images/logo-lambs-group-colour.svg",
       "foundingDate": "1988",
@@ -84,5 +83,6 @@ const ogImageURL = new URL(ogImage.startsWith('/') ? `${baseUrl}${ogImage}` : og
   <body class="min-h-screen flex flex-col bg-white text-[var(--color-charcoal)]">
     <PageTransition client:load />
     <slot />
+    <CookieConsent client:load transition:persist />
   </body>
 </html>

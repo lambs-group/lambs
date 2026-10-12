@@ -6,6 +6,7 @@ import { Button } from "../Button";
 import { PageShell } from "../sections/PageShell";
 import { withBase } from "../../utils/paths";
 import { submitForm } from "../../utils/submit-form";
+import { Turnstile } from "../Turnstile";
 import type { Vacancy } from "../../data/vacancies";
 
 interface JobPageProps {
@@ -149,6 +150,8 @@ export function JobPage({ vacancy }: JobPageProps) {
                         name="message"
                         placeholder="Briefly - relevant tickets, current notice period, anything you want us to know."
                       />
+
+                      <Turnstile />
 
                       {error && (
                         <p className="text-[13px] text-red-600">

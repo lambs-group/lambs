@@ -1,13 +1,13 @@
 import { ArrowUpRight } from "lucide-react";
 import { Logo } from "./Logo";
 import { withBase } from "../utils/paths";
+import { openConsentSettings } from "../utils/consent";
 
 const linkGroups = [
   {
     title: "Commercial",
     links: [
       { label: "Telecoms", href: "/telecoms" },
-      { label: "Civil Works", href: "/civil-works" },
       { label: "Utilities", href: "/utilities" },
     ],
   },
@@ -106,9 +106,21 @@ export function Footer() {
         </div>
 
         <div className="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-          <p className="text-xs uppercase tracking-wider text-white/50">
-            © {new Date().getFullYear()} Lambs Group. Est. 1988.
-          </p>
+          <div className="flex flex-col gap-3">
+            <p className="text-xs uppercase tracking-wider text-white/50">
+              © {new Date().getFullYear()} Lambs Group. Est. 1988.
+            </p>
+            <ul className="flex flex-wrap gap-x-6 gap-y-2 text-xs uppercase tracking-wider text-white/60">
+              <li><a href={withBase("/privacy")} className="hover:text-white transition-colors">Privacy</a></li>
+              <li><a href={withBase("/cookies")} className="hover:text-white transition-colors">Cookies</a></li>
+              <li><a href={withBase("/terms")} className="hover:text-white transition-colors">Terms</a></li>
+              <li>
+                <button type="button" onClick={openConsentSettings} className="uppercase tracking-wider hover:text-white transition-colors cursor-pointer">
+                  Cookie settings
+                </button>
+              </li>
+            </ul>
+          </div>
           <a
             href={withBase("/contact")}
             className="group inline-flex items-center gap-2 text-xs uppercase tracking-wider text-white/70 hover:text-[var(--color-cyan)] transition-colors"

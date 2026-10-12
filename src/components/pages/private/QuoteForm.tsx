@@ -2,13 +2,29 @@ import { useState } from "react";
 import { FadeIn } from "../../FadeIn";
 import { AnimatedHeading } from "../../AnimatedHeading";
 import { Button } from "../../Button";
+import { Turnstile } from "../../Turnstile";
+import { submitForm } from "../../../utils/submit-form";
 
 interface QuoteFormProps {
   id?: string;
 }
 
 export function QuoteForm({ id }: QuoteFormProps) {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "done" | "preview" | "error">("idle");
+  const [error, setError] = useState<string | null>(null);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("sending");
+    setError(null);
+    const result = await submitForm(e.currentTarget, "contact-domestic");
+    if (result.status === "ok") setStatus("done");
+    else if (result.status === "preview") setStatus("preview");
+    else {
+      setStatus("error");
+      setError(result.message);
+    }
+  }
 
   return (
     <section id={id} className="bg-[var(--color-light-grey)] py-24 lg:py-36">
@@ -24,21 +40,26 @@ export function QuoteForm({ id }: QuoteFormProps) {
             </FadeIn>
           </div>
           <div className="lg:col-span-7">
-            {submitted ? (
+            {status === "done" || status === "preview" ? (
               <FadeIn>
                 <div className="bg-[var(--color-dark-blue)] text-white p-10">
                   <h3 className="text-2xl font-semibold mb-3">Thanks - we've got it.</h3>
-                  <p className="text-white/80">We'll be in touch within one working day to arrange a free on-site measure.</p>
+                  <p className="text-white/80">
+                    {status === "preview"
+                      ? "Preview mode - this form isn't connected yet, so nothing has been sent."
+                      : "We'll be in touch within one working day to arrange a free on-site measure."}
+                  </p>
                 </div>
               </FadeIn>
             ) : (
               <FadeIn delay={120}>
                 <form
                   className="flex flex-col gap-6 bg-white p-8 lg:p-10 border border-[var(--color-border)]"
-                  onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
+                  onSubmit={handleSubmit}
+                  encType="multipart/form-data"
                 >
-                  <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
-                  <input type="hidden" name="subject" value="Private Works quote request" />
+                  {/* Honeypot - real users never fill this. */}
+                  <input type="text" name="website" tabIndex={-1} autoComplete="off" className="sr-only" aria-hidden="true" />
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <Field label="Your name" name="name" required />
@@ -63,8 +84,11 @@ export function QuoteForm({ id }: QuoteFormProps) {
                   <FileField label="Photos of the area (optional)" name="photos" />
                   <TextareaField label="Anything else we should know?" name="notes" />
 
+                  <Turnstile />
+                  {error && <p className="text-[13px] text-red-600">{error}</p>}
+
                   <div className="pt-2">
-                    <Button variant="primary" size="lg" type="submit">Send quote request</Button>
+                    <Button variant="primary" size="lg" type="submit">{status === "sending" ? "Sending…" : "Send quote request"}</Button>
                   </div>
                 </form>
               </FadeIn>

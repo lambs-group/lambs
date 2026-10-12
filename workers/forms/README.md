@@ -24,13 +24,19 @@ Thin relay that accepts form POSTs from the website (GitHub Pages) and sends the
    # paste the key when prompted
    ```
 
-5. Edit `wrangler.toml` if your sender / recipient addresses differ from the defaults:
+5. Create a Cloudflare Turnstile widget (dashboard -> Turnstile -> Add widget). Add the hostnames `lambsgroup.co.uk`, `www.lambsgroup.co.uk` and `lng-boomworks.github.io`. Then store the **secret key** on the worker:
+   ```bash
+   wrangler secret put TURNSTILE_SECRET_KEY
+   ```
+   The worker refuses every submission until this is set (it fails closed so forms can't be used by bots). The **site key** goes on the site build, see "Wiring the site".
+
+6. Edit `wrangler.toml` if your sender / recipient addresses differ from the defaults:
    - `FROM_EMAIL` — must be on a verified Resend domain
    - `TO_GENERAL` — contact form recipient
    - `TO_CAREERS` — job application recipient
    - `ALLOWED_ORIGINS` — comma-separated list of origins that can POST
 
-6. Deploy:
+7. Deploy:
    ```bash
    npm run deploy
    ```
@@ -51,6 +57,7 @@ The Astro site reads `PUBLIC_FORM_ENDPOINT` at build time. Two places to set it:
    - Name: `PUBLIC_FORM_ENDPOINT`
    - Value: the worker URL
    - The deploy workflow already passes it through to `npm run build`.
+   - Add a second variable `PUBLIC_TURNSTILE_SITE_KEY` with the Turnstile **site key** (public, safe to expose). Without it the forms render no human check, and once the worker has a secret the worker will reject them.
 
 Once set, the contact and careers forms will POST through to the worker and Resend will send the email.
 

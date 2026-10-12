@@ -8,6 +8,8 @@ export type SubmitResult =
   | { status: "preview"; reason: "endpoint-not-configured" }
   | { status: "error"; message: string };
 
+import { TURNSTILE_FIELD, resetTurnstile, turnstileEnabled } from "./turnstile";
+
 const endpoint = (import.meta.env.PUBLIC_FORM_ENDPOINT ?? "").trim();
 
 export async function submitForm(
@@ -27,6 +29,13 @@ export async function submitForm(
 
   const data = new FormData(formEl);
   data.set("form", formType);
+
+  if (turnstileEnabled && !String(data.get(TURNSTILE_FIELD) ?? "")) {
+    return {
+      status: "error",
+      message: "Please wait for the security check to finish, then try again.",
+    };
+  }
 
   try {
     const resp = await fetch(endpoint, {
@@ -48,5 +57,8 @@ export async function submitForm(
       status: "error",
       message: e instanceof Error ? e.message : "Network error",
     };
+  } finally {
+    // The token is single-use; get a fresh one for any retry.
+    if (turnstileEnabled) resetTurnstile();
   }
 }

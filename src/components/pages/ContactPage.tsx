@@ -5,6 +5,7 @@ import { FadeIn } from "../FadeIn";
 import { Button } from "../Button";
 import { PageShell } from "../sections/PageShell";
 import { submitForm, type FormType } from "../../utils/submit-form";
+import { Turnstile } from "../Turnstile";
 
 type Mode = "commercial" | "domestic";
 
@@ -191,8 +192,9 @@ function CommercialForm(props: FormStateProps) {
         <Field label="Email" name="email" type="email" required />
         <Field label="Phone" name="phone" type="tel" />
       </div>
-      <SelectField label="Sector" name="sector" options={["Telecoms", "Civil Works", "Utilities", "Mixed / not sure"]} />
+      <SelectField label="Sector" name="sector" options={["Telecoms", "Utilities", "Mixed / not sure"]} />
       <TextareaField label="Project brief" name="message" required />
+      <Turnstile />
       {props.error && <p className="text-[13px] text-red-600">{props.error}</p>}
       <div className="pt-2">
         <Button variant="primary" size="lg" type="submit">
@@ -220,6 +222,7 @@ function DomesticForm(props: FormStateProps) {
       <SelectField label="Finish" name="finish" options={["Tarmac", "Resin", "Block paving", "Patio", "Drainage", "Dropped kerb", "Not sure / mix"]} />
       <SelectField label="Timing" name="timing" options={["ASAP", "Within 1 month", "Within 3 months", "Later this year", "No rush"]} />
       <TextareaField label="Anything else?" name="notes" />
+      <Turnstile />
       {props.error && <p className="text-[13px] text-red-600">{props.error}</p>}
       <div className="pt-2">
         <Button variant="primary" size="lg" type="submit">

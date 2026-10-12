@@ -1,5 +1,6 @@
 export interface Env {
   RESEND_API_KEY: string;
+  TURNSTILE_SECRET_KEY: string; // Cloudflare Turnstile secret (wrangler secret put)
   FROM_EMAIL: string; // e.g. "website@lambsgroup.co.uk"
   TO_GENERAL: string; // e.g. "contact@lambsgroup.co.uk"
   TO_CAREERS: string; // e.g. "careers@lambsgroup.co.uk"
@@ -77,6 +78,34 @@ export default {
       return json({ ok: true }, 200, cors);
     }
 
+    // Human check. Fail closed: no secret configured means we refuse to send.
+    if (!env.TURNSTILE_SECRET_KEY) {
+      console.error("TURNSTILE_SECRET_KEY is not set");
+      return json({ error: "Server misconfigured" }, 500, cors);
+    }
+    const token = String(form.get("cf-turnstile-response") ?? "");
+    if (!token) {
+      return json({ error: "Security check missing. Please try again." }, 403, cors);
+    }
+    const verifyBody = new URLSearchParams({ secret: env.TURNSTILE_SECRET_KEY, response: token });
+    const ip = request.headers.get("CF-Connecting-IP");
+    if (ip) verifyBody.set("remoteip", ip);
+    let verified = false;
+    try {
+      const verifyResp = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+        method: "POST",
+        body: verifyBody,
+      });
+      const outcome = (await verifyResp.json()) as { success?: boolean };
+      verified = outcome.success === true;
+    } catch (e) {
+      console.error("Turnstile verification error", e);
+      return json({ error: "Could not verify the security check" }, 502, cors);
+    }
+    if (!verified) {
+      return json({ error: "Security check failed. Please refresh and try again." }, 403, cors);
+    }
+
     const formType = String(form.get("form") ?? "").trim();
     const routes: Record<string, Route> = {
       "contact-commercial": {
@@ -101,7 +130,7 @@ export default {
     const fields: Array<[string, string]> = [];
     const attachments: Array<{ filename: string; content: string }> = [];
     for (const [key, value] of form.entries()) {
-      if (key === "form" || key === "website") continue;
+      if (key === "form" || key === "website" || key === "cf-turnstile-response") continue;
       if (value instanceof File && value.size > 0) {
         if (value.size > 10 * 1024 * 1024) {
           return json({ error: `Attachment ${value.name} exceeds 10 MB` }, 413, cors);

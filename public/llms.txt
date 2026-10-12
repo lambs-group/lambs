@@ -1,11 +1,10 @@
 # Lambs Group
 
 ## About
-Lambs Group is a family-run UK infrastructure contractor, established 1988, based in Warrington. We deliver telecoms, civil works, utilities and domestic private works (driveways) across the UK, using directly employed operatives rather than subcontractors.
+Lambs Group is a family-run UK infrastructure contractor, established 1988, based in Warrington. We deliver telecoms, utilities and domestic private works (driveways, groundworks) across the UK, using directly employed operatives rather than subcontractors.
 
 ## Sectors
 - Telecoms: FTTH/FTTP rollout, splicing, directional drilling, cabinet installs
-- Civil Works: excavation, reinstatement, road works, footways, drainage, ducting
 - Utilities: water, gas, electricity supply works — ducting, jointing, mains laying
 - Private Works (domestic): tarmac, resin driveways, block paving, patios, drainage, dropped kerbs
 
@@ -21,7 +20,6 @@ Virgin Media Motif full-fibre rollout, delivered in partnership with Fujitsu. ~2
 ## Key pages
 - Home: https://lambsgroup.co.uk/
 - Telecoms: https://lambsgroup.co.uk/telecoms
-- Civil Works: https://lambsgroup.co.uk/civil-works
 - Utilities: https://lambsgroup.co.uk/utilities
 - Private Works: https://lambsgroup.co.uk/private-works
 - About: https://lambsgroup.co.uk/about
@@ -32,6 +30,9 @@ Virgin Media Motif full-fibre rollout, delivered in partnership with Fujitsu. ~2
 - Live Map: https://lambsgroup.co.uk/map
 - Careers: https://lambsgroup.co.uk/careers
 - Contact: https://lambsgroup.co.uk/contact
+- Privacy: https://lambsgroup.co.uk/privacy
+- Cookies: https://lambsgroup.co.uk/cookies
+- Terms: https://lambsgroup.co.uk/terms
 
 ## Accreditations
 NRSWA, CSCS, NEBOSH, ECS, ISO 9001, ISO 14001, ISO 45001, WIRS, GIRS, NERS (specific accreditations to be confirmed with client)
