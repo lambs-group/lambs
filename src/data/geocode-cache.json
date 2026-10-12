@@ -1,0 +1,37 @@
+{
+  "place:warrington": {
+    "lat": 53.389569611840585,
+    "lng": -2.590896617675745,
+    "label": "Warrington, North West"
+  },
+  "place:liverpool": {
+    "lat": 53.409349816322546,
+    "lng": -2.9784949183629106,
+    "label": "Liverpool, North West"
+  },
+  "outcode:WA1": {
+    "lat": 53.39372476932983,
+    "lng": -2.5723822770618483,
+    "label": "Warrington (WA1)"
+  },
+  "place:leeds": {
+    "lat": 53.800702634926814,
+    "lng": -1.5502635354357506,
+    "label": "Leeds, Yorkshire and the Humber"
+  },
+  "place:bradford": {
+    "lat": 53.7907783187081,
+    "lng": -1.7545610337246629,
+    "label": "Bradford, Yorkshire and the Humber"
+  },
+  "place:birmingham": {
+    "lat": 52.479284364256884,
+    "lng": -1.9029406427126392,
+    "label": "Birmingham, West Midlands"
+  },
+  "outcode:WV1": {
+    "lat": 52.58649113146235,
+    "lng": -2.115742895125556,
+    "label": "Wolverhampton (WV1)"
+  }
+}

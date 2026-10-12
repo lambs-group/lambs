@@ -1,5 +1,5 @@
 import { useState } from "react";
-import liveWorks from "../../data/live-works.json";
+import liveWorks from "../../data/live-works.resolved.json";
 import { withBase } from "../../utils/paths";
 
 type Sector = "All" | "Telecoms" | "Utilities" | "Private Works";
