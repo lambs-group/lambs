@@ -16,7 +16,7 @@ export function initAnalytics(): void {
     if (document.getElementById(SCRIPT_ID)) return;
     const s = document.createElement("script");
     s.id = SCRIPT_ID;
-    s.defer = true;
+    s.type = "module"; // matches the snippet Cloudflare generates
     s.src = "https://static.cloudflareinsights.com/beacon.min.js";
     s.setAttribute("data-cf-beacon", JSON.stringify({ token, spa: true }));
     document.head.appendChild(s);
