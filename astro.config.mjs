@@ -11,9 +11,8 @@ import { readFileSync } from 'node:fs';
 // 301s (e.g. _redirects / staticwebapp.config.json) once hosting is chosen.
 const base = '/lambs'; // production: ''
 
-// Baseline <lastmod> dates for the sitemap (July-September 2026), keyed by page path.
-// Fixed on purpose so they don't change every build. Replace with real edit dates
-// (or git commit dates) once the site is live: Google discounts lastmod that proves unreliable.
+// Sitemap <lastmod> dates, keyed by page path. Generated from real git history
+// by scripts/sitemap-lastmod.mjs (runs before every build) and committed.
 const lastmod = JSON.parse(readFileSync(new URL('./src/data/sitemap-lastmod.json', import.meta.url), 'utf8'));
 const redirects = Object.fromEntries(Object.entries({
   // Company pages

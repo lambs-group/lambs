@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "predev": "node scripts/build-live-works.mjs",
     "build": "astro build",
-    "prebuild": "node scripts/build-live-works.mjs",
+    "prebuild": "node scripts/build-live-works.mjs && node scripts/sitemap-lastmod.mjs",
     "build:data": "node scripts/build-live-works.mjs",
     "preview": "astro preview"
   },
