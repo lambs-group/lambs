@@ -2,7 +2,7 @@ import { Construction, Layers, Grid3x3, SquareStack, Droplets, ArrowDownToLine, 
 import { FadeIn } from "../../FadeIn";
 import { AnimatedHeading } from "../../AnimatedHeading";
 
-const services = [
+export const services = [
   { icon: Construction, title: "Tarmac", blurb: "Full driveway relays and overlays in quality-graded tarmac, sealed and rolled." },
   { icon: Layers, title: "Resin", blurb: "UV-stable resin-bound finishes in a range of aggregates - permeable and long-lasting." },
   { icon: Grid3x3, title: "Block paving", blurb: "Traditional and contemporary block paving in Marshalls, Brett and Bradstone ranges." },

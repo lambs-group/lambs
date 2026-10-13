@@ -11,7 +11,7 @@ import { CTASection } from "../sections/CTASection";
 
 const caseImage = "/images/utilities/job-06.webp";
 
-const services = [
+export const services = [
   { number: "01", title: "FTTH / FTTP rollout", description: "Full-fibre to the home and premises. Design-and-build, surveys, splicing and commissioning for national operators." },
   { number: "02", title: "Blown fibre & splicing", description: "Microduct blowing, fusion splicing, OTDR testing and certification to operator standards." },
   { number: "03", title: "Directional drilling", description: "Moling and horizontal directional drilling for low-impact cable installs under highways, driveways and gardens." },

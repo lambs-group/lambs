@@ -11,6 +11,10 @@ export interface Vacancy {
   nice: string[];
   whatWeOffer?: string[];
   reports: string;
+  /** ISO date (YYYY-MM-DD). Set this to output Google for Jobs (JobPosting) markup. */
+  datePosted?: string;
+  /** ISO date after which the role should drop out of search. Optional. */
+  validThrough?: string;
 }
 
 // No live vacancies at present (the Openreach civils/reinstatement roles were taken down).

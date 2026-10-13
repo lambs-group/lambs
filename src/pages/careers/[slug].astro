@@ -16,6 +16,14 @@ const { vacancy } = Astro.props;
 <Base
   title={`${vacancy.title} - Careers at Lambs Group`}
   description={vacancy.summary}
+  job={{
+    title: vacancy.title,
+    description: [vacancy.summary, ...vacancy.responsibilities, ...vacancy.requirements].join(' '),
+    datePosted: vacancy.datePosted,
+    validThrough: vacancy.validThrough,
+    employmentType: vacancy.type,
+    location: vacancy.location,
+  }}
 >
   <JobPage vacancy={vacancy} client:load />
 </Base>

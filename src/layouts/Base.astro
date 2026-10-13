@@ -6,6 +6,8 @@ import '@fontsource/inter/latin-600.css';
 import { ClientRouter } from 'astro:transitions';
 import { PageTransition } from '../components/PageTransition';
 import { CookieConsent } from '../components/CookieConsent';
+import { buildGraph, type PageSchemaType, type ServiceInput, type FaqInput, type JobInput } from '../utils/schema';
+import lastmod from '../data/sitemap-lastmod.json';
 
 interface Props {
   title: string;
@@ -13,6 +15,10 @@ interface Props {
   ogImage?: string;
   type?: 'website' | 'article';
   noindex?: boolean;
+  schemaType?: PageSchemaType;
+  service?: ServiceInput;
+  faq?: FaqInput[];
+  job?: JobInput;
 }
 
 const {
@@ -21,6 +27,10 @@ const {
   ogImage = '/images/og-default.jpg',
   type = 'website',
   noindex = false,
+  schemaType,
+  service,
+  faq,
+  job,
 } = Astro.props;
 
 // Only the production domain should be indexed. Preview hosts (e.g. github.io)
@@ -32,6 +42,23 @@ const usesDefaultOg = ogImage === '/images/og-default.jpg';
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
 const ogImageURL = new URL(ogImage.startsWith('/') ? `${baseUrl}${ogImage}` : ogImage, Astro.site);
+
+// Structured data (JSON-LD). Path is relative to the site root, with slashes either side.
+const siteRoot = new URL(`${baseUrl}/`, Astro.site).href;
+const pagePath = ('/' + Astro.url.pathname.replace(baseUrl, '').replace(/^\/+|\/+$/g, '') + '/').replace('//', '/');
+const jsonLd = buildGraph({
+  siteRoot,
+  pageUrl: new URL(pagePath.slice(1), siteRoot).href,
+  path: pagePath,
+  title,
+  description,
+  ogImage: ogImageURL.href,
+  schemaType,
+  dateModified: (lastmod as Record<string, string>)[pagePath],
+  service,
+  faq,
+  job,
+});
 ---
 
 <!doctype html>
@@ -72,28 +99,8 @@ const ogImageURL = new URL(ogImage.startsWith('/') ? `${baseUrl}${ogImage}` : og
     <link rel="icon" type="image/png" sizes="16x16" href={`${baseUrl}/favicon-16.png`} />
     <link rel="apple-touch-icon" sizes="180x180" href={`${baseUrl}/apple-touch-icon.png`} />
 
-    <!-- JSON-LD: LocalBusiness + Organization -->
-    <script is:inline type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "@id": "https://lambsgroup.co.uk/#business",
-      "name": "Lambs Group",
-      "alternateName": ["S Lamb Construction"],
-      "description": "Family-run UK infrastructure contractor delivering telecoms, utilities and private works with skilled teams across its workforce since 1988.",
-      "url": "https://lambsgroup.co.uk",
-      "logo": "https://lambsgroup.co.uk/images/logo-lambs-group-colour.svg",
-      "foundingDate": "1988",
-      "telephone": "+441925810991",
-      "email": "contact@lambsgroup.co.uk",
-      "address": { "@type": "PostalAddress", "streetAddress": "Unit 26 Tatton Court, Kingsland Grange, Woolston", "addressLocality": "Warrington", "postalCode": "WA1 4RR", "addressCountry": "GB" },
-      "areaServed": "United Kingdom",
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "17:30"
-      }
-    })} />
+    <!-- JSON-LD: business, website, page, breadcrumbs, service/FAQ/job where relevant -->
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
     <slot name="head" />
     <ClientRouter fallback="swap" />

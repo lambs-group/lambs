@@ -1,11 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
-import { UtilitiesPage } from '../components/pages/UtilitiesPage';
+import { UtilitiesPage, services } from '../components/pages/UtilitiesPage';
 ---
 
 <Base
-  title="Utilities - Water, Gas & Electricity | Lambs Group"
-  description="Water, gas and electricity supply works. Ducting, jointing, mains laying and service connections for housing, industrial and local authority schemes."
+  service={{
+    name: 'Utilities supply works',
+    serviceType: 'Water, gas and electricity mains and connections',
+    description: 'Water, gas and electricity supply works: mains laying, ducting, jointing and service connections for housing, industrial and local authority sites.',
+    items: services.map((s) => ({ name: s.title, description: s.description })),
+  }}
+  title="Utilities Contractor - Water, Gas & Power | Lambs Group"
+  description="Water, gas and electricity supply works: mains, ducting, jointing and connections for housing, industrial and local authority sites. Lambs Group, Warrington."
 >
   <UtilitiesPage client:load />
 </Base>

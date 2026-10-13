@@ -6,7 +6,7 @@ import { PageShell } from "../sections/PageShell";
 import { ServiceList } from "../sections/ServiceList";
 import { CTASection } from "../sections/CTASection";
 
-const services = [
+export const services = [
   { number: "01", title: "Water supply works", description: "New mains laying, service connections, meter installs and network extensions on housing and commercial sites." },
   { number: "02", title: "Gas supply", description: "Gas mains, service connections, riser works and safe site isolation delivered by accredited crews." },
   { number: "03", title: "Electricity supply", description: "LV and HV ducting routes, service cabinets and connection works coordinated with DNO programmes." },
