@@ -1,0 +1,238 @@
+{
+  "/images/Lambs Logo v2.png": {
+    "width": 1400,
+    "height": 241
+  },
+  "/images/accreditations/iso-14001.webp": {
+    "width": 600,
+    "height": 600
+  },
+  "/images/accreditations/iso-45001.webp": {
+    "width": 600,
+    "height": 600
+  },
+  "/images/accreditations/iso-9001.webp": {
+    "width": 600,
+    "height": 600
+  },
+  "/images/clients/barratt.webp": {
+    "width": 250,
+    "height": 166
+  },
+  "/images/clients/bwp.webp": {
+    "width": 227,
+    "height": 227
+  },
+  "/images/clients/cellex.webp": {
+    "width": 364,
+    "height": 364
+  },
+  "/images/clients/cf.webp": {
+    "width": 257,
+    "height": 257
+  },
+  "/images/clients/circet.webp": {
+    "width": 447,
+    "height": 446
+  },
+  "/images/clients/freedom-fibre.webp": {
+    "width": 257,
+    "height": 257
+  },
+  "/images/clients/ft-surfacing.webp": {
+    "width": 346,
+    "height": 346
+  },
+  "/images/clients/fujitsu-telecom.webp": {
+    "width": 322,
+    "height": 156
+  },
+  "/images/clients/fujitsu.webp": {
+    "width": 334,
+    "height": 164
+  },
+  "/images/clients/jn-civils.webp": {
+    "width": 464,
+    "height": 64
+  },
+  "/images/clients/kelly-group.webp": {
+    "width": 534,
+    "height": 100
+  },
+  "/images/clients/map-group.webp": {
+    "width": 355,
+    "height": 147
+  },
+  "/images/clients/mgroup.webp": {
+    "width": 251,
+    "height": 215
+  },
+  "/images/clients/mj-quinn.webp": {
+    "width": 464,
+    "height": 219
+  },
+  "/images/clients/nano.webp": {
+    "width": 403,
+    "height": 145
+  },
+  "/images/clients/ocu-group.webp": {
+    "width": 546,
+    "height": 102
+  },
+  "/images/clients/pjs.webp": {
+    "width": 359,
+    "height": 144
+  },
+  "/images/clients/stl.webp": {
+    "width": 351,
+    "height": 153
+  },
+  "/images/clients/svella.webp": {
+    "width": 453,
+    "height": 94
+  },
+  "/images/clients/united-infra.webp": {
+    "width": 482,
+    "height": 142
+  },
+  "/images/hero/careers-crew.webp": {
+    "width": 1690,
+    "height": 442
+  },
+  "/images/hero/home-field.webp": {
+    "width": 1060,
+    "height": 400
+  },
+  "/images/lambs-logo-v2.webp": {
+    "width": 1400,
+    "height": 241
+  },
+  "/images/mascot/lambs-digger.webp": {
+    "width": 640,
+    "height": 865
+  },
+  "/images/og-default.jpg": {
+    "width": 1200,
+    "height": 630
+  },
+  "/images/private/tarmac-after.png": {
+    "width": 1104,
+    "height": 930
+  },
+  "/images/private/tarmac-after.webp": {
+    "width": 1104,
+    "height": 930
+  },
+  "/images/private/tarmac-before.png": {
+    "width": 1104,
+    "height": 930
+  },
+  "/images/private/tarmac-before.webp": {
+    "width": 1104,
+    "height": 930
+  },
+  "/images/team/amanda-lamb.webp": {
+    "width": 150,
+    "height": 150
+  },
+  "/images/team/group-office.webp": {
+    "width": 202,
+    "height": 150
+  },
+  "/images/team/ray-pennington.webp": {
+    "width": 150,
+    "height": 150
+  },
+  "/images/team/simon-lamb.webp": {
+    "width": 150,
+    "height": 150
+  },
+  "/images/utilities/job-01.webp": {
+    "width": 1280,
+    "height": 960,
+    "small": {
+      "src": "/images/utilities/job-01-640.webp",
+      "width": 640
+    }
+  },
+  "/images/utilities/job-02.webp": {
+    "width": 1280,
+    "height": 960,
+    "small": {
+      "src": "/images/utilities/job-02-640.webp",
+      "width": 640
+    }
+  },
+  "/images/utilities/job-03.webp": {
+    "width": 1280,
+    "height": 960,
+    "small": {
+      "src": "/images/utilities/job-03-640.webp",
+      "width": 640
+    }
+  },
+  "/images/utilities/job-04.webp": {
+    "width": 1280,
+    "height": 960,
+    "small": {
+      "src": "/images/utilities/job-04-640.webp",
+      "width": 640
+    }
+  },
+  "/images/utilities/job-05.webp": {
+    "width": 1280,
+    "height": 960,
+    "small": {
+      "src": "/images/utilities/job-05-640.webp",
+      "width": 640
+    }
+  },
+  "/images/utilities/job-06.webp": {
+    "width": 1280,
+    "height": 960,
+    "small": {
+      "src": "/images/utilities/job-06-640.webp",
+      "width": 640
+    }
+  },
+  "/images/utilities/job-07.webp": {
+    "width": 1280,
+    "height": 960,
+    "small": {
+      "src": "/images/utilities/job-07-640.webp",
+      "width": 640
+    }
+  },
+  "/images/utilities/job-08.webp": {
+    "width": 1280,
+    "height": 960,
+    "small": {
+      "src": "/images/utilities/job-08-640.webp",
+      "width": 640
+    }
+  },
+  "/images/utilities/job-09.webp": {
+    "width": 1280,
+    "height": 960,
+    "small": {
+      "src": "/images/utilities/job-09-640.webp",
+      "width": 640
+    }
+  },
+  "/images/utilities/job-10.webp": {
+    "width": 1280,
+    "height": 960,
+    "small": {
+      "src": "/images/utilities/job-10-640.webp",
+      "width": 640
+    }
+  },
+  "/images/utilities/job-11.webp": {
+    "width": 1280,
+    "height": 960,
+    "small": {
+      "src": "/images/utilities/job-11-640.webp",
+      "width": 640
+    }
+  }
+}

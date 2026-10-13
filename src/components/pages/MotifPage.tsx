@@ -3,7 +3,6 @@ import { CTASection } from "../sections/CTASection";
 import { MotifHero } from "./motif/MotifHero";
 import { MotifProgramme } from "./motif/MotifProgramme";
 import { MotifNumbers } from "./motif/MotifNumbers";
-import { MotifCrew } from "./motif/MotifCrew";
 import { MotifWeek } from "./motif/MotifWeek";
 import { MotifQC } from "./motif/MotifQC";
 
@@ -13,7 +12,7 @@ export function MotifPage() {
       <MotifHero />
       <MotifProgramme />
       <MotifNumbers />
-      <MotifCrew />
+      {/* Crew section removed until real names and photos are supplied (see motif/MotifCrew.tsx). */}
       <MotifWeek />
       <MotifQC />
       <CTASection

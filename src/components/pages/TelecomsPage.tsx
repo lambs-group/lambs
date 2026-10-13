@@ -20,6 +20,7 @@ export const services = [
   { number: "06", title: "Cabinet installs", description: "PCP and FTTC cabinet foundations, installations, power connections and commissioning." },
 ];
 
+// LAUNCH BLOCKER: Lambs has not yet confirmed which of these they hold (see docs/superpowers/plans/LAUNCH-CHECKLIST.md).
 const telecomsAccreditations = ["NRSWA", "Streetworks", "CSCS", "NEBOSH", "ECS"];
 
 export function TelecomsPage() {
@@ -99,9 +100,6 @@ export function TelecomsPage() {
                   Qualified crews, certified to operator standard.
                 </h3>
               </div>
-              <p className="text-[var(--color-mid-blue)] text-sm max-w-sm uppercase tracking-wider font-medium">
-                Placeholder list - to confirm with client
-              </p>
             </div>
           </FadeIn>
           <div className="flex flex-wrap gap-3">

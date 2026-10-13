@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { Logo } from "./Logo";
 import { withBase } from "../utils/paths";
+import { imgAttrs } from "../utils/images";
 import { openConsentSettings } from "../utils/consent";
 
 const linkGroups = [
@@ -54,7 +55,7 @@ export function Footer() {
             {isoBadges.map((b) => (
               <img
                 key={b.label}
-                src={withBase(b.src)}
+                {...imgAttrs(b.src)}
                 alt={b.label}
                 className="h-14 w-auto object-contain brightness-0 invert opacity-75 hover:opacity-100 transition-opacity"
                 loading="lazy"

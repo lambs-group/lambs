@@ -1,3 +1,5 @@
+// NOT CURRENTLY USED: the data below is placeholder (stock photos, invented names).
+// Re-add <MotifCrew /> to MotifPage only with real crew names, roles and photos.
 import { AnimatedHeading } from "../../AnimatedHeading";
 import { FadeIn } from "../../FadeIn";
 import { RevealImage } from "../../RevealImage";

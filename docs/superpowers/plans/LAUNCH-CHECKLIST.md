@@ -60,3 +60,12 @@ Deliver to `public/images/` — filenames per component's `src` prop (search for
 - [ ] Lighthouse audit on production hosting (desktop + mobile)
 - [ ] axe-core a11y scan across all 15 pages
 - [ ] Cross-browser check (Chrome, Safari, Firefox, mobile Safari)
+
+## Content that must be confirmed or replaced before launch
+- [ ] **Accreditations:** Lambs to confirm which they hold (NRSWA, Streetworks, CSCS, NEBOSH, ECS, WIRS, GIRS, NERS, ISO 9001/14001/45001). Affects Telecoms and Utilities pages, the footer badges, `public/llms.txt` and the new page copy (see `docs/content/telecoms-utilities-draft.md`).
+- [ ] **Private Works images:** replace the placeholder portfolio, finishes gallery and before/after (`PortfolioGallery.tsx`, `FinishesGallery.tsx`, `images/private/`) with the chosen real photos; then convert the before/after PNGs to the existing .webp files.
+- [ ] **Motif crew section:** removed from the page. Re-add `MotifCrew` only with real names, roles and photos.
+- [ ] **How We Deliver stages 1-3 (Brief, Survey, Design):** currently a brand panel; add real photos if available.
+- [ ] **Project photos:** the 11 `images/utilities/job-*.webp` photos are one street-works scene and show a "JN Civils" branded truck. Confirm they are Lambs' own work (or that JN Civils agrees), and consider more varied photos.
+- [ ] **Legal pages:** registered company name/number, ICO number, registered office, retention periods (Lambs Group has confirmed it is the data controller).
+- [ ] **LinkedIn:** the linked page is the Civils company (`lambs-uk-civils-ltd`); replace with a Lambs Group page.

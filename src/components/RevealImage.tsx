@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { withBase } from "../utils/paths";
+import { imgAttrs } from "../utils/images";
 
 interface RevealImageProps {
   src: string;
@@ -8,6 +8,8 @@ interface RevealImageProps {
   aspect?: string; // tailwind aspect class or custom (e.g. "aspect-[4/5]")
   loading?: "eager" | "lazy";
   priority?: boolean;
+  /** How wide the image is displayed, for responsive loading. Default: half the viewport on desktop. */
+  sizes?: string;
 }
 
 /**
@@ -23,6 +25,7 @@ export function RevealImage({
   aspect = "aspect-[4/3]",
   loading = "lazy",
   priority = false,
+  sizes,
 }: RevealImageProps) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -53,7 +56,7 @@ export function RevealImage({
   return (
     <div ref={ref} className={`reveal-image ${aspect} ${className}`}>
       <img
-        src={withBase(src)}
+        {...imgAttrs(src, sizes)}
         alt={alt}
         loading={priority ? "eager" : loading}
         decoding="async"

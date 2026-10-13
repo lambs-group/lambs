@@ -15,6 +15,7 @@ export const services = [
   { number: "06", title: "Mains laying & connections", description: "From bulk mains to final service connections - one crew, one programme, one point of contact." },
 ];
 
+// LAUNCH BLOCKER: Lambs has not yet confirmed which of these they hold (see docs/superpowers/plans/LAUNCH-CHECKLIST.md).
 const utilitiesAccreditations = ["WIRS", "GIRS", "NERS", "NRSWA"];
 
 export function UtilitiesPage() {
@@ -65,9 +66,6 @@ export function UtilitiesPage() {
                   Certified to lay mains,<br />trained to connect homes.
                 </h2>
               </div>
-              <p className="text-[var(--color-mid-blue)] text-sm max-w-sm uppercase tracking-wider font-medium">
-                Placeholder list - to confirm with client
-              </p>
             </div>
           </FadeIn>
           <div className="flex flex-wrap gap-3">
