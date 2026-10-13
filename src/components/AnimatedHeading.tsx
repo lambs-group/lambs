@@ -1,4 +1,4 @@
-import { useEffect, useRef, type ElementType, type ReactNode } from "react";
+import { Fragment, useEffect, useRef, type ElementType, type ReactNode } from "react";
 
 interface AnimatedHeadingProps {
   children: string;
@@ -68,15 +68,20 @@ export function AnimatedHeading({
       className={`heading-reveal ${className}`}
     >
       {words.map((word, i) => (
-        <span key={i} className="word">
-          <span
-            style={{
-              transitionDelay: `${delay + i * stagger}ms`,
-            }}
-          >
-            {word}
+        // A real space between words keeps the text readable to crawlers, AI
+        // tools and assistive tech that read the HTML without the CSS.
+        <Fragment key={i}>
+          {i > 0 && " "}
+          <span className="word">
+            <span
+              style={{
+                transitionDelay: `${delay + i * stagger}ms`,
+              }}
+            >
+              {word}
+            </span>
           </span>
-        </span>
+        </Fragment>
       ))}
       {trailing}
     </Tag>

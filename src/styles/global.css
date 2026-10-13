@@ -159,12 +159,13 @@
 .heading-reveal {
   display: inline-block;
   perspective: 800px;
+  /* Words are separated by a real space; trim it to the old 0.22em gap. */
+  word-spacing: -0.035em;
 }
 .heading-reveal .word {
   display: inline-block;
   overflow: hidden;
   vertical-align: top;
-  padding-right: 0.22em;
   padding-bottom: 0.22em;
   margin-bottom: -0.22em;
 }

@@ -23,6 +23,12 @@ const {
   noindex = false,
 } = Astro.props;
 
+// Only the production domain should be indexed. Preview hosts (e.g. github.io)
+// get noindex automatically; this flips off when `site` is set to lambsgroup.co.uk.
+const isProduction = /(^|\.)lambsgroup\.co\.uk$/.test(Astro.site?.hostname ?? '');
+const robotsNoindex = noindex || !isProduction;
+const usesDefaultOg = ogImage === '/images/og-default.jpg';
+
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
 const ogImageURL = new URL(ogImage.startsWith('/') ? `${baseUrl}${ogImage}` : ogImage, Astro.site);
@@ -36,7 +42,9 @@ const ogImageURL = new URL(ogImage.startsWith('/') ? `${baseUrl}${ogImage}` : og
     <meta name="theme-color" content="#264A88" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {robotsNoindex
+      ? <meta name="robots" content="noindex, nofollow" />
+      : <meta name="robots" content="index, follow, max-image-preview:large" />}
     <link rel="canonical" href={canonicalURL} />
 
     <!-- Open Graph -->
@@ -45,6 +53,9 @@ const ogImageURL = new URL(ogImage.startsWith('/') ? `${baseUrl}${ogImage}` : og
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImageURL} />
+    {usesDefaultOg && <meta property="og:image:width" content="1200" />}
+    {usesDefaultOg && <meta property="og:image:height" content="630" />}
+    <meta property="og:image:alt" content="Lambs Group - infrastructure services across the UK. Telecoms, utilities and private works." />
     <meta property="og:site_name" content="Lambs Group" />
     <meta property="og:locale" content="en_GB" />
 
@@ -53,6 +64,7 @@ const ogImageURL = new URL(ogImage.startsWith('/') ? `${baseUrl}${ogImage}` : og
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageURL} />
+    <meta name="twitter:image:alt" content="Lambs Group - infrastructure services across the UK. Telecoms, utilities and private works." />
 
     <!-- Favicon -->
     <link rel="icon" href={`${baseUrl}/favicon.ico`} sizes="48x48" />
