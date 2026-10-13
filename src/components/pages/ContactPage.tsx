@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { AnimatedHeading } from "../AnimatedHeading";
 import { FadeIn } from "../FadeIn";
 import { Button } from "../Button";
@@ -10,7 +10,7 @@ import { Turnstile } from "../Turnstile";
 type Mode = "commercial" | "domestic";
 
 const offices = [
-  { name: "Head Office", lines: ["Unit 26 Tatton Court", "Kingsland Grange", "Woolston", "Warrington", "WA1 4RR"], phone: "01925 810 991", phoneHref: "tel:01925810991" },
+  { name: "Head Office", lines: ["Unit 26 Tatton Court", "Kingsland Grange", "Woolston", "Warrington", "WA1 4RR"], phone: "01925 810 991", phoneHref: "tel:01925810991", hours: "Monday - Friday, 9am - 5:30pm" },
 ];
 
 type Status = "idle" | "sending" | "done" | "preview" | "error";
@@ -120,6 +120,10 @@ export function ContactPage() {
                         <Phone className="w-4 h-4 mt-1 flex-shrink-0" strokeWidth={1.8} />
                         <span className="leading-relaxed">{office.phone}</span>
                       </a>
+                      <div className="flex items-start gap-3 mt-3 text-[var(--color-dark-blue)] text-sm">
+                        <Clock className="w-4 h-4 mt-1 flex-shrink-0" strokeWidth={1.8} />
+                        <span className="leading-relaxed">{office.hours}</span>
+                      </div>
                     </FadeIn>
                   );
                 })}

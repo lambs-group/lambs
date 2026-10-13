@@ -29,7 +29,7 @@ const ogImageURL = new URL(ogImage.startsWith('/') ? `${baseUrl}${ogImage}` : og
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -66,7 +66,7 @@ const ogImageURL = new URL(ogImage.startsWith('/') ? `${baseUrl}${ogImage}` : og
       "@type": "LocalBusiness",
       "@id": "https://lambsgroup.co.uk/#business",
       "name": "Lambs Group",
-      "alternateName": ["Lambs UK", "S Lamb Construction"],
+      "alternateName": ["S Lamb Construction"],
       "description": "Family-run UK infrastructure contractor delivering telecoms, utilities and private works with skilled teams across its workforce since 1988.",
       "url": "https://lambsgroup.co.uk",
       "logo": "https://lambsgroup.co.uk/images/logo-lambs-group-colour.svg",
@@ -74,7 +74,13 @@ const ogImageURL = new URL(ogImage.startsWith('/') ? `${baseUrl}${ogImage}` : og
       "telephone": "+441925810991",
       "email": "contact@lambsgroup.co.uk",
       "address": { "@type": "PostalAddress", "streetAddress": "Unit 26 Tatton Court, Kingsland Grange, Woolston", "addressLocality": "Warrington", "postalCode": "WA1 4RR", "addressCountry": "GB" },
-      "areaServed": "United Kingdom"
+      "areaServed": "United Kingdom",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "17:30"
+      }
     })} />
 
     <slot name="head" />

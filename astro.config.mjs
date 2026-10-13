@@ -3,12 +3,18 @@ import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
 import sitemap from '@astrojs/sitemap';
+import { readFileSync } from 'node:fs';
 
 // Old lambsgroup.co.uk (WordPress) URLs -> new pages, so search engines and
 // bookmarks don't hit dead links at launch. Source list taken from the old
 // site's wp-sitemap. Static output emits meta-refresh pages; swap for host-level
 // 301s (e.g. _redirects / staticwebapp.config.json) once hosting is chosen.
 const base = '/lambs'; // production: ''
+
+// Baseline <lastmod> dates for the sitemap (July-September 2026), keyed by page path.
+// Fixed on purpose so they don't change every build. Replace with real edit dates
+// (or git commit dates) once the site is live: Google discounts lastmod that proves unreliable.
+const lastmod = JSON.parse(readFileSync(new URL('./src/data/sitemap-lastmod.json', import.meta.url), 'utf8'));
 const redirects = Object.fromEntries(Object.entries({
   // Company pages
   '/about-us': '/about',
@@ -55,7 +61,16 @@ export default defineConfig({
   // production: site: 'https://lambsgroup.co.uk',
   site: 'https://lambs-group.github.io',
   base,
-  integrations: [react(), sitemap()],
+  integrations: [
+    react(),
+    sitemap({
+      serialize(item) {
+        const path = new URL(item.url).pathname.replace(base, '') || '/';
+        if (lastmod[path]) item.lastmod = new Date(lastmod[path]).toISOString();
+        return item;
+      },
+    }),
+  ],
   output: 'static',
   vite: {
     plugins: [tailwindcss()],
