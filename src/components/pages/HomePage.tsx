@@ -6,7 +6,6 @@ import { Button } from "../Button";
 import { NumberTicker } from "../NumberTicker";
 import { PageShell } from "../sections/PageShell";
 import { CTASection } from "../sections/CTASection";
-import { UKMap } from "../map/UKMap";
 import { withBase } from "../../utils/paths";
 import { imgAttrs } from "../../utils/images";
 
@@ -256,29 +255,6 @@ export function HomePage() {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* LIVE MAP EMBED */}
-      <section className="bg-white py-24 lg:py-32 border-t border-[var(--color-border)]">
-        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-12">
-            <div className="lg:col-span-4">
-              <FadeIn><span className="eyebrow">Live works</span></FadeIn>
-            </div>
-            <div className="lg:col-span-8">
-              <AnimatedHeading as="h2" className="max-w-3xl">Where we're working this week.</AnimatedHeading>
-              <FadeIn delay={200}>
-                <p className="text-[var(--color-charcoal)] text-lg leading-relaxed mt-6 max-w-2xl">
-                  We operate across the North West, Yorkshire and West Midlands, with the flexibility to support projects nationwide through our dedicated travelling crews. Updated weekly.
-                </p>
-              </FadeIn>
-            </div>
-          </div>
-          <UKMap variant="embed" />
-          <div className="mt-10 flex justify-end">
-            <Button href="/map" variant="secondary" size="md" arrow="up-right">Full map</Button>
           </div>
         </div>
       </section>

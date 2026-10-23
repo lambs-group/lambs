@@ -24,7 +24,6 @@ const linkGroups = [
       { label: "Our Work", href: "/work" },
       { label: "How We Deliver", href: "/how-we-deliver" },
       { label: "Careers", href: "/careers" },
-      { label: "Live Map", href: "/map" },
       { label: "Contact", href: "/contact" },
     ],
   },

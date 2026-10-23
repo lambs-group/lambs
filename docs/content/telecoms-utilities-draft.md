@@ -52,7 +52,7 @@ We deliver for national operators and their partners. Our flagship programme is 
 Yes. We reinstate to NRSWA standard and audit the finished work.
 
 ### Internal links to add
-/work/motif, /how-we-deliver, /map, /careers, /contact
+/work/motif, /how-we-deliver, /careers, /contact
 
 ---
 
@@ -107,7 +107,7 @@ The North West, Yorkshire and the West Midlands, from our base in Warrington.
 Use our [contact page](/contact) or call 01925 810 991, Monday to Friday, 9am to 5:30pm, and send us the site details and timescales.
 
 ### Internal links to add
-/telecoms, /map, /how-we-deliver, /contact, /careers
+/telecoms, /how-we-deliver, /contact, /careers
 
 ---
 

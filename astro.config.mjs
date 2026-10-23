@@ -48,6 +48,9 @@ const redirects = Object.fromEntries(Object.entries({
   '/cookie-privacy-policy': '/privacy',
   '/terms-conditions': '/terms',
 
+  // Preview-only: the live works map was removed
+  '/map': '/',
+
   // News / test posts (no equivalent on the new site)
   '/news': '/',
   '/category/latest-news': '/',

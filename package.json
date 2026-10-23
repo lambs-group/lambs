@@ -4,10 +4,9 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "predev": "node scripts/build-live-works.mjs && node scripts/image-sizes.mjs",
+    "predev": "node scripts/image-sizes.mjs",
     "build": "astro build",
-    "prebuild": "node scripts/build-live-works.mjs && node scripts/sitemap-lastmod.mjs && node scripts/image-sizes.mjs",
-    "build:data": "node scripts/build-live-works.mjs",
+    "prebuild": "node scripts/sitemap-lastmod.mjs && node scripts/image-sizes.mjs",
     "preview": "astro preview"
   },
   "dependencies": {

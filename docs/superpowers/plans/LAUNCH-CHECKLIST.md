@@ -35,9 +35,6 @@ Deliver to `public/images/` — filenames per component's `src` prop (search for
 ## 5. Pricing confirmation
 - [ ] Confirm Private Works indicative pricing bands in `src/components/pages/private/PricingBand.tsx`
 
-## 6. Live works data
-- [ ] Populate `src/data/live-works.json` with current active programmes
-
 ## 7. Forms (Resend + Turnstile)
 - [x] Forms worker deployed to the customer Cloudflare account (`workers/forms/`)
 - [x] Turnstile widget created, `TURNSTILE_SECRET_KEY` set on the worker

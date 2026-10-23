@@ -48,7 +48,6 @@ const CRUMB_NAMES: Record<string, string> = {
   contact: "Contact",
   cookies: "Cookie Policy",
   "how-we-deliver": "How We Deliver",
-  map: "Live Works Map",
   privacy: "Privacy Policy",
   "private-works": "Private Works",
   team: "Our Team",

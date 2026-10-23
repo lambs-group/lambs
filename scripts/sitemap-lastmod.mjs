@@ -17,14 +17,13 @@ const P = "src/components/pages/";
 
 // route (as in the sitemap) -> files that determine when the page really changed
 const PAGES = {
-  "/": ["src/pages/index.astro", `${P}HomePage.tsx`, "src/data/live-works.json"],
+  "/": ["src/pages/index.astro", `${P}HomePage.tsx`],
   "/about/": ["src/pages/about.astro", `${P}AboutPage.tsx`],
   "/careers/": ["src/pages/careers.astro", `${P}CareersPage.tsx`, "src/data/vacancies.ts"],
   "/careers/apply/": ["src/pages/careers/apply.astro", `${P}careers/`],
   "/contact/": ["src/pages/contact.astro", `${P}ContactPage.tsx`],
   "/cookies/": ["src/pages/cookies.astro", `${P}legal/CookiesPage.tsx`, `${P}legal/LegalPage.tsx`, `${P}legal/company.ts`],
   "/how-we-deliver/": ["src/pages/how-we-deliver.astro", `${P}HowWeDeliverPage.tsx`],
-  "/map/": ["src/pages/map.astro", `${P}MapPage.tsx`, "src/components/map/", "src/data/live-works.json"],
   "/privacy/": ["src/pages/privacy.astro", `${P}legal/PrivacyPage.tsx`, `${P}legal/LegalPage.tsx`, `${P}legal/company.ts`],
   "/private-works/": ["src/pages/private-works.astro", `${P}PrivateWorksPage.tsx`, `${P}private/`],
   "/team/": ["src/pages/team.astro", `${P}TeamPage.tsx`],

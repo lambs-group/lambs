@@ -111,13 +111,6 @@ export function CaseStudiesPage() {
               </article>
             ))}
           </div>
-
-          <FadeIn delay={400}>
-            <div className="mt-24 pt-12 border-t border-[var(--color-border-strong)] flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-              <p className="text-[var(--color-charcoal)] text-lg max-w-2xl">See where we're working today - across the UK.</p>
-              <Button href="/map" variant="secondary" size="md" arrow="up-right">Live works map</Button>
-            </div>
-          </FadeIn>
         </div>
       </section>
 

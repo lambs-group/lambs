@@ -6,4 +6,3 @@ dist/
 .superpowers/
 workers/forms/node_modules/
 .dev.vars
-src/data/live-works.resolved.json

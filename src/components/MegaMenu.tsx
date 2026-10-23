@@ -64,9 +64,6 @@ export function MegaMenu({ onClose }: MegaMenuProps) {
               </a>
             );
           })}
-          <a href={withBase("/map")} className="block mt-6 pt-6 border-t border-[var(--color-border)] text-[13px] text-[var(--color-dark-blue)] hover:text-[var(--color-cyan)] transition-colors">
-            See where we're working now →
-          </a>
         </div>
       </div>
     </div>
