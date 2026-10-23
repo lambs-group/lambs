@@ -110,6 +110,7 @@ export function buildGraph(i: GraphInput) {
         "Directional drilling and mole ploughing",
         "Water, gas and electricity mains and connections",
         "Utility ducting and jointing",
+        "Civils and groundworks (excavation, ducting, drainage and reinstatement)",
         "Driveways, resin surfacing, block paving and groundworks",
       ],
       openingHoursSpecification: {

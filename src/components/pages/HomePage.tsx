@@ -59,11 +59,11 @@ const clients = [
   { name: "BWP Consultants", logo: "/images/clients/bwp.webp" },
 ];
 
-const stats = [
+const stats: { value?: number; suffix?: string; text?: string; label: string }[] = [
   { value: 30, suffix: "+", label: "People across our workforce" },
   { value: 12, suffix: "+", label: "Specialist delivery teams" },
   { value: 400, suffix: "+*", label: "Jobs per week capacity" },
-  { value: 37, suffix: " yrs", label: "Est. 1988" },
+  { text: "1988", label: "Our roots date back to" },
 ];
 
 export function HomePage() {
@@ -139,7 +139,7 @@ export function HomePage() {
             {stats.map((s) => (
               <div key={s.label}>
                 <div className="text-[48px] lg:text-[64px] leading-none font-semibold text-[var(--color-dark-blue)]">
-                  <NumberTicker value={s.value} suffix={s.suffix} />
+                  {s.text ? s.text : <NumberTicker value={s.value ?? 0} suffix={s.suffix} />}
                 </div>
                 <div className="text-[11px] uppercase tracking-widest text-[var(--color-mid-blue)] mt-3 font-medium">
                   {s.label}
@@ -223,6 +223,39 @@ export function HomePage() {
                 </div>
               </a>
             </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* OUR EXPERIENCE: civils and groundworks run through all three areas */}
+      <section className="bg-[var(--color-light-grey)] py-24 lg:py-32 border-t border-[var(--color-border)]">
+        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div className="lg:col-span-4">
+              <FadeIn><span className="eyebrow">Our experience</span></FadeIn>
+            </div>
+            <div className="lg:col-span-8">
+              <AnimatedHeading as="h2" className="max-w-3xl">
+                Civils and groundworks, built into every job.
+              </AnimatedHeading>
+              <FadeIn delay={240}>
+                <p className="text-[var(--color-charcoal)] text-lg leading-relaxed mt-8 max-w-2xl">
+                  Our roots date back to 1988, and civils and groundworks have been part of how we work for many years. Across all three areas, our teams carry out the groundwork that makes the job possible, from excavation and ducting to reinstatement. One group and one point of contact, from the first dig to the final reinstatement.
+                </p>
+              </FadeIn>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[var(--color-border-strong)] mt-12">
+                {[
+                  { title: "Telecoms", body: "Civils delivered alongside fibre programmes." },
+                  { title: "Utilities", body: "Ducting, jointing and mains laying for water, gas and electricity." },
+                  { title: "Private Works", body: "Groundworks, drainage and dropped kerbs for homeowners." },
+                ].map((c, i) => (
+                  <FadeIn key={c.title} delay={320 + i * 100} className="bg-white p-6">
+                    <div className="text-[11px] uppercase tracking-widest text-[var(--color-mid-blue)] font-medium mb-3">{c.title}</div>
+                    <p className="text-[var(--color-charcoal)] text-[15px] leading-relaxed">{c.body}</p>
+                  </FadeIn>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

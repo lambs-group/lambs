@@ -69,3 +69,14 @@ Deliver to `public/images/` — filenames per component's `src` prop (search for
 - [ ] **Project photos:** the 11 `images/utilities/job-*.webp` photos are one street-works scene and show a "JN Civils" branded truck. Confirm they are Lambs' own work (or that JN Civils agrees), and consider more varied photos.
 - [ ] **Legal pages:** registered company name/number, ICO number, registered office, retention periods (Lambs Group has confirmed it is the data controller).
 - [ ] **LinkedIn:** the linked page is the Civils company (`lambs-uk-civils-ltd`); replace with a Lambs Group page.
+
+## Civils and groundworks messaging (client direction 2026-10-23)
+Client (Amanda): civils is a current, substantial capability across Telecoms, Utilities and Groundworks; present the group's combined experience, no separate Civils page, no old company names. Done on the site: Home "Our experience" section, About paragraph, years-counting removed ("Our roots date back to 1988"), search wording. Still waiting on the client's team to confirm:
+- [ ] Civils work carried out in Telecoms today, and the reinstatement standard (then add the Telecoms civils section)
+- [ ] Civils and groundworks work carried out in Utilities and Private Works today (then add those sections)
+- [ ] Qualifications and accreditations held (NRSWA etc.)
+- [ ] Customer names and whether logos can be shown; previous-work entries (e.g. housebuilder, local authority)
+- [ ] Whether the JN Civils photos/logo may be used
+- [ ] Whether the About page keeps the original name "S Lamb Construction"
+- [ ] About page 1988 story says "employ the people who do the work... subcontracting undermines quality": review against the self-employed engineers point
+- [ ] LinkedIn: rename the page to Lambs Group (and its web address), then update the link in `src/utils/schema.ts`

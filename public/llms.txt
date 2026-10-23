@@ -3,6 +3,8 @@
 ## About
 Lambs Group is a family-run UK infrastructure contractor, established 1988, based in Warrington. We deliver telecoms, utilities and domestic private works (driveways, groundworks) across the UK, using skilled teams across its workforce (30+ people in 12+ specialist delivery teams), covering the North West, Yorkshire and West Midlands.
 
+Civils and groundworks run through all three areas of the business, and telecoms includes significant civils work alongside telecoms services. Our roots date back to 1988.
+
 ## Sectors
 - Telecoms: FTTH/FTTP rollout, splicing, directional drilling, cabinet installs
 - Utilities: water, gas, electricity supply works — ducting, jointing, mains laying

@@ -11,7 +11,7 @@ const fieldImage = "/images/utilities/job-03.webp";
 const values = [
   { number: "01", title: "A skilled workforce", description: "30+ people across our workforce, including operatives and engineers. Trained, supervised, accountable.", chip: "30+ people" },
   { number: "02", title: "Compliance-first delivery", description: "NRSWA-trained, NEBOSH-accredited supervision. 55 van audits per month. Audited, logged, actioned.", chip: "55 audits / month" },
-  { number: "03", title: "Family-run, thirty-seven years", description: "Still run by Simon & Amanda Lamb. Still answering the phone. Still remembering every operative's name.", chip: "Est. 1988" },
+  { number: "03", title: "Family-run since 1988", description: "Still run by Simon & Amanda Lamb. Still answering the phone. Still remembering every operative's name.", chip: "Est. 1988" },
   { number: "04", title: "Long client relationships", description: "Our clients come back year after year. Trust built one programme at a time.", chip: "Repeat clients" },
 ];
 
@@ -27,7 +27,7 @@ export function AboutPage() {
     <PageShell>
       <PageHero
         eyebrow="About Lambs Group"
-        heading="Thirty-seven years delivering infrastructure."
+        heading="Our roots date back to 1988."
         lede="Lambs Group is a family-run infrastructure contractor based in Warrington. Telecoms, utilities and private works, delivered by teams across our workforce since 1988."
         image={storyImage}
         imageAlt="Lambs Group Warrington headquarters"
@@ -48,7 +48,10 @@ export function AboutPage() {
               <FadeIn delay={260}>
                 <p>Today - now trading as Lambs Group - the company is still based in Warrington, still family-run by Simon and his wife Amanda Lamb, and still run by people who know the work. Today there are 30+ people across our workforce, in 12+ specialist delivery teams, delivering telecoms, utilities and private works across the North West, Yorkshire and West Midlands.</p>
               </FadeIn>
-              <FadeIn delay={340}>
+              <FadeIn delay={300}>
+                <p>Civils and groundworks have been a big part of our work over the years, and they remain so today. Our teams are built on the experience and customer relationships we have developed since our roots in 1988, and our history and projects speak for themselves.</p>
+              </FadeIn>
+              <FadeIn delay={380}>
                 <p>Bigger projects. Same principles.</p>
               </FadeIn>
             </div>
@@ -118,7 +121,7 @@ export function AboutPage() {
         </div>
       </section>
 
-      <CTASection eyebrow="Work with us" heading="Thirty-seven years in. Still answering the phone." />
+      <CTASection eyebrow="Work with us" heading="Since 1988. Still answering the phone." />
     </PageShell>
   );
 }
