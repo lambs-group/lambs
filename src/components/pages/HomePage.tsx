@@ -296,7 +296,7 @@ export function HomePage() {
               <FadeIn delay={200}>
                 <div className="space-y-5 text-[var(--color-charcoal)] text-lg leading-relaxed max-w-xl">
                   <p>Founded as S Lamb Construction in 1988 and now trading as Lambs Group, we deliver infrastructure services across the UK - operatives across our workforce, NRSWA-trained, compliance-first.</p>
-                  <p>30+ people across our workforce in 12+ specialist delivery teams. 55 van audits a month. NEBOSH-accredited supervision on every site. Trusted by Fujitsu, Virgin Media, Barratt Developments and local authorities across the UK.</p>
+                  <p>30+ people across our workforce in 12+ specialist delivery teams. 55 van audits a month. ISO 9001, 14001 and 45001 certified. Trusted by Fujitsu, Virgin Media, Barratt Developments and local authorities across the UK.</p>
                 </div>
               </FadeIn>
               <FadeIn delay={320}>

@@ -5,18 +5,16 @@ import { UtilityNetwork } from "../motion/UtilityNetwork";
 import { PageShell } from "../sections/PageShell";
 import { ServiceList } from "../sections/ServiceList";
 import { CTASection } from "../sections/CTASection";
+import { Credentials } from "../sections/Credentials";
 
 export const services = [
   { number: "01", title: "Water supply works", description: "New mains laying, service connections, meter installs and network extensions on housing and commercial sites." },
-  { number: "02", title: "Gas supply", description: "Gas mains, service connections, riser works and safe site isolation delivered by accredited crews." },
+  { number: "02", title: "Gas supply", description: "Gas mains, service connections, riser works and safe site isolation delivered by trained crews." },
   { number: "03", title: "Electricity supply", description: "LV and HV ducting routes, service cabinets and connection works coordinated with DNO programmes." },
   { number: "04", title: "Ducting", description: "Multi-utility ducting installation, marker tape, warning mesh and chamber setting-out." },
   { number: "05", title: "Jointing", description: "Cable and pipe jointing delivered to operator standards, including LV jointing and pressure testing." },
   { number: "06", title: "Mains laying & connections", description: "From bulk mains to final service connections - one crew, one programme, one point of contact." },
 ];
-
-// LAUNCH BLOCKER: Lambs has not yet confirmed which of these they hold (see docs/superpowers/plans/LAUNCH-CHECKLIST.md).
-const utilitiesAccreditations = ["WIRS", "GIRS", "NERS", "NRSWA"];
 
 export function UtilitiesPage() {
   return (
@@ -34,7 +32,7 @@ export function UtilitiesPage() {
               </AnimatedHeading>
               <FadeIn delay={260}>
                 <p className="text-[var(--color-charcoal)] text-lg md:text-xl leading-relaxed max-w-3xl">
-                  Utility supply works for housing, industrial and local authority schemes across the UK. From new mains to the final service connection - one accredited crew, one programme, one point of contact.
+                  Utility supply works for housing, industrial and local authority schemes across the UK. From new mains to the final service connection - one trained crew, one programme, one point of contact.
                 </p>
               </FadeIn>
             </div>
@@ -56,29 +54,7 @@ export function UtilitiesPage() {
 
       <ServiceList eyebrow="What we deliver" heading="Three utilities. One accountable crew." items={services} />
 
-      <section className="bg-[var(--color-light-grey)] py-24 lg:py-36">
-        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
-          <FadeIn>
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
-              <div>
-                <span className="eyebrow">Utilities accreditations</span>
-                <h2 className="text-[36px] lg:text-[56px] font-semibold mt-6 max-w-2xl leading-[1.05] text-[var(--color-dark-blue)]">
-                  Certified to lay mains,<br />trained to connect homes.
-                </h2>
-              </div>
-            </div>
-          </FadeIn>
-          <div className="flex flex-wrap gap-3">
-            {utilitiesAccreditations.map((a, i) => (
-              <FadeIn key={a} delay={i * 80}>
-                <span className="text-[11px] uppercase tracking-[0.18em] text-[var(--color-dark-blue)] border border-[var(--color-border-strong)] px-4 py-3 bg-white font-medium">
-                  {a}
-                </span>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Credentials heading="Certified, qualified and trained." tone="grey" />
 
       <CTASection eyebrow="Utilities enquiries" heading="Need mains laid? Let's talk." />
     </PageShell>

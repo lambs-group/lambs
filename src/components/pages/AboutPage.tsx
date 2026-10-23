@@ -10,7 +10,7 @@ const fieldImage = "/images/utilities/job-03.webp";
 
 const values = [
   { number: "01", title: "A skilled workforce", description: "30+ people across our workforce, including operatives and engineers. Trained, supervised, accountable.", chip: "30+ people" },
-  { number: "02", title: "Compliance-first delivery", description: "NRSWA-trained, NEBOSH-accredited supervision. 55 van audits per month. Audited, logged, actioned.", chip: "55 audits / month" },
+  { number: "02", title: "Compliance-first delivery", description: "NRSWA-trained teams. ISO 9001, 14001 and 45001 certified. 55 van audits per month. Audited, logged, actioned.", chip: "55 audits / month" },
   { number: "03", title: "Family-run since 1988", description: "Still run by Simon & Amanda Lamb. Still answering the phone. Still remembering every operative's name.", chip: "Est. 1988" },
   { number: "04", title: "Long client relationships", description: "Our clients come back year after year. Trust built one programme at a time.", chip: "Repeat clients" },
 ];

@@ -30,7 +30,7 @@ Every programme follows the same stages, so you always know what happens next. O
 We have 30+ people across our workforce, organised into 12+ specialist delivery teams, and cover the North West, Yorkshire and the West Midlands. At full allocation and on a five or six-day week, our teams have the capacity to complete 400+ jobs per week.* That mix of specialist teams is what lets us take on large, repeating programmes and still deliver single-address and small-scale work. *Based on full allocation and a five/six-day working week.
 
 ### H2: Safe, compliant and audited
-Telecoms work happens on live roads and in people's streets, so compliance comes first. Our teams work to NRSWA and streetworks requirements, and our supervisors hold NEBOSH qualifications **[CONFIRM: exact qualifications and holders]**. We audit our vans and work every month, with 55 van audits a month, and we log and act on what we find. Accreditations held: NRSWA, CSCS, NEBOSH, ECS **[CONFIRM: current certificates for each]**.
+Telecoms work happens on live roads and in people's streets, so compliance comes first. Our teams hold NRSWA street works qualifications and Openreach-specific training, alongside standard site training such as manual handling, banksman, first aid and asbestos awareness **[CONFIRM: exact qualifications and who holds them]**. We are certified to ISO 9001:2015 (quality), ISO 14001:2015 (environmental) and ISO 45001:2018 (occupational health and safety), and are working towards CHAS. We carry out 55 van audits a month and log and act on what we find.
 
 ### H2: Telecoms FAQs
 **What is the difference between FTTH and FTTP?**
@@ -82,7 +82,7 @@ Utility works go wrong when trades arrive in the wrong order. We plan the sequen
 Before any excavation starts we agree the programme, access, traffic management and isolation arrangements with you. Our crews keep sites safe and tidy, follow the agreed sequence, and record and photograph the work as it goes. When a job is complete we reinstate the ground, complete the audit, and hand over the records, so you have what you need for sign-off and for the network operator.
 
 ### H2: Accreditations and compliance
-Utility work is regulated, and our teams are trained and assessed for it. We hold or work to WIRS, GIRS, NERS and NRSWA requirements **[CONFIRM: which registrations Lambs Group holds, with certificate numbers]**. NERS, WIRS and GIRS are industry registration schemes for contractors working on electricity, water and gas networks respectively. Our supervisors are NEBOSH-trained, and we audit work and vehicles every month.
+Utility work is regulated, and our teams are trained for it. We are certified to ISO 9001:2015 (quality), ISO 14001:2015 (environmental) and ISO 45001:2018 (occupational health and safety), our teams hold NRSWA street works qualifications, and we are working towards CHAS **[CONFIRM: any utility-specific registrations the group holds, for example WIRS, GIRS or NERS. None are listed in the information received, so none are claimed.]** We audit our vans and work every month.
 
 ### H2: Coverage
 We work across the North West, Yorkshire and the West Midlands, based in Warrington. Our teams are organised into 12+ specialist delivery teams, so we can resource multi-site developments as well as single-site connections.
@@ -94,8 +94,8 @@ It means installing ducts for more than one service, such as electricity, gas, w
 **Do you carry out service connections as well as mains laying?**
 Yes. We handle mains laying through to the final service connection, including meter installs and riser works where required.
 
-**What do NERS, WIRS and GIRS mean?**
-They are industry registration schemes for contractors who work on electricity (NERS), water (WIRS) and gas (GIRS) networks. They confirm a contractor's competence to carry out that kind of work. **[CONFIRM: that Lambs Group holds each]**
+**What certifications do you hold?**
+We are certified to ISO 9001:2015 (quality), ISO 14001:2015 (environmental) and ISO 45001:2018 (occupational health and safety), our teams hold NRSWA street works qualifications, and we are working towards CHAS.
 
 **Can you work on housing developments and local authority sites?**
 Yes. We work on housing, industrial and local authority schemes.
@@ -112,8 +112,10 @@ Use our [contact page](/contact) or call 01925 810 991, Monday to Friday, 9am to
 ---
 
 ## Facts to confirm before publishing (both pages)
-1. Accreditations actually held (NRSWA, Streetworks, CSCS, NEBOSH, ECS; WIRS, GIRS, NERS) and whether certificate numbers can be shown. The site currently labels these a placeholder list.
-2. That the 400+ jobs/week capacity figure and the 55 van audits a month still stand, and the "*" footnote wording.
-3. Whether Lambs Group may name customers/operators on these pages beyond Virgin Media and Fujitsu.
-4. Whether the utilities crews work for network operators, developers, or both.
-5. Whether supervisors hold NEBOSH (and which level).
+Confirmed by Lambs on 2026-10-23: ISO 9001:2015, ISO 14001:2015, ISO 45001:2018; working towards CHAS; team qualifications NRSWA (street works), Openreach-specific training, manual handling, banksman, abrasive wheels, first aid, asbestos awareness.
+Still to confirm:
+1. Whether the group also holds CSCS, NEBOSH, ECS, WIRS, GIRS or NERS (previously on the site, not in the list received) and what "Smart Awards" refers to.
+2. The ISO certification body and certificate numbers, if they can be shown.
+3. That the 400+ jobs/week capacity figure and the 55 van audits a month still stand.
+4. Which customers may be named on these pages, beyond Virgin Media and Fujitsu.
+5. Whether the utilities crews work for network operators, developers, or both.

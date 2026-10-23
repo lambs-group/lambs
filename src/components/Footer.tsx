@@ -43,7 +43,7 @@ const isoBadges = [
   { label: "ISO 45001", src: "/images/accreditations/iso-45001.webp" },
 ];
 
-const textBadges = ["NRSWA"];
+const textBadges: string[] = []; // NRSWA is a team qualification, not a company accreditation
 
 export function Footer() {
   return (

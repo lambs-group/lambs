@@ -8,6 +8,7 @@ import { FibreDraw } from "../motion/FibreDraw";
 import { PageShell } from "../sections/PageShell";
 import { ServiceList } from "../sections/ServiceList";
 import { CTASection } from "../sections/CTASection";
+import { Credentials } from "../sections/Credentials";
 
 const caseImage = "/images/utilities/job-06.webp";
 
@@ -19,9 +20,6 @@ export const services = [
   { number: "05", title: "Surveys & design", description: "Pre-build surveys, route planning and on-street validation to keep builds on programme." },
   { number: "06", title: "Cabinet installs", description: "PCP and FTTC cabinet foundations, installations, power connections and commissioning." },
 ];
-
-// LAUNCH BLOCKER: Lambs has not yet confirmed which of these they hold (see docs/superpowers/plans/LAUNCH-CHECKLIST.md).
-const telecomsAccreditations = ["NRSWA", "Streetworks", "CSCS", "NEBOSH", "ECS"];
 
 export function TelecomsPage() {
   return (
@@ -90,29 +88,7 @@ export function TelecomsPage() {
         </div>
       </section>
 
-      <section className="bg-white py-20 border-y border-[var(--color-border)]">
-        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
-          <FadeIn>
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
-              <div>
-                <span className="eyebrow">Telecoms accreditations</span>
-                <h3 className="text-[28px] lg:text-[36px] font-semibold mt-4 max-w-xl text-[var(--color-dark-blue)]">
-                  Qualified crews, certified to operator standard.
-                </h3>
-              </div>
-            </div>
-          </FadeIn>
-          <div className="flex flex-wrap gap-3">
-            {telecomsAccreditations.map((a, i) => (
-              <FadeIn key={a} delay={i * 80}>
-                <span className="text-[11px] uppercase tracking-[0.18em] text-[var(--color-dark-blue)] border border-[var(--color-border-strong)] px-4 py-3 font-medium">
-                  {a}
-                </span>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Credentials heading="Certified, qualified and trained." tone="white" />
 
       <CTASection eyebrow="Planning a fibre programme?" heading="Let's walk the route." />
     </PageShell>

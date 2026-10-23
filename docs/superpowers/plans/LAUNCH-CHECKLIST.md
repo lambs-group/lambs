@@ -62,7 +62,7 @@ Deliver to `public/images/` — filenames per component's `src` prop (search for
 - [ ] Cross-browser check (Chrome, Safari, Firefox, mobile Safari)
 
 ## Content that must be confirmed or replaced before launch
-- [ ] **Accreditations:** Lambs to confirm which they hold (NRSWA, Streetworks, CSCS, NEBOSH, ECS, WIRS, GIRS, NERS, ISO 9001/14001/45001). Affects Telecoms and Utilities pages, the footer badges, `public/llms.txt` and the new page copy (see `docs/content/telecoms-utilities-draft.md`).
+- [x] **Accreditations (received 2026-10-23):** ISO 9001:2015, ISO 14001:2015, ISO 45001:2018; working towards CHAS; team qualifications NRSWA, Openreach-specific training, manual handling, banksman, abrasive wheels, first aid, asbestos awareness. Site now uses only these (`src/data/credentials.ts`). **Still open:** do they also hold CSCS, NEBOSH, ECS, WIRS, GIRS, NERS (removed from the site); what is "Smart Awards"; ISO certification body and certificate numbers; confirm NRSWA wording.
 - [ ] **Private Works images:** replace the placeholder portfolio, finishes gallery and before/after (`PortfolioGallery.tsx`, `FinishesGallery.tsx`, `images/private/`) with the chosen real photos; then convert the before/after PNGs to the existing .webp files.
 - [ ] **Motif crew section:** removed from the page. Re-add `MotifCrew` only with real names, roles and photos.
 - [ ] **How We Deliver stages 1-3 (Brief, Survey, Design):** currently a brand panel; add real photos if available.

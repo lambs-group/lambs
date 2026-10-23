@@ -4,8 +4,7 @@ import { NumberTicker } from "../../NumberTicker";
 
 const qc = [
   { value: 55, label: "Van audits every month" },
-  { value: 100, suffix: "%", label: "NEBOSH supervision on every site" },
-  { value: 100, suffix: "%", label: "NRSWA-trained operatives" },
+  { value: 3, label: "ISO certifications: 9001, 14001 and 45001" },
 ];
 
 export function MotifQC() {
@@ -26,7 +25,7 @@ export function MotifQC() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[var(--color-border-strong)]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[var(--color-border-strong)]">
           {qc.map((q, i) => (
             <FadeIn key={q.label} delay={i * 120} className="bg-white p-10 lg:p-14">
               <div className="text-[var(--color-dark-blue)] text-[56px] lg:text-[72px] leading-none font-semibold">

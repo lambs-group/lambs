@@ -12,7 +12,7 @@ import { VACANCIES } from "../../data/vacancies";
 
 const reasons = [
   { number: "01", title: "Across our workforce", body: "Real training, career progression and long tenures." },
-  { number: "02", title: "Proper training", body: "NRSWA, CSCS, NEBOSH - we invest in the tickets and the time it takes to earn them." },
+  { number: "02", title: "Proper training", body: "NRSWA, Openreach-specific training, first aid and more - we invest in the training and the time it takes to earn it." },
   { number: "03", title: "Real progression", body: "Many of our managers started on a shovel. We promote from within." },
   { number: "04", title: "Family values", body: "Family-run since 1988. We look after our people because we know their names." },
 ];
