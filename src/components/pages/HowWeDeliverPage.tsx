@@ -5,7 +5,6 @@ import { ScrollProgress } from "../ScrollProgress";
 import { PageShell } from "../sections/PageShell";
 import { PageHero } from "../sections/PageHero";
 import { CTASection } from "../sections/CTASection";
-import { imgAttrs } from "../../utils/images";
 
 const stages = [
   { icon: PhoneCall, number: "01", title: "Brief", promise: "You call. We listen.", body: "Send the brief. Scope, timing, sector, constraints. We read it, ring you back within one working day, and tell you honestly whether we're the right crew for it.", chip: "1 working day" },
@@ -35,25 +34,10 @@ export function HowWeDeliverPage() {
         return (
           <section
             key={stage.number}
-            className={`py-24 lg:py-36 ${darkBand ? "bg-[var(--color-dark-blue)] text-white" : "bg-white"}`}
+            className={`py-20 lg:py-28 ${darkBand ? "bg-[var(--color-dark-blue)] text-white" : "bg-white"}`}
           >
             <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
-              <div className={`grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center ${i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""}`}>
-                <div className="lg:col-span-7">
-                  {stage.image ? (
-                    <img {...imgAttrs(stage.image, "(min-width: 1024px) 58vw, 100vw")} alt={stage.title} className="w-full aspect-[4/3] object-cover" />
-                  ) : (
-                    // No project photo for this stage yet: brand panel instead of stock imagery.
-                    <div
-                      className={`w-full aspect-[4/3] flex items-center justify-center ${
-                        darkBand ? "bg-white/5 text-[var(--color-cyan)]" : "bg-[var(--color-light-grey)] text-[var(--color-dark-blue)]"
-                      }`}
-                      aria-hidden="true"
-                    >
-                      <Icon className="w-24 h-24 lg:w-32 lg:h-32 opacity-80" strokeWidth={1.1} />
-                    </div>
-                  )}
-                </div>
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
                 <div className="lg:col-span-5">
                   <FadeIn>
                     <div className={`text-xs uppercase tracking-widest font-semibold mb-5 text-[var(--color-cyan)]`}>
@@ -63,14 +47,16 @@ export function HowWeDeliverPage() {
                       <Icon className="w-7 h-7" strokeWidth={1.8} />
                     </div>
                   </FadeIn>
-                  <AnimatedHeading as="h2" className={`mb-6 max-w-md ${darkBand ? "text-white" : ""}`}>
+                  <AnimatedHeading as="h2" className={`max-w-md ${darkBand ? "text-white" : ""}`}>
                     {stage.title}
                   </AnimatedHeading>
+                </div>
+                <div className="lg:col-span-7 lg:pt-10">
                   <FadeIn delay={180}>
                     <p className={`text-[22px] lg:text-[28px] font-semibold leading-tight mb-6 ${darkBand ? "text-[var(--color-cyan)]" : "text-[var(--color-dark-blue)]"}`}>
                       {stage.promise}
                     </p>
-                    <p className={`text-[15px] leading-relaxed mb-8 max-w-md ${darkBand ? "text-white/80" : "text-[var(--color-charcoal)]"}`}>
+                    <p className={`text-[15px] leading-relaxed mb-8 max-w-xl ${darkBand ? "text-white/80" : "text-[var(--color-charcoal)]"}`}>
                       {stage.body}
                     </p>
                     <span className={`inline-block text-[11px] uppercase tracking-widest px-3 py-2 font-medium ${darkBand ? "border border-white/30 text-white/80" : "border border-[var(--color-border-strong)] text-[var(--color-dark-blue)]"}`}>
