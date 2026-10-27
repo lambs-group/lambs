@@ -9,8 +9,8 @@ import { CTASection } from "../sections/CTASection";
 import { withBase } from "../../utils/paths";
 import { imgAttrs } from "../../utils/images";
 
-const heroImage = "/images/hero/home-field.webp";
-const aboutImage = "/images/hero/careers-crew.webp";
+const heroImage = "/images/field/home-hero-mini-excavator-residential.webp";
+const aboutImage = "/images/field/team-site-briefing.webp";
 
 const commercialSectors = [
   {
@@ -73,7 +73,7 @@ export function HomePage() {
         <div className="absolute inset-0 grid-bg opacity-60" aria-hidden="true" />
         <div className="absolute right-0 top-0 bottom-0 w-full lg:w-1/2 pointer-events-none">
           <div className="reveal-image is-visible h-full w-full">
-            <img {...imgAttrs(heroImage)} alt="" fetchPriority="high" className="h-full w-full object-cover opacity-40 lg:opacity-80" />
+            <img {...imgAttrs(heroImage)} alt="Lambs Group operative driving a mini excavator inside a coned-off excavation on a residential street" fetchPriority="high" className="h-full w-full object-cover opacity-40 lg:opacity-80" />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/70 to-transparent lg:from-white lg:via-white/40" aria-hidden="true" />
         </div>
@@ -264,7 +264,7 @@ export function HomePage() {
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
             <div className="lg:col-span-6">
-              <RevealImage src={aboutImage} alt="Lambs Group operatives on site" aspect="aspect-[4/5]" />
+              <RevealImage src={aboutImage} alt="Lambs Group operatives reviewing plans together on a residential street" aspect="aspect-[4/5]" />
             </div>
             <div className="lg:col-span-6">
               <FadeIn><span className="eyebrow mb-8">Who we are</span></FadeIn>

@@ -5,8 +5,8 @@ import { PageShell } from "../sections/PageShell";
 import { PageHero } from "../sections/PageHero";
 import { CTASection } from "../sections/CTASection";
 
-const storyImage = "/images/hero/careers-crew.webp";
-const fieldImage = "/images/utilities/job-03.webp";
+const storyImage = "/images/field/team-site-briefing.webp";
+const fieldImage = "/images/field/street-works-saw-cutting.webp";
 
 const values = [
   { number: "01", title: "A skilled workforce", description: "30+ people across our workforce, including operatives and engineers. Trained, supervised, accountable.", chip: "30+ people" },
@@ -30,7 +30,7 @@ export function AboutPage() {
         heading="Our roots date back to 1988."
         lede="Lambs Group is a family-run infrastructure contractor based in Warrington. Telecoms, utilities and private works, delivered by teams across our workforce since 1988."
         image={storyImage}
-        imageAlt="Lambs Group Warrington headquarters"
+        imageAlt="Lambs Group operatives reviewing plans together on a residential street"
         sectionIndex="- / About"
       />
 
@@ -97,7 +97,7 @@ export function AboutPage() {
               <FadeIn><span className="eyebrow">Milestones</span></FadeIn>
               <AnimatedHeading as="h2" className="mt-6 mb-10 max-w-md">Three decades, one direction.</AnimatedHeading>
               <FadeIn delay={200}>
-                <RevealImage src={fieldImage} alt="Lambs crew at work" aspect="aspect-[4/5]" />
+                <RevealImage src={fieldImage} alt="Two Lambs Group operatives in hi-vis and ear defenders saw-cutting tarmac behind green safety barriers" aspect="aspect-[4/5]" />
               </FadeIn>
             </div>
             <div className="lg:col-span-7">

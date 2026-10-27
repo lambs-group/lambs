@@ -20,9 +20,10 @@ const reasons = [
 const vacancies = VACANCIES;
 
 const lifeImages = [
-  "/images/hero/careers-crew.webp",
-  "/images/utilities/job-05.webp",
-  "/images/utilities/job-08.webp",
+  { src: "/images/field/careers-mini-excavator-operator.webp", alt: "Lambs Group operative driving a mini excavator on a residential street" },
+  { src: "/images/field/careers-plan-review-on-site.webp", alt: "Two Lambs Group operatives checking plans on site" },
+  { src: "/images/field/careers-saw-cutting-pair.webp", alt: "Lambs Group operatives wearing ear defenders and masks, saw-cutting tarmac" },
+  { src: "/images/field/careers-cable-locator-excavation.webp", alt: "Lambs Group operative using a cable locator beside a hand-dug excavation" },
 ];
 
 export function CareersPage() {
@@ -33,8 +34,8 @@ export function CareersPage() {
         eyebrow="Careers at Lambs Group"
         heading="Work with people who stick around."
         lede="Skilled people across our workforce since 1988. If you want proper jobs, real trades, and to actually know who your boss is, we'd like to hear from you."
-        image="/images/hero/careers-crew.webp"
-        imageAlt="Lambs Group crew on site"
+        image="/images/field/careers-hero-cable-locator-chamber.webp"
+        imageAlt="Lambs Group operative using a gas detector and cable locator at an open chamber"
         sectionIndex="- / Careers"
       />
 
@@ -118,10 +119,10 @@ export function CareersPage() {
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
           <FadeIn><span className="eyebrow mb-8 block">Life on site</span></FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {lifeImages.map((img, i) => (
-              <FadeIn key={img} delay={i * 120}>
-                <RevealImage src={img} alt="Life on site" aspect="aspect-[3/2]" />
+              <FadeIn key={img.src} delay={i * 120}>
+                <RevealImage src={img.src} alt={img.alt} aspect="aspect-[3/2]" />
               </FadeIn>
             ))}
           </div>

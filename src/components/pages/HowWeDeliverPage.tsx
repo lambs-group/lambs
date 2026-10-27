@@ -11,10 +11,10 @@ const stages = [
   { icon: PhoneCall, number: "01", title: "Brief", promise: "You call. We listen.", body: "Send the brief. Scope, timing, sector, constraints. We read it, ring you back within one working day, and tell you honestly whether we're the right crew for it.", chip: "1 working day" },
   { icon: MapPinned, number: "02", title: "Survey", promise: "We walk the route.", body: "On-site survey with our own crew. Marker paint, measurements, photos, sketch. We find what the drawings don't show - and give you a report before we quote.", chip: "Specialist surveyors" },
   { icon: PencilRuler, number: "03", title: "Design", promise: "We draw it first.", body: "Route design, material schedule, programme. Coordinated with client drawings and operator specs. Reviewed internally before you see it.", chip: "Operator-standard drawings" },
-  { icon: Truck, number: "04", title: "Mobilise", promise: "We move the crew.", body: "Permit pulls, PPE drop, vehicle pre-checks, crew brief. Everyone on site knows the plan before the first dig.", chip: "Morning audit call", image: "/images/utilities/job-04.webp" },
-  { icon: Construction, number: "05", title: "Deliver", promise: "We dig, duct, joint, splice, lay, finish.", body: "Delivery by specialist crews across our workforce. NRSWA-compliant. ISO 45001 certified.", chip: "Trained crews", image: "/images/utilities/job-09.webp" },
-  { icon: ShieldCheck, number: "06", title: "Reinstate", promise: "We leave it right.", body: "Permanent reinstatement to NRSWA standard. Compacted, rolled, signed, photographed. Every defect addressed before we leave.", chip: "NRSWA-compliant", image: "/images/utilities/job-07.webp" },
-  { icon: FileCheck, number: "07", title: "Handover", promise: "We sign it over.", body: "As-built drawings, test records, photos, RAMS logs, sign-off. Handover pack sent. Six-month defect window covered.", chip: "Full handover pack", image: "/images/utilities/job-10.webp" },
+  { icon: Truck, number: "04", title: "Mobilise", promise: "We move the crew.", body: "Permit pulls, PPE drop, vehicle pre-checks, crew brief. Everyone on site knows the plan before the first dig.", chip: "Morning audit call" },
+  { icon: Construction, number: "05", title: "Deliver", promise: "We dig, duct, joint, splice, lay, finish.", body: "Delivery by specialist crews across our workforce. NRSWA-compliant. ISO 45001 certified.", chip: "Trained crews" },
+  { icon: ShieldCheck, number: "06", title: "Reinstate", promise: "We leave it right.", body: "Permanent reinstatement to NRSWA standard. Compacted, rolled, signed, photographed. Every defect addressed before we leave.", chip: "NRSWA-compliant" },
+  { icon: FileCheck, number: "07", title: "Handover", promise: "We sign it over.", body: "As-built drawings, test records, photos, RAMS logs, sign-off. Handover pack sent. Six-month defect window covered.", chip: "Full handover pack" },
 ];
 
 export function HowWeDeliverPage() {

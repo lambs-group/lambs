@@ -95,13 +95,53 @@
     "width": 482,
     "height": 142
   },
-  "/images/hero/careers-crew.webp": {
-    "width": 1690,
-    "height": 442
+  "/images/field/careers-cable-locator-excavation.webp": {
+    "width": 1280,
+    "height": 853,
+    "small": {
+      "src": "/images/field/careers-cable-locator-excavation-640.webp",
+      "width": 640
+    }
   },
-  "/images/hero/home-field.webp": {
-    "width": 1060,
-    "height": 400
+  "/images/field/careers-hero-cable-locator-chamber.webp": {
+    "width": 1600,
+    "height": 1067
+  },
+  "/images/field/careers-mini-excavator-operator.webp": {
+    "width": 1280,
+    "height": 853,
+    "small": {
+      "src": "/images/field/careers-mini-excavator-operator-640.webp",
+      "width": 640
+    }
+  },
+  "/images/field/careers-plan-review-on-site.webp": {
+    "width": 1280,
+    "height": 853,
+    "small": {
+      "src": "/images/field/careers-plan-review-on-site-640.webp",
+      "width": 640
+    }
+  },
+  "/images/field/careers-saw-cutting-pair.webp": {
+    "width": 1280,
+    "height": 853,
+    "small": {
+      "src": "/images/field/careers-saw-cutting-pair-640.webp",
+      "width": 640
+    }
+  },
+  "/images/field/home-hero-mini-excavator-residential.webp": {
+    "width": 1920,
+    "height": 1280
+  },
+  "/images/field/street-works-saw-cutting.webp": {
+    "width": 1600,
+    "height": 1067
+  },
+  "/images/field/team-site-briefing.webp": {
+    "width": 1600,
+    "height": 1067
   },
   "/images/lambs-logo-v2.webp": {
     "width": 1400,
@@ -163,67 +203,11 @@
       "width": 640
     }
   },
-  "/images/utilities/job-03.webp": {
-    "width": 1280,
-    "height": 960,
-    "small": {
-      "src": "/images/utilities/job-03-640.webp",
-      "width": 640
-    }
-  },
-  "/images/utilities/job-04.webp": {
-    "width": 1280,
-    "height": 960,
-    "small": {
-      "src": "/images/utilities/job-04-640.webp",
-      "width": 640
-    }
-  },
-  "/images/utilities/job-05.webp": {
-    "width": 1280,
-    "height": 960,
-    "small": {
-      "src": "/images/utilities/job-05-640.webp",
-      "width": 640
-    }
-  },
   "/images/utilities/job-06.webp": {
     "width": 1280,
     "height": 960,
     "small": {
       "src": "/images/utilities/job-06-640.webp",
-      "width": 640
-    }
-  },
-  "/images/utilities/job-07.webp": {
-    "width": 1280,
-    "height": 960,
-    "small": {
-      "src": "/images/utilities/job-07-640.webp",
-      "width": 640
-    }
-  },
-  "/images/utilities/job-08.webp": {
-    "width": 1280,
-    "height": 960,
-    "small": {
-      "src": "/images/utilities/job-08-640.webp",
-      "width": 640
-    }
-  },
-  "/images/utilities/job-09.webp": {
-    "width": 1280,
-    "height": 960,
-    "small": {
-      "src": "/images/utilities/job-09-640.webp",
-      "width": 640
-    }
-  },
-  "/images/utilities/job-10.webp": {
-    "width": 1280,
-    "height": 960,
-    "small": {
-      "src": "/images/utilities/job-10-640.webp",
       "width": 640
     }
   },
