@@ -1,5 +1,5 @@
 import { FadeIn } from "../FadeIn";
-import { companyAccreditations, teamQualifications, workingTowards } from "../../data/credentials";
+import { certificationBody, companyAccreditations, teamQualifications, workingTowards } from "../../data/credentials";
 
 interface CredentialsProps {
   eyebrow?: string;
@@ -29,11 +29,13 @@ export function Credentials({ eyebrow = "Standards and training", heading, tone 
                 <li key={a.name} className="flex items-baseline gap-4 border-b border-[var(--color-border)] pb-3">
                   <span className="text-[var(--color-dark-blue)] font-semibold text-[17px]">{a.name}</span>
                   <span className="text-[var(--color-mid-blue)] text-[14px]">{a.area}</span>
+                  <span className="ml-auto text-[var(--color-charcoal)] text-[12px] text-right">Certificate {a.certificate}</span>
                 </li>
               ))}
             </ul>
+            <p className="mt-5 text-[14px] text-[var(--color-charcoal)]">Certified by {certificationBody}.</p>
             {workingTowards.length > 0 && (
-              <p className="mt-5 text-[14px] text-[var(--color-charcoal)]">Working towards: {workingTowards.join(", ")}.</p>
+              <p className="mt-2 text-[14px] text-[var(--color-charcoal)]">Working towards: {workingTowards.join(", ")}.</p>
             )}
           </FadeIn>
 

@@ -113,9 +113,7 @@ Use our [contact page](/contact) or call 01925 810 991, Monday to Friday, 9am to
 
 ## Facts to confirm before publishing (both pages)
 Confirmed by Lambs on 2026-10-23: ISO 9001:2015, ISO 14001:2015, ISO 45001:2018; working towards CHAS; team qualifications NRSWA (street works), Openreach-specific training, manual handling, banksman, abrasive wheels, first aid, asbestos awareness.
+Confirmed by Lambs on 2026-10-28: certified by Citation ISO (ISO 9001:2015 certificate 200382021, ISO 14001:2015 certificate 200392021, ISO 45001:2018 certificate 200402026). Smart Awards is the Openreach operative card that holds each operative's verified accreditations in one place. The group does NOT hold CSCS, NEBOSH, ECS, WIRS, GIRS or NERS.
 Still to confirm:
-1. Whether the group also holds CSCS, NEBOSH, ECS, WIRS, GIRS or NERS (previously on the site, not in the list received) and what "Smart Awards" refers to.
-2. The ISO certification body and certificate numbers, if they can be shown.
-3. That the 400+ jobs/week capacity figure and the 55 van audits a month still stand.
-4. Which customers may be named on these pages, beyond Virgin Media and Fujitsu.
-5. Whether the utilities crews work for network operators, developers, or both.
+1. That the 400+ jobs/week capacity figure and the 55 van audits a month still stand.
+2. Which customers may be named on these pages, beyond Virgin Media and Fujitsu.
