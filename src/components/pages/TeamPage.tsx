@@ -58,27 +58,31 @@ export function TeamPage() {
                     <span className="text-[11px] uppercase tracking-[0.2em] text-[var(--color-mid-blue)] font-semibold">{person.role}</span>
                     <span className="text-[11px] tracking-widest text-[var(--color-cyan)] font-semibold">{String(i + 1).padStart(2, "0")}</span>
                   </div>
-                  {person.image && (
-                    <div className="relative aspect-[4/5] sm:aspect-square overflow-hidden bg-[var(--color-light-grey)] mb-8">
-                      <img
-                        src={withBase(person.image)}
-                        alt={`${person.name}, ${person.role}`}
-                        width={800}
-                        height={800}
-                        loading="lazy"
-                        className="w-full h-full object-cover object-top transition-transform duration-[900ms] ease-out group-hover:scale-[1.03]"
-                      />
-                      <span className="absolute inset-x-0 bottom-0 h-[3px] bg-[var(--color-cyan)] origin-left scale-x-0 transition-transform duration-500 ease-out group-hover:scale-x-100" aria-hidden="true" />
+                  <div className="flex items-start gap-6 lg:gap-8">
+                    {person.image && (
+                      <div className="relative w-[120px] sm:w-[150px] lg:w-[200px] aspect-[4/5] flex-shrink-0 overflow-hidden bg-[var(--color-light-grey)]">
+                        <img
+                          src={withBase(person.image)}
+                          alt={`${person.name}, ${person.role}`}
+                          width={400}
+                          height={500}
+                          loading="lazy"
+                          className="w-full h-full object-cover object-top transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
+                        />
+                        <span className="absolute inset-x-0 bottom-0 h-[3px] bg-[var(--color-cyan)] origin-left scale-x-0 transition-transform duration-500 ease-out group-hover:scale-x-100" aria-hidden="true" />
+                      </div>
+                    )}
+                    <div className="min-w-0">
+                      <h3 className="text-[var(--color-dark-blue)] text-[26px] lg:text-[34px] font-semibold leading-tight mb-3">
+                        {person.name}
+                      </h3>
+                      {person.bio && (
+                        <p className="text-[var(--color-charcoal)] text-[15px] lg:text-[16px] leading-relaxed">
+                          {person.bio}
+                        </p>
+                      )}
                     </div>
-                  )}
-                  <h3 className="text-[var(--color-dark-blue)] text-[30px] lg:text-[40px] font-semibold leading-tight mb-4">
-                    {person.name}
-                  </h3>
-                  {person.bio && (
-                    <p className="text-[var(--color-charcoal)] text-[16px] lg:text-[17px] leading-relaxed max-w-md">
-                      {person.bio}
-                    </p>
-                  )}
+                  </div>
                 </article>
               </FadeIn>
             ))}
