@@ -87,7 +87,8 @@ export function TeamPage() {
       </section>
 
       <TeamGridSection
-        background="bg-[var(--color-light-grey)]"
+        background="bg-[var(--color-dark-blue)]"
+        dark
         eyebrow="The wider team"
         heading="Keeping every programme on track."
         lede="The managers and specialists behind our operations, plant, health and safety, coordination, purchasing and training."
@@ -105,20 +106,22 @@ interface TeamGridSectionProps {
   heading: string;
   lede: string;
   people: PersonCard[];
+  dark?: boolean;
 }
 
-function TeamGridSection({ background, eyebrow, heading, lede, people }: TeamGridSectionProps) {
+function TeamGridSection({ background, eyebrow, heading, lede, people, dark = false }: TeamGridSectionProps) {
   return (
-    <section className={`${background} py-24 lg:py-36`}>
-      <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-12">
+    <section className={`${background} relative py-24 lg:py-36 ${dark ? "text-white" : ""}`}>
+      {dark && <div className="grid-bg-dark absolute inset-0 opacity-40" aria-hidden="true" />}
+      <div className="relative max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-14 lg:mb-20">
           <div className="lg:col-span-4">
-            <FadeIn><span className="eyebrow">{eyebrow}</span></FadeIn>
+            <FadeIn><span className={`eyebrow ${dark ? "eyebrow-dark" : ""}`}>{eyebrow}</span></FadeIn>
           </div>
           <div className="lg:col-span-8">
-            <AnimatedHeading as="h2" className="max-w-3xl">{heading}</AnimatedHeading>
+            <AnimatedHeading as="h2" className={`max-w-3xl ${dark ? "text-white" : ""}`}>{heading}</AnimatedHeading>
             <FadeIn delay={200}>
-              <p className="text-[var(--color-charcoal)] text-lg leading-relaxed mt-6 max-w-2xl">
+              <p className={`text-lg leading-relaxed mt-6 max-w-2xl ${dark ? "text-white/75" : "text-[var(--color-charcoal)]"}`}>
                 {lede}
               </p>
             </FadeIn>
@@ -137,28 +140,34 @@ function TeamGridSection({ background, eyebrow, heading, lede, people }: TeamGri
             </div>
           </FadeIn>
         ) : (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-10">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 sm:gap-x-8 lg:gap-x-10 lg:gap-y-16">
             {people.map((p, i) => (
-              <FadeIn key={p.name} delay={i * 70}>
-                <article className="flex flex-col">
-                  <div className="w-[140px] h-[140px] overflow-hidden bg-[var(--color-light-grey)] mb-4">
+              <FadeIn key={p.name} delay={i * 90}>
+                <article className="group">
+                  <div className={`relative aspect-square overflow-hidden ${dark ? "bg-white/5" : "bg-[var(--color-light-grey)]"}`}>
                     {p.image ? (
                       <img
                         src={withBase(p.image)}
                         alt={`${p.name}, ${p.role}`}
-                        width={140}
-                        height={140}
+                        width={640}
+                        height={640}
                         loading="lazy"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center text-[var(--color-mid-blue)] text-[28px] font-semibold">
+                      <div className="w-full h-full flex items-center justify-center text-[var(--color-cyan)] text-[48px] font-semibold">
                         {p.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
                       </div>
                     )}
+                    <span className="absolute left-0 top-0 bg-[var(--color-cyan)] text-[var(--color-dark-blue)] text-[11px] font-semibold tracking-widest px-3 py-2">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="absolute inset-x-0 bottom-0 h-[3px] bg-[var(--color-cyan)] origin-left scale-x-0 transition-transform duration-500 ease-out group-hover:scale-x-100" aria-hidden="true" />
                   </div>
-                  <h4 className="text-[var(--color-dark-blue)] font-semibold text-[16px] lg:text-[18px] leading-tight">{p.name}</h4>
-                  <p className="text-[var(--color-mid-blue)] text-[11px] uppercase tracking-widest mt-1 font-medium">{p.role}</p>
+                  <div className="pt-5 lg:pt-6">
+                    <h4 className={`font-semibold text-[19px] lg:text-[24px] leading-tight ${dark ? "text-white" : "text-[var(--color-dark-blue)]"}`}>{p.name}</h4>
+                    <p className={`text-[11px] lg:text-[12px] uppercase tracking-[0.16em] mt-2 font-medium ${dark ? "text-[var(--color-cyan)]" : "text-[var(--color-mid-blue)]"}`}>{p.role}</p>
+                  </div>
                 </article>
               </FadeIn>
             ))}
