@@ -38,6 +38,7 @@ const domesticSector = {
 };
 
 // Client names confirmed by Lambs on 2026-10-29. Entries without a logo show as text.
+// Logos are greyscale to match the wall; white-only sources are flat grey.
 // Not shown yet: NTL and EOM (Amanda to confirm full names).
 const clients: { name: string; logo?: string }[] = [
   { name: "Fujitsu", logo: "/images/clients/fujitsu.webp" },
@@ -55,17 +56,17 @@ const clients: { name: string; logo?: string }[] = [
   { name: "Cellex", logo: "/images/clients/cellex.webp" },
   { name: "Coreline", logo: "/images/clients/cf.webp" },
   { name: "BWP", logo: "/images/clients/bwp.webp" },
-  { name: "United Living" },
-  { name: "Virgin Media" },
-  { name: "Telent" },
-  { name: "Morrison Telecom Services" },
-  { name: "Cobra" },
-  { name: "Sierra" },
-  { name: "Alfred McAlpine" },
-  { name: "NMCN" },
-  { name: "PN Daly" },
+  { name: "United Living", logo: "/images/clients/united-living.webp" },
+  { name: "Virgin Media", logo: "/images/clients/virgin-media.webp" },
+  { name: "Telent", logo: "/images/clients/telent.webp" },
+  { name: "Morrison Telecom Services", logo: "/images/clients/mts.webp" },
+  { name: "Cobra", logo: "/images/clients/cobra.webp" },
+  { name: "Sierra", logo: "/images/clients/sierra.webp" },
+  { name: "Alfred McAlpine", logo: "/images/clients/alfred-mcalpine.webp" },
+  { name: "NMCN", logo: "/images/clients/nmcn.webp" },
+  { name: "PN Daly", logo: "/images/clients/pn-daly.webp" },
   { name: "Brennans Paving" },
-  { name: "Bury MBC" },
+  { name: "Bury MBC", logo: "/images/clients/bury-mbc.webp" },
 ];
 
 const stats: { value?: number; suffix?: string; text?: string; label: string }[] = [

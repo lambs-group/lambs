@@ -15,9 +15,17 @@
     "width": 600,
     "height": 600
   },
+  "/images/clients/alfred-mcalpine.webp": {
+    "width": 469,
+    "height": 200
+  },
   "/images/clients/barratt.webp": {
     "width": 250,
     "height": 166
+  },
+  "/images/clients/bury-mbc.webp": {
+    "width": 399,
+    "height": 200
   },
   "/images/clients/bwp.webp": {
     "width": 227,
@@ -34,6 +42,10 @@
   "/images/clients/circet.webp": {
     "width": 447,
     "height": 446
+  },
+  "/images/clients/cobra.webp": {
+    "width": 429,
+    "height": 151
   },
   "/images/clients/freedom-fibre.webp": {
     "width": 257,
@@ -71,9 +83,17 @@
     "width": 464,
     "height": 219
   },
+  "/images/clients/mts.webp": {
+    "width": 286,
+    "height": 80
+  },
   "/images/clients/nano.webp": {
     "width": 403,
     "height": 145
+  },
+  "/images/clients/nmcn.webp": {
+    "width": 296,
+    "height": 200
   },
   "/images/clients/ocu-group.webp": {
     "width": 546,
@@ -83,6 +103,14 @@
     "width": 359,
     "height": 144
   },
+  "/images/clients/pn-daly.webp": {
+    "width": 193,
+    "height": 200
+  },
+  "/images/clients/sierra.webp": {
+    "width": 480,
+    "height": 119
+  },
   "/images/clients/stl.webp": {
     "width": 351,
     "height": 153
@@ -91,9 +119,17 @@
     "width": 453,
     "height": 94
   },
-  "/images/clients/united-infra.webp": {
-    "width": 482,
-    "height": 142
+  "/images/clients/telent.webp": {
+    "width": 480,
+    "height": 175
+  },
+  "/images/clients/united-living.webp": {
+    "width": 480,
+    "height": 106
+  },
+  "/images/clients/virgin-media.webp": {
+    "width": 344,
+    "height": 200
   },
   "/images/field/careers-cable-locator-excavation.webp": {
     "width": 1280,
