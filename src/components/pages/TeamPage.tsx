@@ -18,16 +18,15 @@ const leadership: PersonCard[] = [
 ];
 
 // Roles and photos confirmed by Lambs on 2026-10-29. More detail (bios) to follow.
-// Davey Tyrer and Emma Howard: photos not received yet (initials show instead).
+// Removed for now at Lambs' request, to add back when photos arrive:
+//   Davey Tyrer (Stores Supervisor), Emma Howard (Accounts).
 const team: PersonCard[] = [
   { name: "Frankie Lamb", role: "Senior Operations Manager", image: "/images/team/frankie-lamb.webp" },
   { name: "Ethan Radcliffe", role: "Plant & Vehicle Manager", image: "/images/team/ethan-radcliffe.webp" },
-  { name: "Davey Tyrer", role: "Stores Supervisor" },
   { name: "Lee Harnick", role: "Health & Safety Manager", image: "/images/team/lee-harnick.webp" },
   { name: "Laura Barber", role: "Coordination Team Manager", image: "/images/team/laura-barber.webp" },
   { name: "Jennifer Nelson", role: "Senior Manager", image: "/images/team/jennifer-nelson.webp" },
   { name: "Luke Pennington", role: "Purchasing & Training Manager", image: "/images/team/luke-pennington.webp" },
-  { name: "Emma Howard", role: "Accounts" },
 ];
 
 export function TeamPage() {
@@ -91,7 +90,7 @@ export function TeamPage() {
         background="bg-[var(--color-light-grey)]"
         eyebrow="The wider team"
         heading="Keeping every programme on track."
-        lede="The managers and specialists behind our operations, plant, health and safety, coordination, purchasing, training and accounts."
+        lede="The managers and specialists behind our operations, plant, health and safety, coordination, purchasing and training."
         people={team}
       />
 
