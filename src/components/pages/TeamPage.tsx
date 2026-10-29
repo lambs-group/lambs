@@ -50,35 +50,35 @@ export function TeamPage() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-10 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
             {leadership.map((person, i) => (
-              <FadeIn key={person.name} delay={i * 120}>
-                <article className="group flex flex-col sm:flex-row items-start gap-6 sm:gap-10 lg:gap-14 pb-10 lg:pb-12 border-b border-[var(--color-border-strong)] last:border-0 last:pb-0">
+              <FadeIn key={person.name} delay={i * 140}>
+                <article className="group border-t-[3px] border-[var(--color-dark-blue)] pt-6">
+                  <div className="flex items-baseline justify-between mb-6">
+                    <span className="text-[11px] uppercase tracking-[0.2em] text-[var(--color-mid-blue)] font-semibold">{person.role}</span>
+                    <span className="text-[11px] tracking-widest text-[var(--color-cyan)] font-semibold">{String(i + 1).padStart(2, "0")}</span>
+                  </div>
                   {person.image && (
-                    <div className="w-[140px] h-[140px] lg:w-[160px] lg:h-[160px] flex-shrink-0 overflow-hidden bg-[var(--color-light-grey)]">
+                    <div className="relative aspect-[4/5] sm:aspect-square overflow-hidden bg-[var(--color-light-grey)] mb-8">
                       <img
                         src={withBase(person.image)}
                         alt={`${person.name}, ${person.role}`}
-                        width={160}
-                        height={160}
+                        width={800}
+                        height={800}
                         loading="lazy"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-top transition-transform duration-[900ms] ease-out group-hover:scale-[1.03]"
                       />
+                      <span className="absolute inset-x-0 bottom-0 h-[3px] bg-[var(--color-cyan)] origin-left scale-x-0 transition-transform duration-500 ease-out group-hover:scale-x-100" aria-hidden="true" />
                     </div>
                   )}
-                  <div className="flex-1 max-w-2xl">
-                    <div className="text-[11px] uppercase tracking-[0.18em] text-[var(--color-mid-blue)] mb-2 font-medium border-b border-[var(--color-cyan)] pb-1 inline-block">
-                      {person.role}
-                    </div>
-                    <h3 className="text-[var(--color-dark-blue)] text-[24px] lg:text-[32px] font-semibold mb-4 leading-tight mt-2">
-                      {person.name}
-                    </h3>
-                    {person.bio && (
-                      <p className="text-[var(--color-charcoal)] text-[15px] lg:text-[16px] leading-relaxed">
-                        {person.bio}
-                      </p>
-                    )}
-                  </div>
+                  <h3 className="text-[var(--color-dark-blue)] text-[30px] lg:text-[40px] font-semibold leading-tight mb-4">
+                    {person.name}
+                  </h3>
+                  {person.bio && (
+                    <p className="text-[var(--color-charcoal)] text-[16px] lg:text-[17px] leading-relaxed max-w-md">
+                      {person.bio}
+                    </p>
+                  )}
                 </article>
               </FadeIn>
             ))}
