@@ -3,7 +3,7 @@ import { FadeIn } from "../../FadeIn";
 import { NumberTicker } from "../../NumberTicker";
 
 const qc = [
-  { value: 55, label: "Van audits every month" },
+  { value: 30, label: "Van audits every month" },
   { value: 3, label: "ISO certifications: 9001, 14001 and 45001" },
 ];
 

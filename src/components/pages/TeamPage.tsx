@@ -13,16 +13,22 @@ interface PersonCard {
 }
 
 const leadership: PersonCard[] = [
-  { name: "Simon Lamb", role: "Managing Director", bio: "Founded the business in 1988 and remains actively involved in every level of delivery.", image: "/images/team/simon-lamb.webp" },
+  { name: "Simon Lamb", role: "Director", bio: "Founded the business in 1988 and remains actively involved in every level of delivery.", image: "/images/team/simon-lamb.webp" },
   { name: "Amanda Lamb", role: "Director", bio: "Oversees finance, HR and operations, working alongside Simon to drive the business forward.", image: "/images/team/amanda-lamb.webp" },
-  { name: "Ray Pennington", role: "Operations Director", bio: "Leads operational delivery across every live programme - telecoms, utilities and private works.", image: "/images/team/ray-pennington.webp" },
 ];
 
-// TODO: add senior management members (names to be provided by client)
-const seniorManagement: PersonCard[] = [];
-
-// TODO: add back-office administration members (names to be provided by client)
-const backOffice: PersonCard[] = [];
+// Roles and photos confirmed by Lambs on 2026-10-29. More detail (bios) to follow.
+// Davey Tyrer and Emma Howard: photos not received yet (initials show instead).
+const team: PersonCard[] = [
+  { name: "Frankie Lamb", role: "Senior Operations Manager", image: "/images/team/frankie-lamb.webp" },
+  { name: "Ethan Radcliffe", role: "Plant & Vehicle Manager", image: "/images/team/ethan-radcliffe.webp" },
+  { name: "Davey Tyrer", role: "Stores Supervisor" },
+  { name: "Lee Harnick", role: "Health & Safety Manager", image: "/images/team/lee-harnick.webp" },
+  { name: "Laura Barber", role: "Coordination Team Manager", image: "/images/team/laura-barber.webp" },
+  { name: "Jennifer Nelson", role: "Senior Manager", image: "/images/team/jennifer-nelson.webp" },
+  { name: "Luke Pennington", role: "Purchasing & Training Manager", image: "/images/team/luke-pennington.webp" },
+  { name: "Emma Howard", role: "Accounts" },
+];
 
 export function TeamPage() {
   return (
@@ -53,7 +59,7 @@ export function TeamPage() {
                     <div className="w-[140px] h-[140px] lg:w-[160px] lg:h-[160px] flex-shrink-0 overflow-hidden bg-[var(--color-light-grey)]">
                       <img
                         src={withBase(person.image)}
-                        alt={person.name}
+                        alt={`${person.name}, ${person.role}`}
                         width={160}
                         height={160}
                         loading="lazy"
@@ -83,18 +89,10 @@ export function TeamPage() {
 
       <TeamGridSection
         background="bg-[var(--color-light-grey)]"
-        eyebrow="Senior management"
-        heading="Running the programmes."
-        lede="The managers keeping every live programme on track - commercial, operational and compliance leads."
-        people={seniorManagement}
-      />
-
-      <TeamGridSection
-        background="bg-white"
-        eyebrow="Back office"
-        heading="Behind the scenes."
-        lede="A highly experienced back-office team, with over 15 years at Lambs Group, growing alongside the business. Covering all aspects of work coordination, streetworks and planning, they keep projects running efficiently with a proactive, can-do approach."
-        people={backOffice}
+        eyebrow="The wider team"
+        heading="Keeping every programme on track."
+        lede="The managers and specialists behind our operations, plant, health and safety, coordination, purchasing, training and accounts."
+        people={team}
       />
 
       <CTASection eyebrow="Join the team" heading="We're always looking for good operatives." primaryLabel="See vacancies" primaryHref="/careers" />
@@ -148,7 +146,7 @@ function TeamGridSection({ background, eyebrow, heading, lede, people }: TeamGri
                     {p.image ? (
                       <img
                         src={withBase(p.image)}
-                        alt={p.name}
+                        alt={`${p.name}, ${p.role}`}
                         width={140}
                         height={140}
                         loading="lazy"

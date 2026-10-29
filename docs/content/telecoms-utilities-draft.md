@@ -27,10 +27,10 @@ Every programme follows the same stages, so you always know what happens next. O
 - **Reinstate and hand over.** Surfaces are made good to NRSWA standard, the work is audited, and the records are handed over.
 
 ### H2: Coverage and capacity
-We have 30+ people across our workforce, organised into 12+ specialist delivery teams, and cover the North West, Yorkshire and the West Midlands. At full allocation and on a five or six-day week, our teams have the capacity to complete 400+ jobs per week.* That mix of specialist teams is what lets us take on large, repeating programmes and still deliver single-address and small-scale work. *Based on full allocation and a five/six-day working week.
+We have 30+ people across our workforce, organised into 12+ specialist delivery teams, and cover the North West, Yorkshire and the West Midlands. At full allocation and on a five or six-day week, our teams have the capacity to complete 300+ jobs per week.* That mix of specialist teams is what lets us take on large, repeating programmes and still deliver single-address and small-scale work. *Based on full allocation and a five/six-day working week.
 
 ### H2: Safe, compliant and audited
-Telecoms work happens on live roads and in people's streets, so compliance comes first. Our teams hold NRSWA street works qualifications and Openreach-specific training, alongside standard site training such as manual handling, banksman, first aid and asbestos awareness **[CONFIRM: exact qualifications and who holds them]**. We are certified to ISO 9001:2015 (quality), ISO 14001:2015 (environmental) and ISO 45001:2018 (occupational health and safety), and are working towards CHAS. We carry out 55 van audits a month and log and act on what we find.
+Telecoms work happens on live roads and in people's streets, so compliance comes first. Our teams hold NRSWA street works qualifications and Openreach-specific training, alongside standard site training such as manual handling, banksman, first aid and asbestos awareness **[CONFIRM: exact qualifications and who holds them]**. We are certified to ISO 9001:2015 (quality), ISO 14001:2015 (environmental) and ISO 45001:2018 (occupational health and safety), and are working towards CHAS. We carry out 30 van audits a month and log and act on what we find.
 
 ### H2: Telecoms FAQs
 **What is the difference between FTTH and FTTP?**
@@ -115,5 +115,5 @@ Use our [contact page](/contact) or call 01925 810 991, Monday to Friday, 9am to
 Confirmed by Lambs on 2026-10-23: ISO 9001:2015, ISO 14001:2015, ISO 45001:2018; working towards CHAS; team qualifications NRSWA (street works), Openreach-specific training, manual handling, banksman, abrasive wheels, first aid, asbestos awareness.
 Confirmed by Lambs on 2026-10-28: certified by Citation ISO (ISO 9001:2015 certificate 200382021, ISO 14001:2015 certificate 200392021, ISO 45001:2018 certificate 200402026). Smart Awards is the Openreach operative card that holds each operative's verified accreditations in one place. The group does NOT hold CSCS, NEBOSH, ECS, WIRS, GIRS or NERS.
 Still to confirm:
-1. That the 400+ jobs/week capacity figure and the 55 van audits a month still stand.
+1. (Answered 2026-10-29: 300+ jobs per week at full allocation; 30 van audits a month. NEBOSH: supervisors do not currently hold it.)
 2. Which customers may be named on these pages, beyond Virgin Media and Fujitsu.

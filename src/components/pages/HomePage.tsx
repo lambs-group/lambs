@@ -37,31 +37,41 @@ const domesticSector = {
   href: "/private-works",
 };
 
-const clients = [
+// Client names confirmed by Lambs on 2026-10-29. Entries without a logo show as text.
+// Not shown yet: NTL and EOM (Amanda to confirm full names).
+const clients: { name: string; logo?: string }[] = [
   { name: "Fujitsu", logo: "/images/clients/fujitsu.webp" },
-  { name: "Barratt Developments", logo: "/images/clients/barratt.webp" },
+  { name: "Barratt Homes", logo: "/images/clients/barratt.webp" },
   { name: "OCU Group", logo: "/images/clients/ocu-group.webp" },
-  { name: "Kelly Group", logo: "/images/clients/kelly-group.webp" },
+  { name: "Kellys", logo: "/images/clients/kelly-group.webp" },
   { name: "MJ Quinn", logo: "/images/clients/mj-quinn.webp" },
-  { name: "Circet", logo: "/images/clients/circet.webp" },
   { name: "M Group", logo: "/images/clients/mgroup.webp" },
-  { name: "MAP Group", logo: "/images/clients/map-group.webp" },
+  { name: "Map Group UK", logo: "/images/clients/map-group.webp" },
   { name: "Freedom Fibre", logo: "/images/clients/freedom-fibre.webp" },
-  { name: "Svella Connect", logo: "/images/clients/svella.webp" },
+  { name: "Svella", logo: "/images/clients/svella.webp" },
   { name: "JN Civils", logo: "/images/clients/jn-civils.webp" },
   { name: "STL", logo: "/images/clients/stl.webp" },
-  { name: "Unified Infra", logo: "/images/clients/united-infra.webp" },
-  { name: "PJS", logo: "/images/clients/pjs.webp" },
-  { name: "Nano", logo: "/images/clients/nano.webp" },
-  { name: "CellEx", logo: "/images/clients/cellex.webp" },
-  { name: "Core Line Fibre", logo: "/images/clients/cf.webp" },
-  { name: "BWP Consultants", logo: "/images/clients/bwp.webp" },
+  { name: "Nano UK", logo: "/images/clients/nano.webp" },
+  { name: "Cellex", logo: "/images/clients/cellex.webp" },
+  { name: "Coreline", logo: "/images/clients/cf.webp" },
+  { name: "BWP", logo: "/images/clients/bwp.webp" },
+  { name: "United Living" },
+  { name: "Virgin Media" },
+  { name: "Telent" },
+  { name: "Morrison Telecom Services" },
+  { name: "Cobra" },
+  { name: "Sierra" },
+  { name: "Alfred McAlpine" },
+  { name: "NMCN" },
+  { name: "PN Daly" },
+  { name: "Brennans Paving" },
+  { name: "Bury MBC" },
 ];
 
 const stats: { value?: number; suffix?: string; text?: string; label: string }[] = [
   { value: 30, suffix: "+", label: "People across our workforce" },
   { value: 12, suffix: "+", label: "Specialist delivery teams" },
-  { value: 400, suffix: "+*", label: "Jobs per week capacity" },
+  { value: 300, suffix: "+*", label: "Jobs per week capacity" },
   { text: "1988", label: "Our roots date back to" },
 ];
 
@@ -272,7 +282,7 @@ export function HomePage() {
               <FadeIn delay={200}>
                 <div className="space-y-5 text-[var(--color-charcoal)] text-lg leading-relaxed max-w-xl">
                   <p>Founded as S Lamb Construction in 1988 and now trading as Lambs Group, we deliver infrastructure services across the UK - operatives across our workforce, NRSWA-trained, compliance-first.</p>
-                  <p>30+ people across our workforce in 12+ specialist delivery teams. 55 van audits a month. ISO 9001, 14001 and 45001 certified. Trusted by Fujitsu, Virgin Media, Barratt Developments and local authorities across the UK.</p>
+                  <p>30+ people across our workforce in 12+ specialist delivery teams. 30 van audits a month. ISO 9001, 14001 and 45001 certified. Trusted by Fujitsu, Virgin Media, Barratt Homes and Bury MBC.</p>
                 </div>
               </FadeIn>
               <FadeIn delay={320}>
@@ -290,9 +300,9 @@ export function HomePage() {
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
           <FadeIn>
             <div className="flex items-center justify-between mb-12">
-              <span className="eyebrow">Trusted by</span>
+              <span className="eyebrow">Our clients</span>
               <span className="hidden md:block text-[11px] uppercase tracking-widest text-[var(--color-mid-blue)] font-medium">
-                Operators · Developers · Local Authorities
+                Operators · Contractors · Developers · Local Authorities
               </span>
             </div>
           </FadeIn>
@@ -300,12 +310,16 @@ export function HomePage() {
             {clients.map((client, i) => (
               <FadeIn key={client.name} delay={i * 40}>
                 <div className="logo-tile bg-white h-24 flex items-center justify-center px-6">
-                  <img
-                    {...imgAttrs(client.logo)}
-                    alt={client.name}
-                    className="max-h-10 max-w-full w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300"
-                    loading="lazy"
-                  />
+                  {client.logo ? (
+                    <img
+                      {...imgAttrs(client.logo)}
+                      alt={client.name}
+                      className="max-h-10 max-w-full w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span className="text-center text-[15px] font-semibold tracking-tight text-[var(--color-dark-blue)] opacity-60">{client.name}</span>
+                  )}
                 </div>
               </FadeIn>
             ))}
