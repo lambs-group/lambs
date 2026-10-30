@@ -20,7 +20,7 @@ const directors: PersonCard[] = [
 // Ray's title is awaiting confirmation from Lambs (Frankie is now Operations Director).
 const seniorTeam: PersonCard[] = [
   { name: "Frankie Lamb", role: "Operations Director", image: "/images/team/frankie-lamb.webp" },
-  { name: "Ray Pennington", role: "Director", image: "/images/team/ray-pennington-headshot.webp" },
+  { name: "Ray Pennington", role: "Director", image: "/images/team/ray-pennington.webp" },
   { name: "Jennifer Nelson", role: "Senior Manager", image: "/images/team/jennifer-nelson.webp" },
   { name: "Luke Pennington", role: "Purchasing & Training Manager", image: "/images/team/luke-pennington.webp" },
 ];
