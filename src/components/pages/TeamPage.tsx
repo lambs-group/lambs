@@ -12,11 +12,14 @@ interface PersonCard {
   image?: string;
 }
 
-const leadership: PersonCard[] = [
+const directors: PersonCard[] = [
   { name: "Simon Lamb", role: "Director", bio: "Founded the business in 1988 and remains actively involved in every level of delivery.", image: "/images/team/simon-lamb.webp" },
   { name: "Amanda Lamb", role: "Director", bio: "Oversees finance, HR, operations and commercials, working alongside Simon to drive the business forward.", image: "/images/team/amanda-lamb.webp" },
+];
+
+// Ray's title is awaiting confirmation from Lambs (Frankie is now Operations Director).
+const seniorTeam: PersonCard[] = [
   { name: "Frankie Lamb", role: "Operations Director", image: "/images/team/frankie-lamb.webp" },
-  // Ray's title is awaiting confirmation from Lambs (Frankie is now Operations Director).
   { name: "Ray Pennington", role: "Director", image: "/images/team/ray-pennington-headshot.webp" },
   { name: "Jennifer Nelson", role: "Senior Manager", image: "/images/team/jennifer-nelson.webp" },
   { name: "Luke Pennington", role: "Purchasing & Training Manager", image: "/images/team/luke-pennington.webp" },
@@ -45,15 +48,15 @@ export function TeamPage() {
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
             <div className="lg:col-span-4">
-              <FadeIn><span className="eyebrow">Senior team</span></FadeIn>
+              <FadeIn><span className="eyebrow">Directors</span></FadeIn>
             </div>
             <div className="lg:col-span-8">
               <AnimatedHeading as="h2" className="max-w-3xl">The people who run the business.</AnimatedHeading>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-14">
-            {leadership.map((person, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-14 max-w-[1000px]">
+            {directors.map((person, i) => (
               <FadeIn key={person.name} delay={i * 140}>
                 <article className="group border-t-[3px] border-[var(--color-dark-blue)] pt-6">
                   <div className="flex items-baseline justify-between mb-6">
@@ -93,6 +96,15 @@ export function TeamPage() {
       </section>
 
       <TeamGridSection
+        background="bg-[var(--color-light-grey)]"
+        eyebrow="Senior team"
+        heading="Leading delivery day to day."
+        lede="Directors and senior managers across operations, purchasing and training, working alongside Simon and Amanda."
+        people={seniorTeam}
+        columns={4}
+      />
+
+      <TeamGridSection
         background="bg-[var(--color-dark-blue)]"
         dark
         eyebrow="The wider team"
@@ -113,9 +125,10 @@ interface TeamGridSectionProps {
   lede: string;
   people: PersonCard[];
   dark?: boolean;
+  columns?: 3 | 4;
 }
 
-function TeamGridSection({ background, eyebrow, heading, lede, people, dark = false }: TeamGridSectionProps) {
+function TeamGridSection({ background, eyebrow, heading, lede, people, dark = false, columns = 3 }: TeamGridSectionProps) {
   return (
     <section className={`${background} relative py-24 lg:py-36 ${dark ? "text-white" : ""}`}>
       {dark && <div className="grid-bg-dark absolute inset-0 opacity-40" aria-hidden="true" />}
@@ -146,7 +159,7 @@ function TeamGridSection({ background, eyebrow, heading, lede, people, dark = fa
             </div>
           </FadeIn>
         ) : (
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 sm:gap-x-8 lg:gap-x-10 lg:gap-y-16">
+          <div className={`grid grid-cols-2 ${columns === 4 ? "lg:grid-cols-4" : "lg:grid-cols-3"} gap-x-5 gap-y-10 sm:gap-x-8 lg:gap-x-10 lg:gap-y-16`}>
             {people.map((p, i) => (
               <FadeIn key={p.name} delay={i * 90}>
                 <article className="group">
