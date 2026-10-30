@@ -68,6 +68,7 @@ const clients: { name: string; logo?: string }[] = [
   { name: "Brennan Paving Company" },
   { name: "Bury MBC", logo: "/images/clients/bury-mbc.webp" },
   { name: "EOM Construction" },
+  { name: "Comex 2000", logo: "/images/clients/comex-2000.webp" },
 ];
 
 const stats: { value?: number; suffix?: string; text?: string; label: string }[] = [
