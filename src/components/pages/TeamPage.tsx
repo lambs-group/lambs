@@ -15,6 +15,7 @@ interface PersonCard {
 const leadership: PersonCard[] = [
   { name: "Simon Lamb", role: "Director", bio: "Founded the business in 1988 and remains actively involved in every level of delivery.", image: "/images/team/simon-lamb.webp" },
   { name: "Amanda Lamb", role: "Director", bio: "Oversees finance, HR and operations, working alongside Simon to drive the business forward.", image: "/images/team/amanda-lamb.webp" },
+  { name: "Ray Pennington", role: "Operations Director", bio: "Leads operational delivery across every live programme - telecoms, utilities and private works.", image: "/images/team/ray-pennington.webp" },
 ];
 
 // Roles and photos confirmed by Lambs on 2026-10-29. More detail (bios) to follow.
@@ -50,7 +51,7 @@ export function TeamPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-14">
             {leadership.map((person, i) => (
               <FadeIn key={person.name} delay={i * 140}>
                 <article className="group border-t-[3px] border-[var(--color-dark-blue)] pt-6">
@@ -58,7 +59,7 @@ export function TeamPage() {
                     <span className="text-[11px] uppercase tracking-[0.2em] text-[var(--color-mid-blue)] font-semibold">{person.role}</span>
                     <span className="text-[11px] tracking-widest text-[var(--color-cyan)] font-semibold">{String(i + 1).padStart(2, "0")}</span>
                   </div>
-                  <div className="flex items-start gap-6 lg:gap-8">
+                  <div className="flex items-start gap-6 lg:flex-col lg:gap-7">
                     {person.image && (
                       <div className="relative w-[120px] sm:w-[150px] lg:w-[200px] aspect-[4/5] flex-shrink-0 overflow-hidden bg-[var(--color-light-grey)]">
                         <img
