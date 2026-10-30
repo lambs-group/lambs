@@ -39,7 +39,7 @@ const domesticSector = {
 
 // Client names confirmed by Lambs on 2026-10-29. Entries without a logo show as text.
 // Logos are greyscale to match the wall; white-only sources are flat grey.
-// Not shown yet: NTL (Amanda to confirm full name).
+// NTL logo is the ntl: brand mark from a logo site; swap for the confirmed logo once Amanda gives the full company name.
 const clients: { name: string; logo?: string }[] = [
   { name: "Fujitsu", logo: "/images/clients/fujitsu.webp" },
   { name: "Barratt Homes", logo: "/images/clients/barratt.webp" },
@@ -69,6 +69,7 @@ const clients: { name: string; logo?: string }[] = [
   { name: "Bury MBC", logo: "/images/clients/bury-mbc.webp" },
   { name: "EOM Construction" },
   { name: "Comex 2000", logo: "/images/clients/comex-2000.webp" },
+  { name: "NTL", logo: "/images/clients/ntl.webp" },
 ];
 
 const stats: { value?: number; suffix?: string; text?: string; label: string }[] = [
