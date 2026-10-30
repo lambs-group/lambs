@@ -20,7 +20,7 @@ const directors: PersonCard[] = [
 const seniorTeam: PersonCard[] = [
   { name: "Frankie Lamb", role: "Operations Director", image: "/images/team/frankie-lamb.webp" },
   { name: "Ray Pennington", role: "General Manager", image: "/images/team/ray-pennington.webp" },
-  { name: "Jennifer Nelson", role: "Senior Manager", image: "/images/team/jennifer-nelson.webp" },
+  { name: "Jennifer Nelson", role: "Business Manager", image: "/images/team/jennifer-nelson.webp" },
   { name: "Luke Pennington", role: "Purchasing & Training Manager", image: "/images/team/luke-pennington.webp" },
 ];
 
