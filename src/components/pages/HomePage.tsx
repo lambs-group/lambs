@@ -70,6 +70,7 @@ const clients: { name: string; logo?: string }[] = [
   { name: "EOM Construction" },
   { name: "Comex 2000", logo: "/images/clients/comex-2000.webp" },
   { name: "NTL", logo: "/images/clients/ntl.webp" },
+  { name: "Lightsource Telecomm", logo: "/images/clients/lightsource.webp" },
 ];
 
 const stats: { value?: number; suffix?: string; text?: string; label: string }[] = [
