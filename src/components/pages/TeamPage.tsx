@@ -14,20 +14,21 @@ interface PersonCard {
 
 const leadership: PersonCard[] = [
   { name: "Simon Lamb", role: "Director", bio: "Founded the business in 1988 and remains actively involved in every level of delivery.", image: "/images/team/simon-lamb.webp" },
-  { name: "Amanda Lamb", role: "Director", bio: "Oversees finance, HR and operations, working alongside Simon to drive the business forward.", image: "/images/team/amanda-lamb.webp" },
-  { name: "Ray Pennington", role: "Operations Director", bio: "Leads operational delivery across every live programme - telecoms, utilities and private works.", image: "/images/team/ray-pennington-headshot.webp" },
+  { name: "Amanda Lamb", role: "Director", bio: "Oversees finance, HR, operations and commercials, working alongside Simon to drive the business forward.", image: "/images/team/amanda-lamb.webp" },
+  { name: "Frankie Lamb", role: "Operations Director", image: "/images/team/frankie-lamb.webp" },
+  // Ray's title is awaiting confirmation from Lambs (Frankie is now Operations Director).
+  { name: "Ray Pennington", role: "Director", image: "/images/team/ray-pennington-headshot.webp" },
+  { name: "Jennifer Nelson", role: "Senior Manager", image: "/images/team/jennifer-nelson.webp" },
+  { name: "Luke Pennington", role: "Purchasing & Training Manager", image: "/images/team/luke-pennington.webp" },
 ];
 
 // Roles and photos confirmed by Lambs on 2026-10-29. More detail (bios) to follow.
 // Removed for now at Lambs' request, to add back when photos arrive:
 //   Davey Tyrer (Stores Supervisor), Emma Howard (Accounts).
 const team: PersonCard[] = [
-  { name: "Frankie Lamb", role: "Senior Operations Manager", image: "/images/team/frankie-lamb.webp" },
   { name: "Ethan Radcliffe", role: "Plant & Vehicle Manager", image: "/images/team/ethan-radcliffe.webp" },
   { name: "Lee Harnick", role: "Health & Safety Manager", image: "/images/team/lee-harnick.webp" },
   { name: "Laura Barber", role: "Coordination Team Manager", image: "/images/team/laura-barber.webp" },
-  { name: "Jennifer Nelson", role: "Senior Manager", image: "/images/team/jennifer-nelson.webp" },
-  { name: "Luke Pennington", role: "Purchasing & Training Manager", image: "/images/team/luke-pennington.webp" },
 ];
 
 export function TeamPage() {
@@ -44,7 +45,7 @@ export function TeamPage() {
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
             <div className="lg:col-span-4">
-              <FadeIn><span className="eyebrow">Directors</span></FadeIn>
+              <FadeIn><span className="eyebrow">Senior team</span></FadeIn>
             </div>
             <div className="lg:col-span-8">
               <AnimatedHeading as="h2" className="max-w-3xl">The people who run the business.</AnimatedHeading>
@@ -96,7 +97,7 @@ export function TeamPage() {
         dark
         eyebrow="The wider team"
         heading="Keeping every programme on track."
-        lede="The managers and specialists behind our operations, plant, health and safety, coordination, purchasing and training."
+        lede="The managers behind our plant and vehicles, health and safety, and coordination."
         people={team}
       />
 
