@@ -65,7 +65,7 @@ const clients: { name: string; logo?: string }[] = [
   { name: "Alfred McAlpine", logo: "/images/clients/alfred-mcalpine.webp" },
   { name: "NMCN", logo: "/images/clients/nmcn.webp" },
   { name: "PN Daly", logo: "/images/clients/pn-daly.webp" },
-  { name: "Brennans Paving" },
+  { name: "Brennan Paving Company" },
   { name: "Bury MBC", logo: "/images/clients/bury-mbc.webp" },
   { name: "EOM Construction" },
 ];
