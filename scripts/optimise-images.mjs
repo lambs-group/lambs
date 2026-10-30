@@ -1,6 +1,6 @@
 // One-off helper (run manually: `node scripts/optimise-images.mjs`): resizes the large
 // project photos to what the pages need and writes a 640px variant next to each for
-// srcset. Skips public/images/private/ (Private Works photos are still being chosen).
+// srcset. Private Works photos are not yet supplied.
 import sharp from "sharp";
 
 sharp.cache(false); // we rewrite files and read them back in the same run

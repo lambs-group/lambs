@@ -5,9 +5,6 @@ import { NumberTicker } from "../../NumberTicker";
 const stats = [
   { value: 2500, suffix: "+", label: "Jobs per week" },
   { value: 10000, suffix: "+", label: "Homes per month" },
-  { value: 80, suffix: "+", label: "Vans on the road" },
-  { value: 120, suffix: "+", label: "Engineers on roster" },
-  { value: 6, suffix: " yrs", label: "On programme" },
 ];
 
 export function MotifNumbers() {
@@ -24,15 +21,12 @@ export function MotifNumbers() {
           </div>
         </div>
 
-        {/* Two wide cells for the big figures, three below: five equal columns clipped "10,000+". */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-px bg-white/10 border border-white/10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/10 border border-white/10">
           {stats.map((s, i) => (
             <FadeIn
               key={s.label}
               delay={i * 100}
-              className={`bg-[var(--color-dark-blue)] p-8 lg:p-10 ${
-                i < 2 ? "lg:col-span-3" : i === stats.length - 1 ? "sm:col-span-2 lg:col-span-2" : "lg:col-span-2"
-              }`}
+              className="bg-[var(--color-dark-blue)] p-8 lg:p-10"
             >
               <div className="text-[44px] lg:text-[64px] xl:text-[72px] leading-none font-semibold text-white whitespace-nowrap">
                 <NumberTicker value={s.value} suffix={s.suffix} />

@@ -12,7 +12,7 @@ export function MotifPage() {
       <MotifHero />
       <MotifProgramme />
       <MotifNumbers />
-      {/* Crew section removed until real names and photos are supplied (see motif/MotifCrew.tsx). */}
+      {/* Crew section removed until real names and photos are supplied. */}
       <MotifWeek />
       <MotifQC />
       <CTASection
