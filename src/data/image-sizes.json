@@ -191,6 +191,62 @@
     "width": 1600,
     "height": 1067
   },
+  "/images/how-we-deliver/01-brief.webp": {
+    "width": 1280,
+    "height": 853,
+    "small": {
+      "src": "/images/how-we-deliver/01-brief-640.webp",
+      "width": 640
+    }
+  },
+  "/images/how-we-deliver/02-survey.webp": {
+    "width": 1280,
+    "height": 853,
+    "small": {
+      "src": "/images/how-we-deliver/02-survey-640.webp",
+      "width": 640
+    }
+  },
+  "/images/how-we-deliver/03-design.webp": {
+    "width": 1280,
+    "height": 853,
+    "small": {
+      "src": "/images/how-we-deliver/03-design-640.webp",
+      "width": 640
+    }
+  },
+  "/images/how-we-deliver/04-mobilise.webp": {
+    "width": 1280,
+    "height": 853,
+    "small": {
+      "src": "/images/how-we-deliver/04-mobilise-640.webp",
+      "width": 640
+    }
+  },
+  "/images/how-we-deliver/05-deliver.webp": {
+    "width": 1280,
+    "height": 853,
+    "small": {
+      "src": "/images/how-we-deliver/05-deliver-640.webp",
+      "width": 640
+    }
+  },
+  "/images/how-we-deliver/06-reinstate.webp": {
+    "width": 1280,
+    "height": 853,
+    "small": {
+      "src": "/images/how-we-deliver/06-reinstate-640.webp",
+      "width": 640
+    }
+  },
+  "/images/how-we-deliver/07-handover.webp": {
+    "width": 1280,
+    "height": 853,
+    "small": {
+      "src": "/images/how-we-deliver/07-handover-640.webp",
+      "width": 640
+    }
+  },
   "/images/lambs-logo-v2.webp": {
     "width": 1400,
     "height": 241
