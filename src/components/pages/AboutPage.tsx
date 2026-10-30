@@ -121,7 +121,7 @@ export function AboutPage() {
         </div>
       </section>
 
-      <CTASection eyebrow="Work with us" heading="Since 1988. Still answering the phone." />
+      <CTASection eyebrow="Work with us" heading="Still answering the phone since 1988." />
     </PageShell>
   );
 }
