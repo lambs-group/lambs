@@ -17,10 +17,9 @@ const directors: PersonCard[] = [
   { name: "Amanda Lamb", role: "Director", bio: "Oversees finance, HR, operations and commercials, working alongside Simon to drive the business forward.", image: "/images/team/amanda-lamb.webp" },
 ];
 
-// Ray's title is awaiting confirmation from Lambs (Frankie is now Operations Director).
 const seniorTeam: PersonCard[] = [
   { name: "Frankie Lamb", role: "Operations Director", image: "/images/team/frankie-lamb.webp" },
-  { name: "Ray Pennington", role: "Director", image: "/images/team/ray-pennington.webp" },
+  { name: "Ray Pennington", role: "General Manager", image: "/images/team/ray-pennington.webp" },
   { name: "Jennifer Nelson", role: "Senior Manager", image: "/images/team/jennifer-nelson.webp" },
   { name: "Luke Pennington", role: "Purchasing & Training Manager", image: "/images/team/luke-pennington.webp" },
 ];
