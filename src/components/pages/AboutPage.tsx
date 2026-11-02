@@ -1,25 +1,17 @@
 import { AnimatedHeading } from "../AnimatedHeading";
 import { FadeIn } from "../FadeIn";
-import { RevealImage } from "../RevealImage";
 import { PageShell } from "../sections/PageShell";
 import { PageHero } from "../sections/PageHero";
 import { CTASection } from "../sections/CTASection";
+import { Todo } from "../Placeholder";
 
 const storyImage = "/images/field/team-site-briefing.webp";
-const fieldImage = "/images/field/street-works-saw-cutting.webp";
 
 const values = [
-  { number: "01", title: "A skilled workforce", description: "30+ people across our workforce, including operatives and engineers. Trained, supervised, accountable.", chip: "30+ people" },
-  { number: "02", title: "Compliance-first delivery", description: "NRSWA-trained teams. ISO 9001, 14001 and 45001 certified. 30 van audits per month. Audited, logged, actioned.", chip: "55 audits / month" },
-  { number: "03", title: "Family-run since 1988", description: "Still run by Simon & Amanda Lamb. Still answering the phone. Still remembering every operative's name.", chip: "Est. 1988" },
-  { number: "04", title: "Long client relationships", description: "Our clients come back year after year. Trust built one programme at a time.", chip: "Repeat clients" },
-];
-
-const timeline = [
-  { year: "1988", title: "Founded as S Lamb Construction", body: "Simon Lamb starts the business with a single crew. Direct delivery, no subcontracting shuffle." },
-  { year: "2000s", title: "Telecoms specialism", body: "First fibre contracts. Lambs becomes a trusted telecoms partner for national operators." },
-  { year: "2010s", title: "Utilities arm launched", body: "Expansion into water, gas and electricity connections across housing and industrial schemes." },
-  { year: "Today", title: "Motif · Virgin Media", body: "One of the largest operational crews on Virgin Media's Motif programme. 2,500 jobs per week, 10,000 homes per month." },
+  { number: "01", title: "A skilled workforce", description: "Experienced operatives and engineers, supported by training, supervision and clear accountability.", chip: "" },
+  { number: "02", title: "Safety, quality & compliance", description: "Our dedicated Health and Safety Manager supports our teams through regular site, vehicle and equipment audits, with findings recorded and followed up.", chip: "ISO 9001 · 14001 · 45001" },
+  { number: "03", title: "Family-run since 1988", description: "Led by Simon and Amanda Lamb, with a hands-on approach and pride in the work we deliver.", chip: "Est. 1988" },
+  { number: "04", title: "Long-standing working relationships", description: "Decades of working with contractors, network operators, developers and local authorities, building trust through practical experience and reliable delivery.", chip: "" },
 ];
 
 export function AboutPage() {
@@ -28,7 +20,7 @@ export function AboutPage() {
       <PageHero
         eyebrow="About Lambs Group"
         heading="Our roots date back to 1988."
-        lede="Lambs Group is a family-run infrastructure contractor based in Warrington. Telecoms, utilities and private works, delivered by teams across our workforce since 1988."
+        lede="Lambs Group is a family-run infrastructure contractor with experience built since 1988. We deliver telecoms, utilities and private works, with minor and major civils and groundworks at the heart of our capabilities."
         image={storyImage}
         imageAlt="Lambs Group operatives reviewing plans together on a residential street"
         sectionIndex="- / About"
@@ -39,20 +31,14 @@ export function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
             <div className="lg:col-span-5">
               <FadeIn><span className="eyebrow">The story</span></FadeIn>
-              <AnimatedHeading as="h2" className="mt-6 max-w-xl">A Warrington yard. A clear idea.</AnimatedHeading>
+              <AnimatedHeading as="h2" className="mt-6 max-w-xl">A family business. Built on experience.</AnimatedHeading>
             </div>
             <div className="lg:col-span-7 space-y-6 text-[var(--color-charcoal)] text-lg leading-relaxed">
               <FadeIn delay={180}>
-                <p>In 1988, Simon Lamb founded S Lamb Construction with a small team and a clear principle: employ the people who do the work. Subcontracting through multiple layers, he'd seen, undermines quality and safety.</p>
+                <p>Led by Simon and Amanda Lamb, Lambs Group brings together decades of practical construction, civils and groundworks experience. Over the years, we have delivered work for network operators, contractors, housebuilders and local authorities. That experience continues to shape our work today, from major infrastructure projects to smaller civils works and improvements to customers&rsquo; homes.</p>
               </FadeIn>
               <FadeIn delay={260}>
-                <p>Today - now trading as Lambs Group - the company is still based in Warrington, still family-run by Simon and his wife Amanda Lamb, and still run by people who know the work. Today there are 30+ people across our workforce, in 12+ specialist delivery teams, delivering telecoms, utilities and private works across the North West, Yorkshire and West Midlands.</p>
-              </FadeIn>
-              <FadeIn delay={300}>
-                <p>Civils and groundworks have been a big part of our work over the years, and they remain so today. Our teams are built on the experience and customer relationships we have developed since our roots in 1988, and our history and projects speak for themselves.</p>
-              </FadeIn>
-              <FadeIn delay={380}>
-                <p>Bigger projects. Same principles.</p>
+                <p>Direct delivery is central to how we work. Our teams operate under Lambs&rsquo; management, giving us clear oversight of safety, quality and workmanship, and giving clients one accountable point of contact.</p>
               </FadeIn>
             </div>
           </div>
@@ -79,9 +65,11 @@ export function AboutPage() {
                   <div>
                     <h3 className="text-white text-[26px] lg:text-[32px] font-semibold mb-4 leading-tight">{v.title}</h3>
                     <p className="text-white/75 text-[15px] leading-relaxed mb-5">{v.description}</p>
-                    <span className="inline-block text-[11px] uppercase tracking-widest text-[var(--color-cyan)] border border-[var(--color-cyan)]/50 px-3 py-1.5 font-medium">
-                      {v.chip}
-                    </span>
+                    {v.chip && (
+                      <span className="inline-block text-[11px] uppercase tracking-widest text-[var(--color-cyan)] border border-[var(--color-cyan)]/50 px-3 py-1.5 font-medium">
+                        {v.chip}
+                      </span>
+                    )}
                   </div>
                 </div>
               </FadeIn>
@@ -92,36 +80,21 @@ export function AboutPage() {
 
       <section className="bg-[var(--color-light-grey)] py-24 lg:py-36">
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-            <div className="lg:col-span-5">
-              <FadeIn><span className="eyebrow">Milestones</span></FadeIn>
-              <AnimatedHeading as="h2" className="mt-6 mb-10 max-w-md">Three decades, one direction.</AnimatedHeading>
-              <FadeIn delay={200}>
-                <RevealImage src={fieldImage} alt="Two Lambs Group operatives in hi-vis and ear defenders saw-cutting tarmac behind green safety barriers" aspect="aspect-[4/5]" />
-              </FadeIn>
-            </div>
-            <div className="lg:col-span-7">
-              <ul className="border-t border-[var(--color-border-strong)]">
-                {timeline.map((item, i) => (
-                  <FadeIn key={item.year} as="span" delay={i * 100} className="block border-b border-[var(--color-border-strong)] py-8 lg:py-10">
-                    <div className="grid grid-cols-12 gap-6">
-                      <div className="col-span-12 md:col-span-3 text-sm uppercase tracking-widest text-[var(--color-cyan)] font-semibold">
-                        {item.year}
-                      </div>
-                      <div className="col-span-12 md:col-span-9">
-                        <h3 className="text-[var(--color-dark-blue)] text-[22px] lg:text-[26px] font-semibold mb-3 leading-tight">{item.title}</h3>
-                        <p className="text-[var(--color-charcoal)] text-[15px] leading-relaxed">{item.body}</p>
-                      </div>
-                    </div>
-                  </FadeIn>
-                ))}
-              </ul>
-            </div>
+          <FadeIn><span className="eyebrow">One team</span></FadeIn>
+          <div className="mt-10 border border-dashed border-[var(--color-border-strong)] bg-white/60 aspect-[16/7] flex items-center justify-center text-center px-6">
+            <p className="text-[15px]">
+              <Todo>whole-team photograph: office staff, engineers, operatives and management together, mixed rather than separated by role</Todo>
+            </p>
           </div>
+          <FadeIn delay={200}>
+            <p className="mt-6 text-[var(--color-dark-blue)] text-[20px] lg:text-[24px] font-semibold">
+              One Lambs team. Working together, on site and behind the scenes.
+            </p>
+          </FadeIn>
         </div>
       </section>
 
-      <CTASection eyebrow="Work with us" heading="Still answering the phone since 1988." />
+      <CTASection eyebrow="Work with us" heading="Experience behind us. Commitment ahead." note="closing line is Amanda's proposal, awaiting her confirmation" />
     </PageShell>
   );
 }

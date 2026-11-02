@@ -1,6 +1,7 @@
 import { AnimatedHeading } from "../AnimatedHeading";
 import { FadeIn } from "../FadeIn";
 import { Button } from "../Button";
+import { Todo } from "../Placeholder";
 
 interface CTASectionProps {
   eyebrow?: string;
@@ -9,6 +10,8 @@ interface CTASectionProps {
   primaryHref?: string;
   secondaryLabel?: string;
   secondaryHref?: string;
+  /** Optional highlighted note for wording still awaiting confirmation. */
+  note?: string;
 }
 
 export function CTASection({
@@ -18,6 +21,7 @@ export function CTASection({
   primaryHref = "/contact",
   secondaryLabel = "Call 01925 810 991",
   secondaryHref = "tel:01925810991",
+  note,
 }: CTASectionProps) {
   return (
     <section className="bg-[var(--color-dark-blue)] text-white py-24 lg:py-32 relative overflow-hidden">
@@ -29,6 +33,7 @@ export function CTASection({
             <AnimatedHeading as="h2" className="text-white max-w-3xl mt-8">
               {heading}
             </AnimatedHeading>
+            {note && <p className="mt-6 text-[14px]"><Todo>{note}</Todo></p>}
           </div>
           <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 items-start lg:items-end">
             <Button href={primaryHref} variant="primary" size="lg">{primaryLabel}</Button>
