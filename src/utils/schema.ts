@@ -44,7 +44,7 @@ const LINKEDIN = "https://www.linkedin.com/company/lambs-uk-civils-ltd/home/";
 const CRUMB_NAMES: Record<string, string> = {
   about: "About",
   careers: "Careers",
-  apply: "Send us your CV",
+  apply: "Register your interest",
   contact: "Contact",
   cookies: "Cookie Policy",
   "how-we-deliver": "How We Deliver",
@@ -55,7 +55,7 @@ const CRUMB_NAMES: Record<string, string> = {
   terms: "Website Terms of Use",
   utilities: "Utilities",
   work: "Our Work",
-  motif: "Virgin Media Motif",
+  motif: "Project experience",
 };
 
 const EMPLOYMENT: Record<string, string> = {
@@ -84,8 +84,8 @@ export function buildGraph(i: GraphInput) {
       name: "Lambs Group",
       alternateName: ["S Lamb Construction"],
       description:
-        "Family-run infrastructure contractor delivering telecoms, utilities and private works with skilled teams across its workforce since 1988.",
-      slogan: "Safely, compliantly, on programme.",
+        "Family-run infrastructure contractor delivering telecoms, utilities and private works, with civils and groundworks expertise at the heart of every project, since 1988.",
+      slogan: "Built on experience. Delivered with care.",
       url: i.siteRoot,
       logo: { "@type": "ImageObject", url: `${i.siteRoot}images/lambs-logo-v2.webp`, width: 1400, height: 241 },
       image: `${i.siteRoot}images/og-default.jpg`,
@@ -93,6 +93,7 @@ export function buildGraph(i: GraphInput) {
       founder: { "@type": "Person", name: "Simon Lamb", jobTitle: "Director" },
       telephone: "+441925810991",
       email: "contact@lambsgroup.co.uk",
+      // Current address; the planned move is not published until Lambs confirm the new one.
       address: {
         "@type": "PostalAddress",
         streetAddress: "Unit 26 Tatton Court, Kingsland Grange, Woolston",
@@ -105,6 +106,7 @@ export function buildGraph(i: GraphInput) {
       areaServed: regions,
       knowsAbout: [
         "Fibre optic network installation (FTTH and FTTP)",
+        "Fibre blowing and cabling",
         "Fibre splicing and testing",
         "Directional drilling and mole ploughing",
         "Water, gas and electricity mains and connections",

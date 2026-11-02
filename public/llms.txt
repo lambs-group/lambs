@@ -1,20 +1,20 @@
 # Lambs Group
 
 ## About
-Lambs Group is a family-run UK infrastructure contractor, established 1988, based in Warrington. We deliver telecoms, utilities and domestic private works (driveways, groundworks) across the UK, using skilled teams across its workforce (30+ people in 12+ specialist delivery teams), covering the North West, Yorkshire and West Midlands.
+Lambs Group is a family-run UK infrastructure contractor with experience built since 1988. We deliver telecoms, utilities and private works, with minor and major civils and groundworks at the heart of our capabilities. Lambs usually delivers directly: our teams work under Lambs' management, giving clients one accountable point of contact and clear oversight of safety, quality and workmanship.
 
-Civils and groundworks run through all three areas of the business, and telecoms includes significant civils work alongside telecoms services. Our roots date back to 1988.
+Agreed slogan: Built on experience. Delivered with care.
 
 ## Sectors
-- Telecoms: FTTH/FTTP rollout, splicing, directional drilling, cabinet installs
-- Utilities: water, gas, electricity supply works — ducting, jointing, mains laying
-- Private Works (domestic): tarmac, resin driveways, block paving, patios, drainage, dropped kerbs
+- Telecoms: telecoms civils, ducting and chambers, fibre blowing and cabling, splicing and testing, FTTH/FTTP rollout, directional drilling, mole ploughing, surveys and design, cabinet installations
+- Utilities: civils and infrastructure for telecoms, water, gas and electricity: ducting, jointing, mains laying, service connections, reinstatement
+- Private Works (domestic): driveways and surfacing, patios and paving, bricklaying and building works, landscaping and garden improvements, fencing and drainage, groundworks and external works. Labour-only work and smaller jobs welcome. Written quotations for every project.
 
-## Flagship programme
-Virgin Media Motif full-fibre rollout, delivered in partnership with Fujitsu. ~2,500 jobs per week, ~10,000 homes connected per month.
+## Delivery support
+Office and operational teams support every job: planning and scheduling, streetworks and permitting support, client and site communication, project administration, job packs and safe digging information, documentation and client systems, progress and completion records, health and safety (a dedicated Health and Safety Manager runs regular site, vehicle and equipment audits), training coordination, and plant and fleet coordination.
 
 ## Contact
-- Head Office: Unit 26 Tatton Court, Kingsland Grange, Woolston, Warrington WA1 4RR
+- Head Office: Unit 26 Tatton Court, Kingsland Grange, Woolston, Warrington WA1 4RR (details to be confirmed before launch)
 - Phone: 01925 810 991
 - Opening hours: Monday to Friday, 9am to 5:30pm
 - Email: contact@lambsgroup.co.uk
@@ -28,7 +28,6 @@ Virgin Media Motif full-fibre rollout, delivered in partnership with Fujitsu. ~2
 - About: https://lambsgroup.co.uk/about
 - Team: https://lambsgroup.co.uk/team
 - Our Work: https://lambsgroup.co.uk/work
-- Motif microsite: https://lambsgroup.co.uk/work/motif
 - How We Deliver: https://lambsgroup.co.uk/how-we-deliver
 - Careers: https://lambsgroup.co.uk/careers
 - Contact: https://lambsgroup.co.uk/contact
