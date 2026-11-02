@@ -1,5 +1,5 @@
 import { COMPANY } from "./company";
-import { A, H2, LegalPage, Mail, P, UL } from "./LegalPage";
+import { A, H2, LegalPage, Mail, P, Tbc, UL } from "./LegalPage";
 import { openConsentSettings } from "../../../utils/consent";
 
 export function CookiesPage() {
@@ -69,6 +69,8 @@ export function CookiesPage() {
         . You can also block or delete cookies and site data in your browser settings, though the forms may stop working if the
         security check is blocked.
       </P>
+
+      <P><Tbc>technical check of the final site: analytics stays off until accepted, rejecting works, and reopening cookie settings works; update the date once checked</Tbc></P>
 
       <H2>More information</H2>
       <P>

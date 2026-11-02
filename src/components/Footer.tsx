@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { Logo } from "./Logo";
 import { withBase } from "../utils/paths";
+import { Todo } from "./Placeholder";
 import { imgAttrs } from "../utils/images";
 import { openConsentSettings } from "../utils/consent";
 
@@ -81,6 +82,7 @@ export function Footer() {
             </h3>
             <div className="flex flex-col gap-2 text-[13px] text-white/60 max-w-sm">
               <span>Unit 26 Tatton Court, Kingsland Grange, Woolston, Warrington WA1 4RR</span>
+              <span className="text-[12px]"><Todo>confirm address, phone and hours before launch</Todo></span>
             </div>
           </div>
 

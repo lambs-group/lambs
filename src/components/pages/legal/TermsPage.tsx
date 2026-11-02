@@ -1,5 +1,5 @@
 import { COMPANY } from "./company";
-import { A, H2, LegalPage, Mail, P, UL, Val } from "./LegalPage";
+import { A, H2, LegalPage, Mail, P, Tbc, UL, Val } from "./LegalPage";
 
 export function TermsPage() {
   return (
@@ -35,7 +35,7 @@ export function TermsPage() {
       <H2>Accuracy of information</H2>
       <P>
         We take care to keep the site accurate and up to date, but it is provided for general information. Descriptions of services,
-        project figures and accreditations may change, and nothing on the site is a quotation or an offer to supply services. Prices
+        project information and accreditations may change, and nothing on the site is a quotation or an offer to supply services. Prices
         and availability are confirmed only in a written quote.
       </P>
 
@@ -56,6 +56,8 @@ export function TermsPage() {
         and <A href="/cookies">Cookie Policy</A>.
       </P>
 
+      <P><Tbc>legal review of the liability, changes and governing-law clauses, if Lambs want one</Tbc></P>
+
       <H2>Changes and governing law</H2>
       <P>
         We may update these terms from time to time; the version on this page is the one that applies. These terms, and any dispute
@@ -65,7 +67,7 @@ export function TermsPage() {
 
       <H2>Contact</H2>
       <P>
-        {COMPANY.tradingName}, {COMPANY.tradingAddress}. Email{" "}
+        {COMPANY.tradingName}, {COMPANY.tradingAddress} <Tbc>update the address for the planned move</Tbc>. Email{" "}
         <Mail address={COMPANY.email} />, phone {COMPANY.phone}.
       </P>
     </LegalPage>

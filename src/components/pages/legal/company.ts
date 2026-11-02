@@ -12,5 +12,4 @@ export const COMPANY = {
   tradingAddress: "Unit 26 Tatton Court, Kingsland Grange, Woolston, Warrington WA1 4RR",
   email: "contact@lambsgroup.co.uk",
   phone: "01925 810 991",
-  lastUpdated: "12 October 2026",
 };

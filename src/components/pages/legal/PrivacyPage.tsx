@@ -13,7 +13,7 @@ export function PrivacyPage() {
         This website is run by {COMPANY.tradingName}, a trading name of <Val v={COMPANY.legalName} label="registered company name" />
         {" "}(company number <Val v={COMPANY.companyNumber} label="Companies House number" />). We are the "controller" of the personal
         information described in this policy, which means we decide how and why it is used. Our registered office is{" "}
-        <Val v={COMPANY.registeredOffice} label="registered office address" /> and we trade from {COMPANY.tradingAddress}. We are
+        <Val v={COMPANY.registeredOffice} label="registered office address" /> and we trade from {COMPANY.tradingAddress} <Tbc>update the trading address for the planned move</Tbc>. We are
         registered with the Information Commissioner's Office (ICO), registration number{" "}
         <Val v={COMPANY.icoRegistration} label="ICO registration number" />.
       </P>
@@ -26,9 +26,9 @@ export function PrivacyPage() {
       <H2>What information we collect</H2>
       <P>We only collect information you choose to give us, plus a small amount of technical data needed to run the site securely.</P>
       <UL>
-        <li><strong>Commercial enquiries</strong> (contact form): your name, company, email address, phone number, sector and the details of your project.</li>
-        <li><strong>Private Works quote requests</strong>: your name, email, phone, postcode, address, the work you want, timing, any notes and any photos you upload.</li>
-        <li><strong>Job applications</strong>: your name, email, phone, location, cover note and your CV, which may include employment history, qualifications and tickets.</li>
+        <li><strong>Commercial enquiries</strong> (contact form): your name, company, email address, phone number, project location or postcode, preferred timescale, sector and the details of your project.</li>
+        <li><strong>Private Works and homeowner quote requests</strong>: your name, email, phone, postcode, optional address, the service you require, approximate area, timing, any notes and any photos you upload.</li>
+        <li><strong>Careers enquiries and applications</strong>: your name, email, phone, location, the type of work you are interested in, a summary of your skills and qualifications and, if you choose to attach one, your CV, which may include employment history, qualifications and tickets.</li>
         <li><strong>Security and technical data</strong>: your IP address and basic browser details are processed when you load the site and when you submit a form, so that we can keep the site secure and block automated abuse.</li>
         <li><strong>Analytics</strong> (only if you accept them in our cookie banner): aggregate information about how pages are used, collected by Cloudflare Web Analytics. See our <A href="/cookies">Cookie Policy</A>.</li>
       </UL>
