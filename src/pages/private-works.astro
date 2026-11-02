@@ -1,17 +1,17 @@
 ---
 import Base from "../layouts/Base.astro";
 import { PrivateWorksPage } from "../components/pages/PrivateWorksPage";
-import { services } from "../components/pages/private/PrivateServicesGrid";
+import { SERVICE_GROUPS } from "../components/pages/private/serviceGroups";
 ---
 <Base
   service={{
     name: 'Private works: driveways and groundworks',
     serviceType: 'Domestic driveway and groundworks installation',
-    description: 'Tarmac, resin, block paving, patios, drainage, dropped kerbs and domestic groundworks for homeowners across the North West.',
-    items: services.map((s) => ({ name: s.title, description: s.blurb })),
+    description: 'Driveways, patios, brickwork, garden walls, landscaping, drainage, dropped kerbs and domestic groundworks for homeowners across the North West.',
+    items: SERVICE_GROUPS.map((s) => ({ name: s.title, description: s.blurb })),
   }}
-  title="Private Works: Driveways, Resin & Paving | Lambs Group"
-  description="Driveways, resin surfacing, block paving, patios, drainage and dropped kerbs across the North West from Lambs Group. Family-run, fixed quotes, compliance-first."
+  title="Private Works: Driveways, Patios & Groundworks | Lambs Group"
+  description="Driveways, patios, brickwork, garden walls, landscaping, drainage and dropped kerbs from Lambs Group. Family-run since 1988, with clear written quotations."
 >
   <PrivateWorksPage client:load />
 </Base>

@@ -4,6 +4,7 @@ import { AnimatedHeading } from "../../AnimatedHeading";
 import { Button } from "../../Button";
 import { Turnstile } from "../../Turnstile";
 import { submitForm } from "../../../utils/submit-form";
+import { SERVICE_OPTIONS } from "./serviceGroups";
 
 interface QuoteFormProps {
   id?: string;
@@ -32,10 +33,10 @@ export function QuoteForm({ id }: QuoteFormProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           <div className="lg:col-span-5">
             <FadeIn><span className="eyebrow mb-6">Get a quote</span></FadeIn>
-            <AnimatedHeading as="h2" className="mt-4 mb-6 max-w-md">Your driveway, measured free.</AnimatedHeading>
+            <AnimatedHeading as="h2" className="mt-4 mb-6 max-w-md">Tell us about your project.</AnimatedHeading>
             <FadeIn delay={200}>
               <p className="text-[var(--color-charcoal)] text-lg leading-relaxed max-w-md">
-                Tell us about your drive. We'll come out, measure up, and send a fixed-price quote within 48 hours. No deposit, no pushy sales, no surprise extras.
+                Tell us what you have in mind and share any photos of the area. Our team will get in touch to discuss your requirements and arrange a site visit where needed.
               </p>
             </FadeIn>
           </div>
@@ -47,7 +48,7 @@ export function QuoteForm({ id }: QuoteFormProps) {
                   <p className="text-white/80">
                     {status === "preview"
                       ? "Preview mode - this form isn't connected yet, so nothing has been sent."
-                      : "We'll be in touch within one working day to arrange a free on-site measure."}
+                      : "Our team will be in touch to discuss your requirements."}
                   </p>
                 </div>
               </FadeIn>
@@ -70,19 +71,15 @@ export function QuoteForm({ id }: QuoteFormProps) {
                     <Field label="Postcode" name="postcode" required />
                   </div>
                   <Field label="Address line 1" name="address" />
-                  <Field label="Approx area (m²)" name="area" type="number" />
-                  <SelectField
-                    label="Finish interest"
-                    name="finish"
-                    options={["Tarmac", "Resin", "Block paving", "Patio", "Drainage", "Dropped kerb", "Not sure / mix"]}
-                  />
+                  <Field label="Approx area (m²), optional" name="area" type="number" />
+                  <SelectField label="Service required" name="service" options={SERVICE_OPTIONS} />
                   <SelectField
                     label="Target timing"
                     name="timing"
                     options={["As soon as possible", "Within 1 month", "Within 3 months", "Later this year", "No rush"]}
                   />
                   <FileField label="Photos of the area (optional)" name="photos" />
-                  <TextareaField label="Anything else we should know?" name="notes" />
+                  <TextareaField label="Tell us about your project" name="notes" />
 
                   <Turnstile />
                   {error && <p className="text-[13px] text-red-600">{error}</p>}

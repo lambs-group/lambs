@@ -1,16 +1,9 @@
-import { Construction, Layers, Grid3x3, SquareStack, Droplets, ArrowDownToLine, Hammer } from "lucide-react";
+import { Construction, SquareStack, BrickWall, Trees, Droplets, Shovel } from "lucide-react";
 import { FadeIn } from "../../FadeIn";
 import { AnimatedHeading } from "../../AnimatedHeading";
+import { SERVICE_GROUPS } from "./serviceGroups";
 
-export const services = [
-  { icon: Construction, title: "Tarmac", blurb: "Full driveway relays and overlays in quality-graded tarmac, sealed and rolled." },
-  { icon: Layers, title: "Resin", blurb: "UV-stable resin-bound finishes in a range of aggregates - permeable and long-lasting." },
-  { icon: Grid3x3, title: "Block paving", blurb: "Traditional and contemporary block paving in Marshalls, Brett and Bradstone ranges." },
-  { icon: SquareStack, title: "Patios", blurb: "Indian stone, porcelain and natural stone patios laid to full manufacturer spec." },
-  { icon: Droplets, title: "Drainage", blurb: "ACO channel drains, soakaways and SUDS-compliant drainage for driveways and patios." },
-  { icon: ArrowDownToLine, title: "Dropped kerbs", blurb: "Council-approved dropped kerb applications, construction and highway reinstatement." },
-  { icon: Hammer, title: "Groundworks", blurb: "Domestic groundworks - excavation, levelling, foundations, edging and site prep." },
-];
+const icons = [Construction, SquareStack, BrickWall, Trees, Droplets, Shovel];
 
 export function PrivateServicesGrid() {
   return (
@@ -22,14 +15,14 @@ export function PrivateServicesGrid() {
           </div>
           <div className="lg:col-span-8">
             <AnimatedHeading as="h2" className="max-w-3xl">
-              Seven domestic services. One accountable crew.
+              Practical improvements. Quality workmanship.
             </AnimatedHeading>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[var(--color-border-strong)]">
-          {services.map((s, i) => {
-            const Icon = s.icon;
+          {SERVICE_GROUPS.map((s, i) => {
+            const Icon = icons[i];
             return (
               <FadeIn key={s.title} delay={i * 100} className="bg-[var(--color-light-grey)] p-8 group hover:bg-white transition-colors duration-500">
                 <div className="w-12 h-12 flex items-center justify-center bg-[var(--color-dark-blue)] group-hover:bg-[var(--color-cyan)] transition-colors duration-500 mb-6">
@@ -43,6 +36,12 @@ export function PrivateServicesGrid() {
             );
           })}
         </div>
+
+        <FadeIn delay={200}>
+          <p className="mt-12 text-[var(--color-dark-blue)] text-[18px] lg:text-[20px] font-medium max-w-3xl">
+            We welcome smaller building and landscaping jobs and can also provide labour-only services.
+          </p>
+        </FadeIn>
       </div>
     </section>
   );
