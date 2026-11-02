@@ -4,6 +4,7 @@ import { Button } from "../../Button";
 import { Turnstile } from "../../Turnstile";
 import { withBase } from "../../../utils/paths";
 import { submitForm } from "../../../utils/submit-form";
+import { Todo } from "../../Placeholder";
 import { VACANCIES, type Vacancy } from "../../../data/vacancies";
 
 const GENERAL = "general";
@@ -56,8 +57,8 @@ export function ApplicationForm({ vacancy }: ApplicationFormProps) {
           <h3 className="text-2xl font-semibold mb-3 text-white">Thanks - we've got it.</h3>
           <p className="text-white/80">
             {status === "preview"
-              ? "Preview mode - the form handler isn't configured yet, so this submission wasn't sent. In production we'd be in touch within one working day."
-              : "We'll be in touch within one working day."}
+              ? "Preview mode - the form handler isn't configured yet, so this submission wasn't sent."
+              : "Our team will review your details and contact you if there is a suitable opportunity."}
           </p>
         </div>
       </FadeIn>
@@ -97,11 +98,12 @@ export function ApplicationForm({ vacancy }: ApplicationFormProps) {
         <Field label="Email" name="email" type="email" required />
         <Field label="Phone" name="phone" type="tel" required />
         <Field label="Location / postcode" name="location" />
+        {!vacancy && VACANCIES.length === 0 && <Field label="Role / type of work you're interested in" name="interest" />}
 
         <CvField fileName={fileName} onChange={setFileName} />
 
         <TextareaField
-          label="Cover note"
+          label="Short summary of your skills and qualifications"
           name="message"
           placeholder="Briefly - the work you do, relevant tickets, current notice period, anything you want us to know."
         />
@@ -112,12 +114,12 @@ export function ApplicationForm({ vacancy }: ApplicationFormProps) {
 
         <div className="pt-2">
           <Button variant="primary" size="lg" type="submit">
-            {status === "sending" ? "Sending…" : vacancy ? `Apply for ${vacancy.title}` : "Send my CV"}
+            {status === "sending" ? "Sending…" : vacancy ? `Apply for ${vacancy.title}` : "Send your details"}
           </Button>
         </div>
 
         <p className="text-[11px] uppercase tracking-[0.14em] text-[var(--color-mid-blue)] mt-2">
-          Prefer email? Send your CV to{" "}
+          Prefer email? Send your details to{" "}
           <a
             href={`mailto:careers@lambsgroup.co.uk?subject=Application - ${encodeURIComponent(roleTitle)}`}
             className="text-[var(--color-dark-blue)] underline underline-offset-2 decoration-[var(--color-cyan)]"
@@ -125,6 +127,7 @@ export function ApplicationForm({ vacancy }: ApplicationFormProps) {
             careers@lambsgroup.co.uk
           </a>
         </p>
+        <p className="text-[12px]"><Todo>careers@lambsgroup.co.uk monitored, and by whom</Todo></p>
       </form>
     </FadeIn>
   );
@@ -167,13 +170,12 @@ function CvField({ fileName, onChange }: { fileName: string | null; onChange: (n
   return (
     <label className="flex flex-col gap-2">
       <span className="text-[11px] uppercase tracking-[0.18em] text-[var(--color-mid-blue)] font-medium">
-        CV <span className="text-[var(--color-cyan)] ml-0.5">*</span>
+        CV (optional)
       </span>
       <div className="flex items-center gap-4 py-3 border-b border-[var(--color-border-strong)]">
         <input
           type="file"
           name="cv"
-          required
           accept=".pdf,.doc,.docx,.odt,.rtf,.txt"
           onChange={(e) => onChange(e.target.files?.[0]?.name ?? null)}
           className="text-[13px] text-[var(--color-dark-blue)] file:mr-4 file:py-2 file:px-4 file:border-0 file:bg-[var(--color-dark-blue)] file:text-white file:text-[11px] file:uppercase file:tracking-[0.14em] file:font-medium file:cursor-pointer hover:file:bg-[var(--color-cyan)] hover:file:text-[var(--color-dark-blue)] file:transition-colors"

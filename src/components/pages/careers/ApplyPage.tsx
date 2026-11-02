@@ -2,6 +2,7 @@ import { FadeIn } from "../../FadeIn";
 import { PageShell } from "../../sections/PageShell";
 import { PageHero } from "../../sections/PageHero";
 import { withBase } from "../../../utils/paths";
+import { Todo } from "../../Placeholder";
 import { VACANCIES } from "../../../data/vacancies";
 import { ApplicationForm } from "./ApplicationForm";
 
@@ -10,8 +11,8 @@ export function ApplyPage() {
     <PageShell>
       <PageHero
         eyebrow="Careers"
-        heading="Send us your CV."
-        lede="Tell us what you do and where you work. We keep every CV on file and get in touch when a role fits. If there's a specific vacancy you're after, choose it below."
+        heading="Register your interest."
+        lede="Tell us about your experience, location and the type of work you’re interested in. You can attach a CV or provide a short summary of your skills and qualifications."
         sectionIndex="- / Careers"
       />
 
@@ -25,8 +26,8 @@ export function ApplyPage() {
               <FadeIn>
                 <span className="eyebrow mb-6">What happens next</span>
                 <ul className="mt-6 flex flex-col gap-4 text-[var(--color-charcoal)] text-[15px] leading-relaxed">
-                  <li className="flex items-start gap-4"><span className="mt-2 w-2 h-2 flex-shrink-0 bg-[var(--color-cyan)]" />We read every application and reply within one working day.</li>
-                  <li className="flex items-start gap-4"><span className="mt-2 w-2 h-2 flex-shrink-0 bg-[var(--color-cyan)]" />Your CV goes to our careers team only, and is kept on file for future roles.</li>
+                  <li className="flex items-start gap-4"><span className="mt-2 w-2 h-2 flex-shrink-0 bg-[var(--color-cyan)]" />Our team will review your details and contact you if there is a suitable opportunity.</li>
+                  <li className="flex items-start gap-4"><span className="mt-2 w-2 h-2 flex-shrink-0 bg-[var(--color-cyan)]" /><Todo>who receives applications, whether careers@lambsgroup.co.uk is monitored, and the retention process</Todo></li>
                   <li className="flex items-start gap-4">
                     <span className="mt-2 w-2 h-2 flex-shrink-0 bg-[var(--color-cyan)]" />
                     <span>

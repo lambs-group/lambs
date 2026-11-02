@@ -6,15 +6,16 @@ import { SectorIndex } from "../SectorIndex";
 import { PageShell } from "../sections/PageShell";
 import { PageHero } from "../sections/PageHero";
 import { CTASection } from "../sections/CTASection";
+import { Todo } from "../Placeholder";
 import { ArrowUpRight } from "lucide-react";
 import { withBase } from "../../utils/paths";
 import { VACANCIES } from "../../data/vacancies";
 
 const reasons = [
-  { number: "01", title: "Across our workforce", body: "Real training, career progression and long tenures." },
-  { number: "02", title: "Proper training", body: "NRSWA, Openreach-specific training, first aid and more - we invest in the training and the time it takes to earn it." },
-  { number: "03", title: "Real progression", body: "Many of our managers started on a shovel. We promote from within." },
-  { number: "04", title: "Family values", body: "Family-run since 1988. We look after our people because we know their names." },
+  { number: "01", title: "Teamwork", body: "Site and office teams work closely together, with every role contributing to delivery." },
+  { number: "02", title: "Training & development", body: "Training is matched to each person\u2019s role, helping our people develop their skills and work safely." },
+  { number: "03", title: "Support on the job", body: "Our teams are supported by experienced managers and a dedicated Health and Safety Manager." },
+  { number: "04", title: "A family-run business", body: "Led by Simon and Amanda Lamb, with a hands-on approach and pride in our people and their work." },
 ];
 
 const vacancies = VACANCIES;
@@ -32,8 +33,8 @@ export function CareersPage() {
       <SectorIndex label="- / CAREERS" />
       <PageHero
         eyebrow="Careers at Lambs Group"
-        heading="Work with people who stick around."
-        lede="Skilled people across our workforce since 1988. If you want proper jobs, real trades, and to actually know who your boss is, we'd like to hear from you."
+        heading="Build your future with Lambs."
+        lede="At Lambs Group, everyone has a part to play—from our engineers and operatives to the people supporting delivery in the office. We welcome enquiries from people who take pride in their work, value teamwork and share our commitment to safety and quality."
         image="/images/field/careers-hero-cable-locator-chamber.webp"
         imageAlt="Lambs Group operative using a gas detector and cable locator at an open chamber"
         sectionIndex="- / Careers"
@@ -46,7 +47,7 @@ export function CareersPage() {
               <FadeIn><span className="eyebrow">Why work here</span></FadeIn>
             </div>
             <div className="lg:col-span-8">
-              <AnimatedHeading as="h2" className="max-w-3xl">Four reasons our people stay.</AnimatedHeading>
+              <AnimatedHeading as="h2" className="max-w-3xl">Working as one Lambs team.</AnimatedHeading>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[var(--color-border-strong)]">
@@ -70,12 +71,12 @@ export function CareersPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-12">
             <div className="lg:col-span-5">
               <FadeIn><span className="eyebrow">Current vacancies</span></FadeIn>
-              <AnimatedHeading as="h2" className="mt-6 max-w-md">Roles we're recruiting for.</AnimatedHeading>
+              <AnimatedHeading as="h2" className="mt-6 max-w-md">Current opportunities.</AnimatedHeading>
             </div>
             <div className="lg:col-span-7 flex lg:justify-end lg:items-end">
               <FadeIn delay={200}>
-                <p className="text-[var(--color-charcoal)] text-base leading-relaxed max-w-md">
-                  Always open to speaking with qualified operatives. Don't see your role? Send us your CV anyway - we'll keep it on file.
+                <p className="text-[14px]">
+                  <Todo>any live vacancies to show here (none listed at present)</Todo>
                 </p>
               </FadeIn>
             </div>
@@ -84,9 +85,8 @@ export function CareersPage() {
           {vacancies.length === 0 ? (
             <FadeIn>
               <div className="border-t border-b border-[var(--color-border-strong)] py-12 lg:py-16">
-                <p className="text-[var(--color-dark-blue)] text-[22px] lg:text-[28px] font-semibold mb-3">No vacancies at the moment.</p>
-                <p className="text-[var(--color-charcoal)] text-base leading-relaxed max-w-xl">
-                  We're always keen to hear from qualified operatives. Send us your CV and we'll keep it on file for when something comes up.
+                <p className="text-[var(--color-charcoal)] text-base lg:text-lg leading-relaxed max-w-2xl">
+                  We don&rsquo;t currently have any advertised vacancies, but welcome enquiries about future opportunities on site and in the office. Tell us about your experience and the type of role you&rsquo;re interested in.
                 </p>
               </div>
             </FadeIn>
@@ -110,7 +110,7 @@ export function CareersPage() {
 
           <FadeIn delay={500}>
             <div className="mt-16 flex flex-col md:flex-row gap-4">
-              <Button href="/careers/apply" variant="primary" size="lg">Send us your CV</Button>
+              <Button href="/careers/apply" variant="primary" size="lg">Register your interest</Button>
             </div>
           </FadeIn>
         </div>
@@ -119,6 +119,7 @@ export function CareersPage() {
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
           <FadeIn><span className="eyebrow mb-8 block">Life on site</span></FadeIn>
+          <p className="mb-8 text-[14px]"><Todo>add office photos alongside site photos, consistent with the one-team message</Todo></p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {lifeImages.map((img, i) => (
               <FadeIn key={img.src} delay={i * 120}>
@@ -129,7 +130,7 @@ export function CareersPage() {
         </div>
       </section>
 
-      <CTASection eyebrow="Join the crew" heading="Good operatives welcome. Always." />
+      <CTASection eyebrow="Join the team" heading="Interested in becoming part of Lambs?" primaryLabel="Register your interest" primaryHref="/careers/apply" />
     </PageShell>
   );
 }

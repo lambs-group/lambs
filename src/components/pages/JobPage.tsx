@@ -81,10 +81,10 @@ export function JobPage({ vacancy }: JobPageProps) {
                 <FadeIn>
                   <span className="eyebrow mb-6">Apply</span>
                   <h2 className="text-[var(--color-dark-blue)] text-[28px] lg:text-[36px] font-semibold mt-6 mb-3 leading-tight">
-                    Send us your CV.
+                    Register your interest.
                   </h2>
                   <p className="text-[var(--color-charcoal)] text-[15px] leading-relaxed mb-8 max-w-md">
-                    We read every application. Expect a call back within one working day.
+                    Our team will review your details and contact you if there is a suitable opportunity.
                   </p>
                 </FadeIn>
 
