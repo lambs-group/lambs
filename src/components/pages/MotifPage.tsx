@@ -1,28 +1,28 @@
 import { PageShell } from "../sections/PageShell";
+import { PageHero } from "../sections/PageHero";
 import { CTASection } from "../sections/CTASection";
-import { MotifHero } from "./motif/MotifHero";
-import { MotifProgramme } from "./motif/MotifProgramme";
-import { MotifNumbers } from "./motif/MotifNumbers";
-import { MotifWeek } from "./motif/MotifWeek";
+import { Todo } from "../Placeholder";
 import { MotifQC } from "./motif/MotifQC";
 
+// Interim page. The old Motif case study combined two separate workstreams (direct Virgin Media
+// full-fibre work and Fujitsu work) and carried unverified figures, so it was stripped on 2 Nov 2026.
+// Rebuild from confirmed information once Lambs confirm which work the Motif name, photos and figures relate to.
 export function MotifPage() {
   return (
-    <PageShell darkHero>
-      <MotifHero />
-      <MotifProgramme />
-      <MotifNumbers />
-      {/* Crew section removed until real names and photos are supplied. */}
-      <MotifWeek />
+    <PageShell>
+      <PageHero
+        eyebrow="Project experience"
+        heading="Telecoms project experience."
+        sectionIndex="- / Project experience"
+      >
+        <p className="mt-6 text-[16px] leading-relaxed max-w-2xl">
+          <Todo>case study rewrite: which work the Motif name, photographs and figures relate to; scope of the direct Virgin Media work and of the Fujitsu work; historical dates. Awaiting Lambs.</Todo>
+        </p>
+      </PageHero>
+
       <MotifQC />
-      <CTASection
-        eyebrow="Work with us"
-        heading="Your programme. Our crew. Motif-tested."
-        primaryLabel="Start a project"
-        primaryHref="/contact"
-        secondaryLabel="See all case studies"
-        secondaryHref="/work"
-      />
+
+      <CTASection />
     </PageShell>
   );
 }

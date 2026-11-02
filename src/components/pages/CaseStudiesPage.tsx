@@ -1,120 +1,47 @@
-import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
-import { AnimatedHeading } from "../AnimatedHeading";
 import { FadeIn } from "../FadeIn";
-import { RevealImage } from "../RevealImage";
-import { Button } from "../Button";
 import { PageShell } from "../sections/PageShell";
 import { PageHero } from "../sections/PageHero";
 import { CTASection } from "../sections/CTASection";
+import { Todo } from "../Placeholder";
 import { withBase } from "../../utils/paths";
-import { imgAttrs } from "../../utils/images";
-
-type Sector = "All" | "Telecoms" | "Utilities" | "Private Works";
-
-const studies = [
-  { id: "motif", flagship: true, client: "Fujitsu · Virgin Media", title: "Virgin Media Motif - national fibre rollout", summary: "One of the largest operational crews on Virgin Media's Motif full-fibre programme. 2,500 jobs per week, 10,000 homes connected per month.", sector: "Telecoms" as Sector, image: "/images/utilities/job-02.webp", stats: [{ value: "2,500+", label: "Jobs / week" }, { value: "10k+", label: "Homes / month" }], href: "/work/motif" },
-];
-
-const sectors: Sector[] = ["All", "Telecoms", "Utilities", "Private Works"];
 
 export function CaseStudiesPage() {
-  const [filter, setFilter] = useState<Sector>("All");
-  const filtered = filter === "All" ? studies : studies.filter((s) => s.sector === filter);
-  const flagship = filtered.find((s) => s.flagship);
-  const rest = filtered.filter((s) => !s.flagship);
-
   return (
     <PageShell>
       <PageHero
         eyebrow="Our Work"
-        heading="Proven delivery, not promises."
-        lede="A selection of delivered programmes. More on request - while much of our best work sits under NDA, we can share comparable projects and the people behind them."
+        heading="Decades of experience. Proven delivery."
+        lede="Explore examples of Lambs Group\u2019s work across telecoms, utilities, civils and groundworks. Our experience spans major infrastructure programmes, smaller works and private projects, built over decades of working with contractors, developers and local authorities."
         sectionIndex="- / Our Work"
       />
 
       <section className="bg-white py-20 lg:py-24">
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
-          <div className="flex flex-wrap gap-2 mb-16">
-            {sectors.map((s) => (
-              <button
-                key={s}
-                onClick={() => setFilter(s)}
-                className={`px-4 py-2 text-[12px] uppercase tracking-[0.14em] font-medium transition-colors duration-300 ${
-                  filter === s ? "bg-[var(--color-cyan)] text-[var(--color-dark-blue)]" : "border border-[var(--color-border-strong)] text-[var(--color-dark-blue)] hover:border-[var(--color-dark-blue)]"
-                }`}
-              >
-                {s}
-              </button>
-            ))}
-          </div>
+          <FadeIn>
+            <a href={withBase("/work/motif")} className="group block border border-[var(--color-border-strong)] p-10 lg:p-14 hover:border-[var(--color-dark-blue)] transition-colors duration-500">
+              <span className="eyebrow mb-6">Project experience · Telecoms</span>
+              <h2 className="text-[var(--color-dark-blue)] text-[28px] lg:text-[40px] font-semibold leading-tight mb-6 max-w-2xl">
+                <Todo>title, once the Fujitsu and Virgin Media work is clarified</Todo>
+              </h2>
+              <p className="text-[var(--color-charcoal)] text-[16px] leading-relaxed mb-8 max-w-2xl">
+                <Todo>summary of historical project experience, awaiting Lambs</Todo>
+              </p>
+              <span className="inline-flex items-center gap-3 text-xs uppercase tracking-widest text-[var(--color-dark-blue)] font-semibold">
+                View project experience
+                <ArrowUpRight className="w-4 h-4 btn-arrow" />
+              </span>
+            </a>
+          </FadeIn>
 
-          {flagship && (
-            <FadeIn>
-              <a href={flagship.href} className="group block bg-[var(--color-dark-blue)] text-white mb-24 overflow-hidden">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
-                  <div className="lg:col-span-7 aspect-video lg:aspect-auto lg:min-h-[520px] relative overflow-hidden">
-                    <img {...imgAttrs(flagship.image, "(min-width: 1024px) 58vw, 100vw")} alt={flagship.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-                  </div>
-                  <div className="lg:col-span-5 p-10 lg:p-14 flex flex-col justify-center">
-                    <span className="eyebrow eyebrow-dark mb-6">Flagship · {flagship.sector}</span>
-                    <div className="text-[11px] uppercase tracking-widest text-white/60 mb-4 font-medium">{flagship.client}</div>
-                    <h2 className="text-white text-[32px] lg:text-[44px] font-semibold leading-tight mb-6">{flagship.title}</h2>
-                    <p className="text-white/80 text-[15px] leading-relaxed mb-8">{flagship.summary}</p>
-                    <div className="grid grid-cols-2 gap-6 mb-8">
-                      {flagship.stats.map((stat) => (
-                        <div key={stat.label}>
-                          <div className="text-[36px] font-semibold leading-none">{stat.value}</div>
-                          <div className="text-[11px] uppercase tracking-widest text-white/60 mt-2 font-medium">{stat.label}</div>
-                        </div>
-                      ))}
-                    </div>
-                    <Button href={flagship.href} variant="primary" size="md" arrow="up-right">Read the Motif story</Button>
-                  </div>
-                </div>
-              </a>
-            </FadeIn>
-          )}
-
-          <div className="flex flex-col gap-24 lg:gap-32">
-            {rest.map((study, i) => (
-              <article key={study.id} className={`grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center ${i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""}`}>
-                <div className="lg:col-span-7">
-                  <RevealImage src={study.image} alt={study.title} aspect="aspect-[4/3]" />
-                </div>
-                <div className="lg:col-span-5">
-                  <FadeIn>
-                    <div className="flex items-center gap-4 mb-4">
-                      <span className="text-xs uppercase tracking-widest text-[var(--color-cyan)] font-semibold">{study.sector}</span>
-                    </div>
-                    <div className="text-[11px] uppercase tracking-[0.18em] text-[var(--color-mid-blue)] mb-4 font-medium">{study.client}</div>
-                  </FadeIn>
-                  <AnimatedHeading as="h2" className="mb-8 max-w-md">{study.title}</AnimatedHeading>
-                  <FadeIn delay={220}>
-                    <p className="text-[var(--color-charcoal)] text-[16px] leading-relaxed mb-8">{study.summary}</p>
-                  </FadeIn>
-                  <div className="grid grid-cols-2 gap-px bg-[var(--color-border-strong)] mb-8 max-w-md">
-                    {study.stats.map((stat, j) => (
-                      <FadeIn key={stat.label} delay={300 + j * 80} className="bg-white p-5">
-                        <div className="text-[32px] lg:text-[40px] leading-none font-semibold text-[var(--color-dark-blue)]">{stat.value}</div>
-                        <div className="text-[11px] uppercase tracking-widest text-[var(--color-mid-blue)] mt-2 font-medium">{stat.label}</div>
-                      </FadeIn>
-                    ))}
-                  </div>
-                  <FadeIn delay={460}>
-                    <a href={study.href} className="group inline-flex items-center gap-3 text-xs uppercase tracking-widest text-[var(--color-dark-blue)] font-semibold">
-                      Discuss a similar programme
-                      <ArrowUpRight className="w-4 h-4 btn-arrow" />
-                    </a>
-                  </FadeIn>
-                </div>
-              </article>
-            ))}
+          <div className="mt-12 space-y-3 text-[15px]">
+            <p><Todo>further case studies: major civils, utilities, housebuilder and local authority projects, with approved details and photographs (Jen to gather, Amanda to approve)</Todo></p>
+            <p><Todo>reference quotes, to follow</Todo></p>
           </div>
         </div>
       </section>
 
-      <CTASection eyebrow="Ready to brief us?" heading="Your programme. Our crew. One point of contact." />
+      <CTASection eyebrow="Ready to brief us?" />
     </PageShell>
   );
 }
