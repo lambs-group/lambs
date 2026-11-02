@@ -13,7 +13,7 @@ interface CTASectionProps {
 
 export function CTASection({
   eyebrow = "Start a project",
-  heading = "Your project. Our crew. One point of contact.",
+  heading = "Your project. Our expertise. One point of contact.",
   primaryLabel = "Start a project",
   primaryHref = "/contact",
   secondaryLabel = "Call 01925 810 991",

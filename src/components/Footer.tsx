@@ -77,7 +77,7 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Logo variant="white" width={160} />
             <h3 className="text-white text-[24px] lg:text-[28px] font-semibold leading-[1.15] max-w-sm mt-10 mb-8">
-              Infrastructure services across the UK. Safely, compliantly, on programme.
+              Built on experience. Delivered with care.
             </h3>
             <div className="flex flex-col gap-2 text-[13px] text-white/60 max-w-sm">
               <span>Unit 26 Tatton Court, Kingsland Grange, Woolston, Warrington WA1 4RR</span>

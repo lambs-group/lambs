@@ -6,10 +6,12 @@ interface CredentialsProps {
   heading: string;
   /** "white" or "grey" section background, to alternate with its neighbours. */
   tone?: "white" | "grey";
+  /** Line on the dedicated Health and Safety Manager, shown under both lists. */
+  healthSafetyNote?: string;
 }
 
 /** Company accreditations and team qualifications, from src/data/credentials.ts. */
-export function Credentials({ eyebrow = "Standards and training", heading, tone = "white" }: CredentialsProps) {
+export function Credentials({ eyebrow = "Standards and training", heading, tone = "white", healthSafetyNote = "Our dedicated Health and Safety Manager oversees regular audits and supports our teams in maintaining safe working practices." }: CredentialsProps) {
   const chip = "text-[11px] uppercase tracking-[0.18em] text-[var(--color-dark-blue)] border border-[var(--color-border-strong)] px-4 py-3 bg-white font-medium";
   return (
     <section
@@ -41,6 +43,9 @@ export function Credentials({ eyebrow = "Standards and training", heading, tone 
 
           <FadeIn delay={120}>
             <h3 className="text-[13px] uppercase tracking-[0.18em] text-[var(--color-mid-blue)] font-medium mb-5">Team qualifications</h3>
+            <p className="mb-5 text-[14px] text-[var(--color-charcoal)] max-w-lg">
+              Training and qualifications are matched to each operative&rsquo;s role and the requirements of the work.
+            </p>
             <div className="flex flex-wrap gap-3">
               {teamQualifications.map((q) => (
                 <span key={q} className={chip}>{q}</span>
@@ -48,6 +53,12 @@ export function Credentials({ eyebrow = "Standards and training", heading, tone 
             </div>
           </FadeIn>
         </div>
+
+        <FadeIn delay={200}>
+          <p className="mt-12 pt-8 border-t border-[var(--color-border)] text-[16px] text-[var(--color-dark-blue)] font-medium max-w-3xl">
+            {healthSafetyNote}
+          </p>
+        </FadeIn>
       </div>
     </section>
   );

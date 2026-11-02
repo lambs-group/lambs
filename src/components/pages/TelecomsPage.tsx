@@ -1,8 +1,6 @@
 import { AnimatedHeading } from "../AnimatedHeading";
 import { FadeIn } from "../FadeIn";
-import { RevealImage } from "../RevealImage";
-import { Button } from "../Button";
-import { NumberTicker } from "../NumberTicker";
+import { Todo } from "../Placeholder";
 import { SectorIndex } from "../SectorIndex";
 import { FibreDraw } from "../motion/FibreDraw";
 import { PageShell } from "../sections/PageShell";
@@ -10,15 +8,15 @@ import { ServiceList } from "../sections/ServiceList";
 import { CTASection } from "../sections/CTASection";
 import { Credentials } from "../sections/Credentials";
 
-const caseImage = "/images/utilities/job-06.webp";
-
 export const services = [
-  { number: "01", title: "FTTH / FTTP rollout", description: "Full-fibre to the home and premises. Design-and-build, surveys, splicing and commissioning for national operators." },
-  { number: "02", title: "Blown fibre & splicing", description: "Microduct blowing, fusion splicing, OTDR testing and certification to operator standards." },
-  { number: "03", title: "Directional drilling", description: "Moling and horizontal directional drilling for low-impact cable installs under highways, driveways and gardens." },
-  { number: "04", title: "Mole ploughing", description: "High-speed duct and cable installation across verges, footpaths and rural routes with minimal reinstatement." },
-  { number: "05", title: "Surveys & design", description: "Pre-build surveys, route planning and on-street validation to keep builds on programme." },
-  { number: "06", title: "Cabinet installs", description: "PCP and FTTC cabinet foundations, installations, power connections and commissioning." },
+  { number: "01", title: "Civils & reinstatement", description: "Excavation, trenching, duct installation, chambers, blockage clearance and reinstatement of roads, footpaths and private land." },
+  { number: "02", title: "FTTH / FTTP rollout", description: "Full-fibre to the home and premises. Surveys, splicing and commissioning to client and network requirements." },
+  { number: "03", title: "Fibre blowing & cabling", description: "Fibre blowing and cable installation through new and existing duct networks." },
+  { number: "04", title: "Splicing & testing", description: "Fibre splicing, testing and certification to client and network requirements." },
+  { number: "05", title: "Directional drilling", description: "Moling and horizontal directional drilling for low-impact cable installs under highways, driveways and gardens." },
+  { number: "06", title: "Mole ploughing", description: "High-speed duct and cable installation across verges, footpaths and rural routes with minimal reinstatement." },
+  { number: "07", title: "Surveys & design", description: "Pre-build surveys, route planning and on-street validation to keep builds on programme." },
+  { number: "08", title: "Cabinet installations", description: "PCP and FTTC cabinet foundations, installations, power connections and commissioning." },
 ];
 
 export function TelecomsPage() {
@@ -34,11 +32,11 @@ export function TelecomsPage() {
         <div className="relative max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 pt-[180px] pb-20 w-full">
           <FadeIn><span className="eyebrow eyebrow-dark mb-8">Sector 01 · Telecoms</span></FadeIn>
           <AnimatedHeading as="h1" className="text-white max-w-4xl mt-8 mb-10" stagger={40}>
-            From survey to splice. At national scale.
+            Telecoms infrastructure. From the ground up.
           </AnimatedHeading>
           <FadeIn delay={280}>
             <p className="text-white/80 text-lg md:text-xl leading-relaxed max-w-2xl">
-              Trusted fibre delivery for the UK's largest operators. FTTH, FTTP, blown fibre, splicing, directional drilling - delivered by crews across our workforce, compliant to operator standard.
+              Lambs Group delivers minor and major telecoms civils, drawing on decades of infrastructure and groundworks experience. Our capabilities include excavation, ducting, chambers, fibre blowing and cabling, splicing and reinstatement, with delivery managed directly by Lambs.
             </p>
           </FadeIn>
         </div>
@@ -46,51 +44,27 @@ export function TelecomsPage() {
 
       <ServiceList
         eyebrow="What we deliver"
-        heading="A full-stack telecoms crew, under one roof."
+        heading="Complete telecoms delivery, managed by Lambs."
         items={services}
       />
 
       <section className="bg-[var(--color-light-grey)] py-24 lg:py-36">
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            <div className="lg:col-span-6">
-              <RevealImage src={caseImage} alt="Virgin Media Motif programme" aspect="aspect-[5/4]" />
-            </div>
-            <div className="lg:col-span-6">
-              <FadeIn><span className="eyebrow mb-6">Flagship programme</span></FadeIn>
-              <AnimatedHeading as="h2" className="mt-6 mb-8 max-w-xl">
-                Fujitsu · Virgin Media Motif
-              </AnimatedHeading>
-              <FadeIn delay={200}>
-                <p className="text-[var(--color-charcoal)] text-lg leading-relaxed mb-10 max-w-xl">
-                  Lambs Group runs one of the largest operational crews on Virgin Media's Motif programme - a major UK full-fibre build-out delivered in partnership with Fujitsu.
-                </p>
-              </FadeIn>
-              <div className="grid grid-cols-2 gap-px bg-[var(--color-border-strong)] max-w-lg mb-10">
-                <FadeIn delay={280} className="bg-[var(--color-light-grey)] p-6">
-                  <div className="text-[48px] lg:text-[56px] leading-none font-semibold text-[var(--color-dark-blue)]">
-                    <NumberTicker value={2500} /><span className="text-[var(--color-cyan)]">+</span>
-                  </div>
-                  <div className="text-[11px] uppercase tracking-widest text-[var(--color-mid-blue)] mt-2 font-medium">Jobs / week</div>
-                </FadeIn>
-                <FadeIn delay={360} className="bg-[var(--color-light-grey)] p-6">
-                  <div className="text-[48px] lg:text-[56px] leading-none font-semibold text-[var(--color-dark-blue)]">
-                    <NumberTicker value={10000} /><span className="text-[var(--color-cyan)]">+</span>
-                  </div>
-                  <div className="text-[11px] uppercase tracking-widest text-[var(--color-mid-blue)] mt-2 font-medium">Homes / month</div>
-                </FadeIn>
-              </div>
-              <FadeIn delay={440}>
-                <Button href="/work/motif" variant="primary" size="md" arrow="up-right">Read the Motif story</Button>
-              </FadeIn>
-            </div>
-          </div>
+          <FadeIn><span className="eyebrow mb-6">Project experience</span></FadeIn>
+          <h2 className="mt-6 mb-8 max-w-2xl text-[var(--color-dark-blue)] text-[28px] lg:text-[40px] font-semibold leading-tight">
+            <Todo>heading, once the Fujitsu and Virgin Media work is clarified</Todo>
+          </h2>
+          <FadeIn delay={200}>
+            <p className="text-[var(--color-charcoal)] text-lg leading-relaxed max-w-2xl">
+              <Todo>historical project experience wording, awaiting Lambs to confirm which work relates to which client</Todo>
+            </p>
+          </FadeIn>
         </div>
       </section>
 
       <Credentials heading="Certified, qualified and trained." tone="white" />
 
-      <CTASection eyebrow="Planning a fibre programme?" heading="Let's walk the route." />
+      <CTASection eyebrow="Planning telecoms works?" heading="Let's walk the route." />
     </PageShell>
   );
 }
