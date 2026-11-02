@@ -6,6 +6,8 @@ import { Button } from "../Button";
 import { PageShell } from "../sections/PageShell";
 import { submitForm, type FormType } from "../../utils/submit-form";
 import { Turnstile } from "../Turnstile";
+import { Todo } from "../Placeholder";
+import { SERVICE_OPTIONS } from "./private/serviceGroups";
 
 type Mode = "commercial" | "domestic";
 
@@ -27,11 +29,11 @@ export function ContactPage() {
         <div className="relative max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
           <FadeIn><span className="eyebrow mb-6">Contact · Start a project</span></FadeIn>
           <AnimatedHeading as="h1" className="max-w-5xl mt-6 mb-8">
-            Let's talk. We answer our own phones.
+            Let's talk about your project.
           </AnimatedHeading>
           <FadeIn delay={240}>
             <p className="text-[var(--color-charcoal)] text-lg md:text-xl max-w-2xl leading-relaxed">
-              Tell us about the project. We'll come back within one working day with a plan, a price and a person's name at the end of the phone.
+              Tell us about the work you’re planning, where it is and your preferred timescale. Our team will get in touch to discuss your requirements and the next steps.
             </p>
           </FadeIn>
         </div>
@@ -66,8 +68,8 @@ export function ContactPage() {
                     <h3 className="text-white text-2xl font-semibold mb-3">Thanks - we've got it.</h3>
                     <p className="text-white/80">
                       {status === "preview"
-                        ? "Preview mode - the form handler isn't configured yet, so this submission wasn't sent. In production we'd be in touch within one working day."
-                        : "We'll be in touch within one working day."}
+                        ? "Preview mode - the form handler isn't configured yet, so this submission wasn't sent."
+                        : "Our team will be in touch to discuss your requirements."}
                     </p>
                   </div>
                 </FadeIn>
@@ -86,10 +88,13 @@ export function ContactPage() {
               <FadeIn delay={180}>
                 <span className="eyebrow mb-6">Where to find us</span>
                 <h3 className="text-[var(--color-dark-blue)] text-[26px] lg:text-[32px] font-semibold mt-6 mb-10">
-                  Based in Warrington. On site everywhere.
+                  Get in touch.
                 </h3>
               </FadeIn>
 
+              <p className="mb-6 text-[14px]">
+                <Todo>new office address, directions link, telephone and hours, general enquiry email and who receives each form; also the registered office if different. Current details shown below until confirmed.</Todo>
+              </p>
               <div className="flex flex-col gap-px bg-[var(--color-border-strong)]">
                 {offices.map((office, i) => {
                   const directions = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(office.lines.concat("UK").join(", "))}`;
@@ -196,6 +201,10 @@ function CommercialForm(props: FormStateProps) {
         <Field label="Email" name="email" type="email" required />
         <Field label="Phone" name="phone" type="tel" />
       </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Field label="Project location / postcode" name="location" required />
+        <Field label="Preferred timescale" name="timescale" />
+      </div>
       <SelectField label="Sector" name="sector" options={["Telecoms", "Utilities", "Mixed / not sure"]} />
       <TextareaField label="Project brief" name="message" required />
       <Turnstile />
@@ -212,7 +221,7 @@ function CommercialForm(props: FormStateProps) {
 function DomesticForm(props: FormStateProps) {
   const onSubmit = useFormHandler("contact-domestic", props);
   return (
-    <form className="flex flex-col gap-6 bg-white p-8 lg:p-10 border border-[var(--color-border)]" onSubmit={onSubmit}>
+    <form className="flex flex-col gap-6 bg-white p-8 lg:p-10 border border-[var(--color-border)]" onSubmit={onSubmit} encType="multipart/form-data">
       <Honeypot />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Field label="Your name" name="name" required />
@@ -222,10 +231,12 @@ function DomesticForm(props: FormStateProps) {
         <Field label="Phone" name="phone" type="tel" />
         <Field label="Postcode" name="postcode" required />
       </div>
-      <Field label="Address" name="address" />
-      <SelectField label="Finish" name="finish" options={["Tarmac", "Resin", "Block paving", "Patio", "Drainage", "Dropped kerb", "Not sure / mix"]} />
-      <SelectField label="Timing" name="timing" options={["ASAP", "Within 1 month", "Within 3 months", "Later this year", "No rush"]} />
-      <TextareaField label="Anything else?" name="notes" />
+      <Field label="Address line 1 (optional)" name="address" />
+      <Field label="Approx area (m²), optional" name="area" type="number" />
+      <SelectField label="Service required" name="service" options={SERVICE_OPTIONS} />
+      <SelectField label="Target timing" name="timing" options={["As soon as possible", "Within 1 month", "Within 3 months", "Later this year", "No rush"]} />
+      <FileField label="Photos of the area (optional)" name="photos" />
+      <TextareaField label="Tell us about your project" name="notes" />
       <Turnstile />
       {props.error && <p className="text-[13px] text-red-600">{props.error}</p>}
       <div className="pt-2">
@@ -234,6 +245,21 @@ function DomesticForm(props: FormStateProps) {
         </Button>
       </div>
     </form>
+  );
+}
+
+function FileField({ label, name }: { label: string; name: string }) {
+  return (
+    <label className="flex flex-col gap-2">
+      <span className="text-[11px] uppercase tracking-[0.18em] text-[var(--color-mid-blue)] font-medium">{label}</span>
+      <input
+        type="file"
+        name={name}
+        accept="image/*"
+        multiple
+        className="text-sm text-[var(--color-charcoal)] file:mr-4 file:py-2 file:px-4 file:border-0 file:bg-[var(--color-dark-blue)] file:text-white file:text-sm file:uppercase file:tracking-wide hover:file:bg-[var(--color-cyan)] hover:file:text-[var(--color-dark-blue)] transition-colors"
+      />
+    </label>
   );
 }
 
