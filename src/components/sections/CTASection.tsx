@@ -12,6 +12,8 @@ interface CTASectionProps {
   secondaryHref?: string;
   /** Optional highlighted note for wording still awaiting confirmation. */
   note?: string;
+  /** Optional supporting paragraph under the heading. */
+  body?: string;
 }
 
 export function CTASection({
@@ -22,6 +24,7 @@ export function CTASection({
   secondaryLabel = "Call 01925 810 991",
   secondaryHref = "tel:01925810991",
   note,
+  body,
 }: CTASectionProps) {
   return (
     <section className="bg-[var(--color-dark-blue)] text-white py-24 lg:py-32 relative overflow-hidden">
@@ -33,6 +36,7 @@ export function CTASection({
             <AnimatedHeading as="h2" className="text-white max-w-3xl mt-8">
               {heading}
             </AnimatedHeading>
+            {body && <p className="mt-6 text-white/80 text-lg leading-relaxed max-w-2xl">{body}</p>}
             {note && <p className="mt-6 text-[14px]"><Todo>{note}</Todo></p>}
           </div>
           <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 items-start lg:items-end">
