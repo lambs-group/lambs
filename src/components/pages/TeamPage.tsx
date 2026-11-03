@@ -34,6 +34,43 @@ const team: PersonCard[] = [
   { name: "Harry Lamb", role: "Training Manager", pending: "portrait awaited" },
 ];
 
+const directors = team.slice(0, 2);
+const others = team.slice(2);
+
+function PersonTile({ person: p, ratio, large }: { person: PersonCard; ratio: string; large?: boolean }) {
+  return (
+    <article className="group">
+      <div className={`relative ${ratio} overflow-hidden bg-[var(--color-light-grey)]`}>
+        {p.image ? (
+          <img
+            src={withBase(p.image)}
+            alt={p.role ? `${p.name}, ${p.role}` : p.name}
+            width={640}
+            height={large ? 800 : 640}
+            loading="lazy"
+            className="w-full h-full object-cover object-top transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center text-[var(--color-mid-blue)] text-[48px] font-semibold">
+            {p.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
+          </div>
+        )}
+        <span className="absolute inset-x-0 bottom-0 h-[3px] bg-[var(--color-cyan)] origin-left scale-x-0 transition-transform duration-500 ease-out group-hover:scale-x-100" aria-hidden="true" />
+      </div>
+      <div className="pt-5 lg:pt-6">
+        <h3 className={`font-semibold leading-tight text-[var(--color-dark-blue)] ${large ? "text-[24px] lg:text-[30px]" : "text-[19px] lg:text-[24px]"}`}>{p.name}</h3>
+        <p className="text-[11px] lg:text-[12px] uppercase tracking-[0.16em] mt-2 font-medium text-[var(--color-mid-blue)]">
+          {p.role ?? <Todo>{p.pending ?? "title"}</Todo>}
+        </p>
+        {p.role && p.pending && (
+          <p className="mt-2 text-[13px]"><Todo>{p.pending}</Todo></p>
+        )}
+        {p.bio && <p className="mt-3 text-[var(--color-charcoal)] text-[14px] leading-relaxed">{p.bio}</p>}
+      </div>
+    </article>
+  );
+}
+
 export function TeamPage() {
   return (
     <PageShell>
@@ -64,44 +101,26 @@ export function TeamPage() {
               <AnimatedHeading as="h2" className="max-w-3xl">The people behind Lambs Group.</AnimatedHeading>
               <FadeIn delay={200}>
                 <p className="mt-6 text-[15px]">
-                  <Todo>single &ldquo;Meet the team&rdquo; layout is Amanda&rsquo;s proposal, awaiting her confirmation</Todo>
+                  <Todo>directors-first layout (Simon and Amanda, then the rest of the team), awaiting Amanda&rsquo;s confirmation</Todo>
                 </p>
               </FadeIn>
             </div>
           </div>
 
+          <h3 className="text-[13px] uppercase tracking-[0.18em] text-[var(--color-mid-blue)] font-medium mb-8 max-w-4xl mx-auto">Directors</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12 lg:gap-x-12 max-w-4xl mx-auto">
+            {directors.map((p, i) => (
+              <FadeIn key={p.name} delay={i * 90}>
+                <PersonTile person={p} ratio="aspect-[4/5]" large />
+              </FadeIn>
+            ))}
+          </div>
+
+          <h3 className="text-[13px] uppercase tracking-[0.18em] text-[var(--color-mid-blue)] font-medium mt-20 lg:mt-28 mb-8">Senior team and colleagues</h3>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-12 sm:gap-x-8 lg:gap-x-10 lg:gap-y-16">
-            {team.map((p, i) => (
+            {others.map((p, i) => (
               <FadeIn key={p.name} delay={(i % 4) * 90}>
-                <article className="group">
-                  <div className="relative aspect-square overflow-hidden bg-[var(--color-light-grey)]">
-                    {p.image ? (
-                      <img
-                        src={withBase(p.image)}
-                        alt={p.role ? `${p.name}, ${p.role}` : p.name}
-                        width={640}
-                        height={640}
-                        loading="lazy"
-                        className="w-full h-full object-cover object-top transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center text-[var(--color-mid-blue)] text-[48px] font-semibold">
-                        {p.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
-                      </div>
-                    )}
-                    <span className="absolute inset-x-0 bottom-0 h-[3px] bg-[var(--color-cyan)] origin-left scale-x-0 transition-transform duration-500 ease-out group-hover:scale-x-100" aria-hidden="true" />
-                  </div>
-                  <div className="pt-5 lg:pt-6">
-                    <h3 className="font-semibold text-[19px] lg:text-[24px] leading-tight text-[var(--color-dark-blue)]">{p.name}</h3>
-                    <p className="text-[11px] lg:text-[12px] uppercase tracking-[0.16em] mt-2 font-medium text-[var(--color-mid-blue)]">
-                      {p.role ?? <Todo>{p.pending ?? "title"}</Todo>}
-                    </p>
-                    {p.role && p.pending && (
-                      <p className="mt-2 text-[13px]"><Todo>{p.pending}</Todo></p>
-                    )}
-                    {p.bio && <p className="mt-3 text-[var(--color-charcoal)] text-[14px] leading-relaxed">{p.bio}</p>}
-                  </div>
-                </article>
+                <PersonTile person={p} ratio="aspect-square" />
               </FadeIn>
             ))}
           </div>
