@@ -24,7 +24,7 @@ interface PersonCard {
 const team: PersonCard[] = [
   { name: "Simon Lamb", role: "Director", bio: "Founded the business in 1988 and remains actively involved in every level of delivery.", image: "/images/team/simon-lamb.webp" },
   { name: "Amanda Lamb", role: "Director", bio: "Oversees finance, HR, operations and commercials, working alongside Simon to drive the business forward.", image: "/images/team/amanda-lamb.webp" },
-  { name: "Frankie Lamb", role: "Operations Director", image: "/images/team/frankie-lamb.webp" },
+  { name: "Frankie Lamb", role: "Operations Director", bio: "Frankie drives our operational performance, working closely with clients and crews to keep our teams safe, productive and delivering.", image: "/images/team/frankie-lamb.webp" },
   { name: "Jennifer Nelson", role: "Business Manager", image: "/images/team/jennifer-nelson.webp" },
   { name: "Luke Pennington", role: "Purchasing & Training Manager", image: "/images/team/luke-pennington.webp" },
   { name: "Ray Pennington", pending: "title, awaiting Amanda", bio: "Ray has been part of Lambs for 25 years, making a lasting contribution to our people, projects and the business we are today.", image: "/images/team/ray-pennington.webp" },
