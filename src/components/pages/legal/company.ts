@@ -5,7 +5,8 @@ export const TBC = Symbol("tbc");
 
 export const COMPANY = {
   tradingName: "Lambs Group",
-  legalName: TBC as typeof TBC | string,
+  // Per CHAS certificate 3 Nov 2026: "LAMBS (UK) TELECOMS LTD T/A Lambs Group". Companies House number still to confirm.
+  legalName: "Lambs (UK) Telecoms Ltd" as typeof TBC | string,
   companyNumber: TBC as typeof TBC | string,
   icoRegistration: TBC as typeof TBC | string,
   registeredOffice: TBC as typeof TBC | string,
