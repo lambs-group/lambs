@@ -58,7 +58,7 @@ function PersonTile({ person: p, ratio, large }: { person: PersonCard; ratio: st
         <span className="absolute inset-x-0 bottom-0 h-[3px] bg-[var(--color-cyan)] origin-left scale-x-0 transition-transform duration-500 ease-out group-hover:scale-x-100" aria-hidden="true" />
       </div>
       <div className="pt-5 lg:pt-6">
-        <h3 className={`font-semibold leading-tight text-[var(--color-dark-blue)] ${large ? "text-[24px] lg:text-[30px]" : "text-[19px] lg:text-[24px]"}`}>{p.name}</h3>
+        <h3 className={`font-semibold leading-tight text-[var(--color-dark-blue)] ${large ? "text-[21px] lg:text-[26px]" : "text-[19px] lg:text-[24px]"}`}>{p.name}</h3>
         <p className="text-[11px] lg:text-[12px] uppercase tracking-[0.16em] mt-2 font-medium text-[var(--color-mid-blue)]">
           {p.role ?? <Todo>{p.pending ?? "title"}</Todo>}
         </p>
@@ -107,8 +107,8 @@ export function TeamPage() {
             </div>
           </div>
 
-          <h3 className="text-[13px] uppercase tracking-[0.18em] text-[var(--color-mid-blue)] font-medium mb-8 max-w-4xl mx-auto">Directors</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12 lg:gap-x-12 max-w-4xl mx-auto">
+          <h3 className="text-[13px] uppercase tracking-[0.18em] text-[var(--color-mid-blue)] font-medium mb-8 max-w-2xl mx-auto">Directors</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-12 lg:gap-x-10 max-w-2xl mx-auto">
             {directors.map((p, i) => (
               <FadeIn key={p.name} delay={i * 90}>
                 <PersonTile person={p} ratio="aspect-[4/5]" large />
