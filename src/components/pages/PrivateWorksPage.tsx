@@ -19,11 +19,11 @@ export function PrivateWorksPage() {
             <div className="lg:col-span-10">
               <FadeIn><span className="eyebrow mb-6">Sector 03 · Private Works · Domestic</span></FadeIn>
               <AnimatedHeading as="h1" className="mt-4 mb-8" stagger={40}>
-                Driveways, gardens and groundworks. Built around you.
+                Home improvements and groundworks. Built around you.
               </AnimatedHeading>
               <FadeIn delay={260}>
                 <p className="text-[var(--color-charcoal)] text-lg md:text-xl leading-relaxed max-w-2xl mb-8">
-                  From driveways and patios to brickwork, garden walls, landscaping and drainage, Lambs Group brings decades of construction and groundworks experience to your home. Our team manages your project from preparation to the finishing touches, with clear quotations and one point of contact.
+                  From driveways, patios and groundworks to building, roofing, windows and doors, joinery, plumbing and electrical works, Lambs Group brings decades of construction experience to your home. Our team manages your project from preparation to the finishing touches, with clear quotations and one point of contact.
                 </p>
               </FadeIn>
               <FadeIn delay={380}>

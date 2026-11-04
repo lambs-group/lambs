@@ -113,6 +113,7 @@ export function buildGraph(i: GraphInput) {
         "Utility ducting and jointing",
         "Civils and groundworks (excavation, ducting, drainage and reinstatement)",
         "Driveways, resin surfacing, block paving and groundworks",
+        "Building works, roofing, windows and doors, and joinery for homeowners",
       ],
       openingHoursSpecification: {
         "@type": "OpeningHoursSpecification",

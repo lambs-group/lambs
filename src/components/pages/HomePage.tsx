@@ -32,7 +32,7 @@ const domesticSector = {
   icon: Home,
   number: "03",
   title: "Private Works",
-  blurb: "Driveways, resin surfacing, block paving, patios, brickwork, garden walls, landscaping, drainage and dropped kerbs.",
+  blurb: "Driveways, patios, groundworks, building works, roofing, windows and doors, joinery, plumbing and electrical works for homeowners.",
   href: "/private-works",
 };
 
@@ -261,7 +261,7 @@ export function HomePage() {
                 {[
                   { title: "Telecoms", body: "Civils, ducting and chambers alongside fibre blowing and cabling." },
                   { title: "Utilities", body: "Civils and groundworks supporting essential utilities, including telecoms, water, gas and electricity." },
-                  { title: "Private Works", body: "Groundworks, driveways, patios, brickwork, landscaping and drainage." },
+                  { title: "Private Works", body: "Groundworks, driveways, patios, building works, roofing, joinery and more for homeowners." },
                 ].map((c, i) => (
                   <FadeIn key={c.title} delay={320 + i * 100} className="bg-white p-6">
                     <div className="text-[11px] uppercase tracking-widest text-[var(--color-mid-blue)] font-medium mb-3">{c.title}</div>

@@ -1,9 +1,10 @@
-import { Construction, SquareStack, BrickWall, Trees, Droplets, Shovel } from "lucide-react";
+import { Construction, SquareStack, Shovel, BrickWall, House, AppWindow, Hammer, Wrench, Zap } from "lucide-react";
+import { Todo } from "../../Placeholder";
 import { FadeIn } from "../../FadeIn";
 import { AnimatedHeading } from "../../AnimatedHeading";
 import { SERVICE_GROUPS } from "./serviceGroups";
 
-const icons = [Construction, SquareStack, BrickWall, Trees, Droplets, Shovel];
+const icons = [Construction, SquareStack, Shovel, BrickWall, House, AppWindow, Hammer, Wrench, Zap];
 
 export function PrivateServicesGrid() {
   return (
@@ -15,7 +16,7 @@ export function PrivateServicesGrid() {
           </div>
           <div className="lg:col-span-8">
             <AnimatedHeading as="h2" className="max-w-3xl">
-              Practical improvements. Quality workmanship.
+              Building, joinery and groundworks. One trusted team.
             </AnimatedHeading>
           </div>
         </div>
@@ -32,6 +33,7 @@ export function PrivateServicesGrid() {
                   {s.title}
                 </h3>
                 <p className="text-[var(--color-charcoal)] text-[15px] leading-relaxed">{s.blurb}</p>
+                {s.todo && <p className="mt-3 text-[13px]"><Todo>{s.todo}</Todo></p>}
               </FadeIn>
             );
           })}

@@ -5,13 +5,13 @@ import { SERVICE_GROUPS } from "../components/pages/private/serviceGroups";
 ---
 <Base
   service={{
-    name: 'Private works: driveways and groundworks',
-    serviceType: 'Domestic driveway and groundworks installation',
-    description: 'Driveways, patios, brickwork, garden walls, landscaping, drainage, dropped kerbs and domestic groundworks for homeowners across the North West.',
+    name: 'Private works: home improvements and groundworks',
+    serviceType: 'Domestic building, joinery and groundworks',
+    description: 'Driveways, patios, groundworks, building works, roofing, windows and doors, joinery, plumbing and electrical works for homeowners across the North West.',
     items: SERVICE_GROUPS.map((s) => ({ name: s.title, description: s.blurb })),
   }}
-  title="Private Works: Driveways, Patios & Groundworks | Lambs Group"
-  description="Driveways, patios, brickwork, garden walls, landscaping, drainage and dropped kerbs from Lambs Group. Family-run since 1988, with clear written quotations."
+  title="Private Works: Building, Joinery & Groundworks | Lambs Group"
+  description="Driveways, patios, groundworks, building, roofing, windows and doors, joinery, plumbing and electrical works from Lambs Group. Family-run since 1988, with clear written quotations."
 >
   <PrivateWorksPage client:load />
 </Base>
