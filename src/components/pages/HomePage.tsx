@@ -137,9 +137,9 @@ export function HomePage() {
 
       {/* HERITAGE STRIP */}
       <section className="bg-[var(--color-light-grey)] py-12 border-y border-[var(--color-border)]">
-        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 flex items-baseline gap-6">
+        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 flex flex-wrap items-baseline gap-x-5 gap-y-2">
+          <div className="text-[26px] lg:text-[40px] leading-none font-medium text-[var(--color-mid-blue)]">Our roots date back to</div>
           <div className="text-[48px] lg:text-[64px] leading-none font-semibold text-[var(--color-dark-blue)]">1988</div>
-          <div className="text-[11px] uppercase tracking-widest text-[var(--color-mid-blue)] font-medium">Our roots date back to</div>
         </div>
       </section>
 
