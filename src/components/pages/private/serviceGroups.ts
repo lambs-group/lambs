@@ -12,7 +12,6 @@ export const SERVICE_GROUPS: ServiceGroup[] = [
   {
     title: "Patios, paving & landscaping",
     blurb: "Indian sandstone, porcelain and natural stone patios, feature paving, paths and steps, raised beds, decorative gravel and stone areas, garden renovations and hard landscaping.",
-    todo: "whether grounds or golf-course maintenance is offered, awaiting Lambs",
   },
   { title: "Groundworks, fencing & drainage", blurb: "Excavation, levelling, footings, concrete slabs, foundations, dropped kerbs and masonry repairs, plus concrete fence post replacement, ACO channel drainage, patio drainage and surface-water management." },
   { title: "Bricklaying & building works", blurb: "Brick and blockwork, extensions, new builds, garden and retaining walls, archways, repointing, structural joinery, alterations and repairs." },
