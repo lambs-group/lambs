@@ -51,6 +51,12 @@ For production on `lambsgroup.co.uk`, set `site` to `https://lambsgroup.co.uk` a
 A one-file holding page in Lambs style, for covering the old site until the new one is ready.
 
 - **Standalone:** `npm run maintenance` writes `maintenance/index.html` (fonts, logo and favicon inlined). Upload that single file as `index.html` to any host.
-- **Flag on the deploy:** set the repository variable `MAINTENANCE_MODE` to `true` (Settings > Secrets and variables > Actions > Variables, or `gh variable set MAINTENANCE_MODE --body true`) and re-run the Deploy workflow. The build then publishes only the holding page, for every address. Set it to `false` (or delete it) and re-run to publish the full site again.
+- **Flag on the deploy:** set the repository variable `MAINTENANCE_MODE` to `true` (Settings > Secrets and variables > Actions > Variables, or `gh variable set MAINTENANCE_MODE --body true`) and re-run the Deploy workflow. The production build (Cloudflare Pages) then publishes only the holding page, for every address. Set it to `false` (or delete it) and re-run to publish the full site again. The GitHub Pages client preview is not affected.
 - **Locally:** `MAINTENANCE_MODE=true npm run build` swaps `dist/` for the holding page; a normal `npm run build` builds the full site.
 - Edit the wording in `scripts/maintenance.mjs`. The page is `noindex` and the swap adds a `robots.txt` that disallows crawling.
+
+## Production deploy (lambsgroup.co.uk on Cloudflare Pages)
+
+- `SITE_TARGET=production` (set by the workflow's `production` job, or `npm run build:production` locally) builds for https://lambsgroup.co.uk with no `/lambs` base, and writes `dist/_redirects` with real 301s for the old WordPress URLs (map in `src/data/old-site-redirects.mjs`). Without it you get the GitHub Pages preview build.
+- The `production` job only runs when the repo variable `CLOUDFLARE_PAGES_PROJECT` is set. It also needs the secrets `CLOUDFLARE_API_TOKEN` (Pages edit permission) and `CLOUDFLARE_ACCOUNT_ID` (85d942cd35307649d2b125e4671ce65b, the customer account contact@outcomeworks.co.uk).
+- One-off set-up: `npx wrangler pages project create <name> --production-branch=main`, add `lambsgroup.co.uk` and `www` as custom domains in the Cloudflare dashboard, then set the variable and secrets.

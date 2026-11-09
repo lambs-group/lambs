@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "predev": "node scripts/image-sizes.mjs",
     "build": "astro build",
-    "postbuild": "node scripts/maintenance.mjs",
+    "postbuild": "node scripts/redirects.mjs && node scripts/maintenance.mjs",
+    "build:production": "SITE_TARGET=production astro build",
     "maintenance": "node scripts/maintenance.mjs",
     "prebuild": "node scripts/sitemap-lastmod.mjs && node scripts/image-sizes.mjs",
     "preview": "astro preview"
