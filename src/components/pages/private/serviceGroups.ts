@@ -25,8 +25,8 @@ export const SERVICE_GROUPS: ServiceGroup[] = [
   },
   {
     title: "Electrical works",
-    blurb: "Electrical installation and works for your home.",
-    todo: "electrical wording and registration (e.g. NICEIC), awaiting Lambs",
+    blurb: "Electrical installation and works for your home, carried out by qualified electricians working with Lambs (City & Guilds Level 3 Electrotechnical, AM2S assessed).",
+    todo: "electrical scheme registration (e.g. NICEIC or NAPIT) and who certifies the work, awaiting Lambs",
   },
 ];
 
