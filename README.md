@@ -45,3 +45,12 @@ Contact, careers and Private Works quote forms POST to the Cloudflare Worker in 
 Pushes to `main` build and deploy to GitHub Pages via `.github/workflows/deploy.yml`.
 
 For production on `lambsgroup.co.uk`, set `site` to `https://lambsgroup.co.uk` and `base` to `''` in `astro.config.mjs`. Old-site redirects are in the same file and need a host-level 301 file at launch. Also update the sitemap URL in `public/robots.txt` if the domain changes.
+
+## Maintenance ("coming soon") page
+
+A one-file holding page in Lambs style, for covering the old site until the new one is ready.
+
+- **Standalone:** `npm run maintenance` writes `maintenance/index.html` (fonts, logo and favicon inlined). Upload that single file as `index.html` to any host.
+- **Flag on the deploy:** set the repository variable `MAINTENANCE_MODE` to `true` (Settings > Secrets and variables > Actions > Variables, or `gh variable set MAINTENANCE_MODE --body true`) and re-run the Deploy workflow. The build then publishes only the holding page, for every address. Set it to `false` (or delete it) and re-run to publish the full site again.
+- **Locally:** `MAINTENANCE_MODE=true npm run build` swaps `dist/` for the holding page; a normal `npm run build` builds the full site.
+- Edit the wording in `scripts/maintenance.mjs`. The page is `noindex` and the swap adds a `robots.txt` that disallows crawling.
