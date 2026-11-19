@@ -16,22 +16,22 @@ interface PersonCard {
   pending?: string;
 }
 
-// One team, one set of cards (Lambs feedback 1 Nov 2026). The senior team appear first without separate tiers.
-// Titles per Lambs: Simon Director; Amanda Director; Frankie Operations Director; Jen Business Manager;
-// Luke Purchasing & Training Manager; Ethan Plant & Vehicle Manager; Lee Harnick Health & Safety Manager;
-// Laura Barber Coordination Team Manager; Harry Lamb Training Manager.
-// Davey Tyrer (Stores Supervisor) was removed earlier pending a photo and is not in Lambs' latest list.
+// Team profiles supplied by Lambs (Lambs_Group_Website_Team_Profiles.docx, 19 Nov 2026): titles and bios are theirs.
+// The two owners lead the page; everyone else follows in Lambs' order. Davey's surname is spelt "Tyre" in the
+// profiles but "Tyrer" in earlier notes, and there is no portrait for him or Harry yet. Emma Howard (Accounts)
+// is not in the profiles.
 const team: PersonCard[] = [
-  { name: "Simon Lamb", role: "Director", bio: "Founded the business in 1988 and remains actively involved in every level of delivery.", image: "/images/team/simon-lamb.webp" },
-  { name: "Amanda Lamb", role: "Director", bio: "Oversees finance, HR, operations and commercials, working alongside Simon to drive the business forward.", image: "/images/team/amanda-lamb.webp" },
-  { name: "Frankie Lamb", role: "Operations Director", bio: "Frankie drives our operational performance, working closely with clients and crews to keep our teams safe, productive and delivering.", image: "/images/team/frankie-lamb.webp" },
-  { name: "Jennifer Nelson", role: "Business Manager", image: "/images/team/jennifer-nelson.webp" },
-  { name: "Luke Pennington", role: "Purchasing & Training Manager", image: "/images/team/luke-pennington.webp" },
-  { name: "Ray Pennington", pending: "title, awaiting Amanda", bio: "Ray has been part of Lambs for 25 years, making a lasting contribution to our people, projects and the business we are today.", image: "/images/team/ray-pennington.webp" },
-  { name: "Ethan Radcliffe", role: "Plant & Vehicle Manager", image: "/images/team/ethan-radcliffe.webp" },
-  { name: "Laura Barber", role: "Coordination Team Manager", image: "/images/team/laura-barber.webp" },
-  { name: "Lee Harnick", role: "Health & Safety Manager", image: "/images/team/lee-harnick.webp" },
-  { name: "Harry Lamb", role: "Training Manager", pending: "portrait awaited" },
+  { name: "Amanda Lamb", role: "Owner & Managing Director", bio: "Amanda leads Lambs Group and has helped build the business since 1988. She is the main point of contact for senior clients and brings new contracts into the business, from building relationships to negotiating terms. She oversees company finances and commercial decisions, works directly with suppliers and helps run the business alongside the senior team. She also leads the development of Lambs\u2019 Private Works service.", image: "/images/team/amanda-lamb.webp" },
+  { name: "Simon Lamb", role: "Co-owner & Operations Director", bio: "Simon has helped build Lambs Group since 1988. As co-owner and Operations Director, he leads the business alongside Amanda and oversees all aspects of operations. He works closely with the senior team, advising on delivery and stepping in to solve operational problems. He also liaises directly with clients when his input is needed.", image: "/images/team/simon-lamb.webp" },
+  { name: "Frankie Lamb", role: "Head of Operations", bio: "Frankie oversees and plans the whole of Lambs\u2019 day-to-day operations. He sets the schedule and work routes for every team, coordinates job allocations and requests the materials crews need for upcoming work. He leads day-to-day client communication on delivery and works with senior management, office staff and site crews to keep everyone aligned on priorities. As work progresses, he adjusts plans and resolves issues so teams can deliver safely and meet client requirements.", image: "/images/team/frankie-lamb.webp" },
+  { name: "Luke Pennington", role: "Purchasing & Training Manager", bio: "Luke manages purchasing and supplier relationships and supports training coordination, helping keep operatives\u2019 qualifications and accreditations up to date. He also oversees new client onboarding and company insurance. He works closely with Lee on Lambs\u2019 ISO certifications and helped secure the company\u2019s CHAS accreditation.", image: "/images/team/luke-pennington.webp" },
+  { name: "Jennifer Nelson", role: "Business Manager", bio: "Jennifer oversees Lambs\u2019 head office, including commercial administration, client applications, compliance records, payments and reporting. She supports the operations team by making sure they have the information they need.", image: "/images/team/jennifer-nelson.webp" },
+  { name: "Ray Pennington", role: "General Operations Manager", bio: "Ray has been with Lambs for 25 years. He looks after the stores and supports the senior team and site crews across departments, helping with vehicles, plant and the practical needs of day-to-day operations.", image: "/images/team/ray-pennington.webp" },
+  { name: "Lee Harnick", role: "Health & Safety Manager", bio: "Lee oversees health, safety, environmental and quality standards across Lambs. He carries out site inspections and quality checks, leads toolbox talks and investigates incidents. He also oversees environmental controls and compliance with the New Roads and Street Works Act. He works with Luke on Lambs\u2019 ISO 9001, ISO 14001 and ISO 45001 certifications and supports the company\u2019s CHAS accreditation.", image: "/images/team/lee-harnick.webp" },
+  { name: "Ethan Radcliffe", role: "Plant & Vehicle Manager", bio: "Ethan manages the maintenance, inspection and allocation of Lambs\u2019 vehicles and plant. He works with the operations team to make sure crews have the equipment they need for each job and that it is properly maintained.", image: "/images/team/ethan-radcliffe.webp" },
+  { name: "Laura Barber", role: "Coordination Team Manager", bio: "Laura leads the coordination team and acts as a link between clients and site crews. She oversees scheduling, job allocation and permits, and coordinates follow-up work when defects are reported.", image: "/images/team/laura-barber.webp" },
+  { name: "Harry Lamb", role: "Training Manager", bio: "Harry delivers hands-on training for Lambs\u2019 site crews, drawing on his own experience leading teams in the field. He oversees inductions, street works qualifications and refresher training, helping operatives put safe working practices into use on site.", pending: "portrait awaited" },
+  { name: "Davey Tyre", role: "Stores & Yard Supervisor", bio: "Davey keeps the yard safe and organised and makes sure crews leave with the equipment they need. He also puts his mechanical skills to use in the yard and helps crews on site when needed.", pending: "portrait awaited, and whether the surname is Tyre or Tyrer" },
 ];
 
 const directors = team.slice(0, 2);
@@ -101,13 +101,13 @@ export function TeamPage() {
               <AnimatedHeading as="h2" className="max-w-3xl">The people behind Lambs Group.</AnimatedHeading>
               <FadeIn delay={200}>
                 <p className="mt-6 text-[15px]">
-                  <Todo>directors-first layout (Simon and Amanda, then the rest of the team), awaiting Amanda&rsquo;s confirmation</Todo>
+                  <Todo>owners first (Amanda and Simon), then the rest of the team: layout awaiting Amanda&rsquo;s confirmation</Todo>
                 </p>
               </FadeIn>
             </div>
           </div>
 
-          <h3 className="text-[13px] uppercase tracking-[0.18em] text-[var(--color-mid-blue)] font-medium mb-8 max-w-2xl mx-auto">Directors</h3>
+          <h3 className="text-[13px] uppercase tracking-[0.18em] text-[var(--color-mid-blue)] font-medium mb-8 max-w-2xl mx-auto">Owners</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-12 lg:gap-x-10 max-w-2xl mx-auto">
             {directors.map((p, i) => (
               <FadeIn key={p.name} delay={i * 90}>
@@ -116,17 +116,19 @@ export function TeamPage() {
             ))}
           </div>
 
-          <h3 className="text-[13px] uppercase tracking-[0.18em] text-[var(--color-mid-blue)] font-medium mt-20 lg:mt-28 mb-8">Senior team and colleagues</h3>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-12 sm:gap-x-8 lg:gap-x-10 lg:gap-y-16">
-            {others.map((p, i) => (
-              <FadeIn key={p.name} delay={(i % 4) * 90}>
-                <PersonTile person={p} ratio="aspect-square" />
-              </FadeIn>
-            ))}
+          <div className="max-w-5xl mx-auto mt-20 lg:mt-28">
+            <h3 className="text-[13px] uppercase tracking-[0.18em] text-[var(--color-mid-blue)] font-medium mb-8">Senior team and colleagues</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-14 lg:gap-x-10 lg:gap-y-16">
+              {others.map((p, i) => (
+                <FadeIn key={p.name} delay={(i % 3) * 90}>
+                  <PersonTile person={p} ratio="aspect-square" />
+                </FadeIn>
+              ))}
+            </div>
           </div>
 
           <div className="mt-16 space-y-3 text-[15px]">
-            <p><Todo>Emma Howard, Accounts: inclusion, title and portrait to be confirmed</Todo></p>
+            <p><Todo>Emma Howard (Accounts) is not in the latest profiles: confirm she is not to be included</Todo></p>
             <p><Todo>engineers and operatives to feature, individually or in named team photos, in the same style</Todo></p>
           </div>
         </div>

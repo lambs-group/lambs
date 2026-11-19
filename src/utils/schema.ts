@@ -90,7 +90,7 @@ export function buildGraph(i: GraphInput) {
       logo: { "@type": "ImageObject", url: `${i.siteRoot}images/lambs-logo-v2.webp`, width: 1400, height: 241 },
       image: `${i.siteRoot}images/og-default.jpg`,
       foundingDate: "1988",
-      founder: { "@type": "Person", name: "Simon Lamb", jobTitle: "Director" },
+      founder: { "@type": "Person", name: "Simon Lamb", jobTitle: "Co-owner and Operations Director" },
       telephone: "+441925810991",
       email: "contact@lambsgroup.co.uk",
       // Current address; the planned move is not published until Lambs confirm the new one.
