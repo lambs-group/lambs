@@ -159,7 +159,7 @@ export function HowWeDeliverPage() {
 
       <Testimonial
         tone="grey"
-        quote="Lambs have further built healthy relationships with several Local Authorities since working with JN Civils on the Openreach Civils contract."
+        quote="Lambs have further built healthy relationships with several local authorities since working with JN Civils on the Openreach civils contract."
         attribution="Operations Director, JN Civils"
       />
 

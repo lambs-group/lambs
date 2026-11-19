@@ -340,7 +340,7 @@ export function HomePage() {
       <Testimonial
         tone="grey"
         eyebrow="Lead client reference"
-        quote="[Lambs Group] delivered civils works across a large and demanding programme, consistently achieving high performance levels whilst maintaining exceptional quality, safety and customer service standards."
+        quote="Lambs Group delivered civils works across a large and demanding programme, consistently achieving high performance levels whilst maintaining exceptional quality, safety and customer service standards."
         attribution="Head of Strategy, Electricity Transmission, National Grid"
       />
 

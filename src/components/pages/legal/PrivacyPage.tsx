@@ -48,8 +48,7 @@ export function PrivacyPage() {
       <P>We only share information with organisations that help us run the website and our business, under contracts that require them to protect it:</P>
       <UL>
         <li><strong>Resend</strong> - sends the form submissions to our team by email.</li>
-        <li><strong>Cloudflare</strong> - runs the service that receives form submissions and provides the Turnstile security check.</li>
-        <li><strong>Our website hosting provider</strong> <Tbc>name the production host once chosen</Tbc>.</li>
+        <li><strong>Cloudflare</strong> - hosts this website (Cloudflare Pages), runs the service that receives form submissions and provides the Turnstile security check.</li>
         <li><strong>Our email provider</strong> (the mailboxes that receive enquiries and applications).</li>
         <li><strong>Cloudflare Web Analytics</strong>, only if you accept analytics. It reports page views, referrers and device and country information in aggregate, without cookies or local storage.</li>
       </UL>

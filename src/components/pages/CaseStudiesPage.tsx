@@ -36,7 +36,6 @@ export function CaseStudiesPage() {
 
           <div className="mt-12 space-y-3 text-[15px]">
             <p><Todo>further case studies: major civils, utilities, housebuilder and local authority projects, with approved details and photographs (Jen to gather, Amanda to approve)</Todo></p>
-            <p><Todo>reference quotes, to follow</Todo></p>
           </div>
         </div>
       </section>

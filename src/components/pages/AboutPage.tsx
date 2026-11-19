@@ -97,7 +97,7 @@ export function AboutPage() {
 
       <Testimonial
         tone="white"
-        quote="Lambs always sought to do a great job, and their continuity under sub-Contracts from Kelly, NMC, Fujitsu, Svella, OCU just bears testimony to the delivery."
+        quote="Lambs always sought to do a great job, and their continuity under sub-contracts from Kelly, NMC, Fujitsu, Svella, OCU just bears testimony to the delivery."
         attribution="ABR Consult Ltd"
       />
 
