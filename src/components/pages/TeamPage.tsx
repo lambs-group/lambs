@@ -99,11 +99,6 @@ export function TeamPage() {
             </div>
             <div className="lg:col-span-8">
               <AnimatedHeading as="h2" className="max-w-3xl">The people behind Lambs Group.</AnimatedHeading>
-              <FadeIn delay={200}>
-                <p className="mt-6 text-[15px]">
-                  <Todo>owners first (Amanda and Simon), then the rest of the team: layout awaiting Amanda&rsquo;s confirmation</Todo>
-                </p>
-              </FadeIn>
             </div>
           </div>
 

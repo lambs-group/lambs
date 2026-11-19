@@ -57,11 +57,7 @@ export function HowWeDeliverPage() {
         heading="From planning to completion. Managed by Lambs."
         lede="Every project has different requirements. We coordinate planning, people, safety and delivery around the agreed scope, supported by experienced operations and office staff and a dedicated Health and Safety Manager. Regular audits and checks help us maintain standards throughout the work."
         sectionIndex="- / How We Deliver"
-      >
-        <p className="mt-6 text-[14px]">
-          <Todo>heading and introduction are Amanda&rsquo;s proposed wording, awaiting her confirmation</Todo>
-        </p>
-      </PageHero>
+      />
 
       <section id="team-behind-every-job" className="bg-[var(--color-light-grey)] py-20 lg:py-28 scroll-mt-24">
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
