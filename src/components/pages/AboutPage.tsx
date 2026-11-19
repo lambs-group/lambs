@@ -2,6 +2,7 @@ import { AnimatedHeading } from "../AnimatedHeading";
 import { FadeIn } from "../FadeIn";
 import { PageShell } from "../sections/PageShell";
 import { PageHero } from "../sections/PageHero";
+import { Testimonial } from "../sections/Testimonial";
 import { CTASection } from "../sections/CTASection";
 import { Todo } from "../Placeholder";
 
@@ -93,6 +94,12 @@ export function AboutPage() {
           </FadeIn>
         </div>
       </section>
+
+      <Testimonial
+        tone="white"
+        quote="Lambs always sought to do a great job, and their continuity under sub-Contracts from Kelly, NMC, Fujitsu, Svella, OCU just bears testimony to the delivery."
+        attribution="ABR Consult Ltd"
+      />
 
       <CTASection eyebrow="Work with us" heading="Experience behind us. Commitment ahead." note="closing line is Amanda's proposal, awaiting her confirmation" />
     </PageShell>

@@ -6,6 +6,7 @@ import { FibreDraw } from "../motion/FibreDraw";
 import { PageShell } from "../sections/PageShell";
 import { ServiceList } from "../sections/ServiceList";
 import { CTASection } from "../sections/CTASection";
+import { Testimonial } from "../sections/Testimonial";
 import { Credentials } from "../sections/Credentials";
 
 export const services = [
@@ -63,6 +64,12 @@ export function TelecomsPage() {
       </section>
 
       <Credentials heading="Certified, qualified and trained." tone="white" />
+
+      <Testimonial
+        tone="grey"
+        quote="Lambs provided my organisation with an exemplary service in terms of safety, operational delivery, responsiveness and flexibility, quality of workmanship and performance metrics and indicators."
+        attribution="Former Openreach Director and Chief Engineer (personal reference)"
+      />
 
       <CTASection eyebrow="Planning telecoms works?" heading="Let's walk the route." />
     </PageShell>

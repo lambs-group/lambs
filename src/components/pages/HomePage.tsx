@@ -4,6 +4,7 @@ import { FadeIn } from "../FadeIn";
 import { RevealImage } from "../RevealImage";
 import { Button } from "../Button";
 import { PageShell } from "../sections/PageShell";
+import { Testimonial } from "../sections/Testimonial";
 import { CTASection } from "../sections/CTASection";
 import { withBase } from "../../utils/paths";
 import { imgAttrs } from "../../utils/images";
@@ -335,6 +336,13 @@ export function HomePage() {
           </div>
         </div>
       </section>
+
+      <Testimonial
+        tone="grey"
+        eyebrow="Lead client reference"
+        quote="[Lambs Group] delivered civils works across a large and demanding programme, consistently achieving high performance levels whilst maintaining exceptional quality, safety and customer service standards."
+        attribution="Head of Strategy, Electricity Transmission, National Grid"
+      />
 
       <CTASection />
     </PageShell>

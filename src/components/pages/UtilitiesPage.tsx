@@ -5,6 +5,7 @@ import { UtilityNetwork } from "../motion/UtilityNetwork";
 import { PageShell } from "../sections/PageShell";
 import { ServiceList } from "../sections/ServiceList";
 import { CTASection } from "../sections/CTASection";
+import { Testimonial } from "../sections/Testimonial";
 import { Credentials } from "../sections/Credentials";
 
 export const services = [
@@ -58,6 +59,12 @@ export function UtilitiesPage() {
       <ServiceList eyebrow="What we deliver" heading="Essential utilities. One experienced team." items={services} />
 
       <Credentials heading="Certified, qualified and trained." tone="grey" healthSafetyNote="Our dedicated Health and Safety Manager supports safe delivery through regular audits, site checks and ongoing training." />
+
+      <Testimonial
+        tone="white"
+        quote="During our time working together, they consistently demonstrated exceptional project management skills, creative problem-solving, and a strong work ethic."
+        attribution="Director, PG Consultancy Ltd"
+      />
 
       <CTASection eyebrow="Utilities enquiries" heading="Planning utility works? Let's talk." />
     </PageShell>
