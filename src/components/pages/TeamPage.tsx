@@ -16,7 +16,7 @@ interface PersonCard {
   pending?: string;
 }
 
-// Team profiles supplied by Lambs (Lambs_Group_Website_Team_Profiles.docx, 19 Nov 2026): titles and bios are theirs.
+// Team profiles supplied by Lambs (Lambs_Group_Website_Team_Profiles.docx, 19 Nov 2026): titles and bios are theirs. Ray's card is a tribute written by Amanda and Simon (20 Nov 2026); use a blank line (two newlines) in a bio for a new paragraph.
 // The two owners lead the page; everyone else follows in Lambs' order. Davey Tyre is deliberately left off (Lambs, 20 Nov 2026).
 const team: PersonCard[] = [
   { name: "Amanda Lamb", role: "Owner & Managing Director", bio: "Amanda leads Lambs Group and has helped build the business since 1988. She is the main point of contact for senior clients and brings new contracts into the business, from building relationships to negotiating terms. She oversees company finances and commercial decisions, works directly with suppliers and helps run the business alongside the senior team. She also leads the development of Lambs\u2019 Private Works service.", image: "/images/team/amanda-lamb.webp" },
@@ -24,7 +24,7 @@ const team: PersonCard[] = [
   { name: "Frankie Lamb", role: "Head of Operations", bio: "Frankie oversees and plans the whole of Lambs\u2019 day-to-day operations. He sets the schedule and work routes for every team, coordinates job allocations and requests the materials crews need for upcoming work. He leads day-to-day client communication on delivery and works with senior management, office staff and site crews to keep everyone aligned on priorities. As work progresses, he adjusts plans and resolves issues so teams can deliver safely and meet client requirements.", image: "/images/team/frankie-lamb.webp" },
   { name: "Luke Pennington", role: "Purchasing & Training Manager", bio: "Luke manages purchasing and supplier relationships and supports training coordination, helping keep operatives\u2019 qualifications and accreditations up to date. He also oversees new client onboarding and company insurance. He works closely with Lee on Lambs\u2019 ISO certifications and helped secure the company\u2019s CHAS accreditation.", image: "/images/team/luke-pennington.webp" },
   { name: "Jennifer Nelson", role: "Business Manager", bio: "Jennifer oversees Lambs\u2019 head office, including commercial administration, client applications, compliance records, payments and reporting. She supports the operations team by making sure they have the information they need.", image: "/images/team/jennifer-nelson.webp" },
-  { name: "Ray Pennington", role: "General Operations Manager", bio: "Ray has been with Lambs for 25 years. He looks after the stores and supports the senior team and site crews across departments, helping with vehicles, plant and the practical needs of day-to-day operations.", image: "/images/team/ray-pennington.webp" },
+  { name: "Ray Pennington", role: "25 years with Lambs", bio: "For much of his 25 years with Lambs, Ray led the day-to-day running of the business. He oversaw operations, supported our managers and site teams, and was the person we trusted to make sure things got done. Simon and I always knew that if Ray had something in hand, we could leave it with him.\n\nThese days, Ray is easing into retirement, although he\u2019s still only a phone call away and always happy to lend a hand. That\u2019s Ray all over.\n\nThank you, Ray, for 25 years of hard work, loyalty and friendship. You\u2019ve helped make Lambs what it is today, and you\u2019ll always be part of the Lambs family.\n\nAmanda and Simon", image: "/images/team/ray-pennington.webp" },
   { name: "Lee Harnick", role: "Health & Safety Manager", bio: "Lee oversees health, safety, environmental and quality standards across Lambs. He carries out site inspections and quality checks, leads toolbox talks and investigates incidents. He also oversees environmental controls and compliance with the New Roads and Street Works Act. He works with Luke on Lambs\u2019 ISO 9001, ISO 14001 and ISO 45001 certifications and supports the company\u2019s CHAS accreditation.", image: "/images/team/lee-harnick.webp" },
   { name: "Ethan Radcliffe", role: "Plant & Vehicle Manager", bio: "Ethan manages the maintenance, inspection and allocation of Lambs\u2019 vehicles and plant. He works with the operations team to make sure crews have the equipment they need for each job and that it is properly maintained.", image: "/images/team/ethan-radcliffe.webp" },
   { name: "Laura Barber", role: "Coordination Team Manager", bio: "Laura leads the coordination team and acts as a link between clients and site crews. She oversees scheduling, job allocation and permits, and coordinates follow-up work when defects are reported.", image: "/images/team/laura-barber.webp" },
@@ -62,7 +62,9 @@ function PersonTile({ person: p, ratio, large }: { person: PersonCard; ratio: st
         {p.role && p.pending && (
           <p className="mt-2 text-[13px]"><Todo>{p.pending}</Todo></p>
         )}
-        {p.bio && <p className="mt-3 text-[var(--color-charcoal)] text-[14px] leading-relaxed">{p.bio}</p>}
+        {p.bio && p.bio.split("\n\n").map((para, i) => (
+          <p key={i} className="mt-3 text-[var(--color-charcoal)] text-[14px] leading-relaxed">{para}</p>
+        ))}
       </div>
     </article>
   );
