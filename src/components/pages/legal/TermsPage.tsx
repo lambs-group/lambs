@@ -1,5 +1,5 @@
 import { COMPANY } from "./company";
-import { A, H2, LegalPage, Mail, P, Tbc, UL, Val } from "./LegalPage";
+import { A, H2, LegalPage, Mail, P, UL, Val } from "./LegalPage";
 
 export function TermsPage() {
   return (
@@ -7,6 +7,7 @@ export function TermsPage() {
       eyebrow="Legal"
       heading="Website Terms of Use"
       lede="The terms that apply when you use the Lambs Group website."
+      updated="October 2026"
     >
       <H2>About these terms</H2>
       <P>
@@ -55,8 +56,6 @@ export function TermsPage() {
         How we use personal information is explained in our <A href="/privacy">Privacy Policy</A>{" "}
         and <A href="/cookies">Cookie Policy</A>.
       </P>
-
-      <P><Tbc>legal review of the liability, changes and governing-law clauses, if Lambs want one</Tbc></P>
 
       <H2>Changes and governing law</H2>
       <P>
