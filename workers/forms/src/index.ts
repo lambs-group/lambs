@@ -1,3 +1,13 @@
+import {
+  MAX_FIELDS,
+  MAX_FIELD_CHARS,
+  MAX_FILES,
+  MAX_FILE_BYTES,
+  MAX_TOTAL_BYTES,
+  checkAttachment,
+  cleanFilename,
+} from "./attachments";
+
 export interface Env {
   RESEND_API_KEY: string;
   TURNSTILE_SECRET_KEY: string; // Cloudflare Turnstile secret (wrangler secret put)
@@ -136,19 +146,36 @@ export default {
       return json({ error: "Unknown form" }, 400, cors);
     }
 
-    // Collect fields + file attachments
+    // Collect fields + file attachments, with server-side limits on both.
     const fields: Array<[string, string]> = [];
     const attachments: Array<{ filename: string; content: string }> = [];
+    let totalBytes = 0;
+    let entryCount = 0;
     for (const [key, value] of form.entries()) {
       if (key === "form" || key === "website" || key === "cf-turnstile-response") continue;
-      if (value instanceof File && value.size > 0) {
-        if (value.size > 10 * 1024 * 1024) {
-          return json({ error: `Attachment ${value.name} exceeds 10 MB` }, 413, cors);
+      if (++entryCount > MAX_FIELDS) {
+        return json({ error: "Too many fields in the form" }, 400, cors);
+      }
+      if (value instanceof File) {
+        if (value.size === 0) continue;
+        if (value.size > MAX_FILE_BYTES) {
+          return json({ error: `Attachment ${cleanFilename(value.name)} exceeds 10 MB` }, 413, cors);
+        }
+        totalBytes += value.size;
+        if (attachments.length >= MAX_FILES) {
+          return json({ error: `Please attach no more than ${MAX_FILES} files` }, 400, cors);
+        }
+        if (totalBytes > MAX_TOTAL_BYTES) {
+          return json({ error: "Attachments are too large in total (20 MB maximum)" }, 413, cors);
         }
         const buf = new Uint8Array(await value.arrayBuffer());
-        attachments.push({ filename: value.name, content: bytesToBase64(buf) });
-      } else if (!(value instanceof File)) {
-        fields.push([key, String(value)]);
+        const problem = checkAttachment(formType, value.name, buf);
+        if (problem) {
+          return json({ error: problem }, 400, cors);
+        }
+        attachments.push({ filename: cleanFilename(value.name), content: bytesToBase64(buf) });
+      } else {
+        fields.push([key, String(value).slice(0, MAX_FIELD_CHARS)]);
       }
     }
 
