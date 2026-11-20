@@ -7,7 +7,7 @@ import { REFERENCES } from "../../data/references";
 import { CTASection } from "../sections/CTASection";
 import { Todo } from "../Placeholder";
 
-const storyImage = "/images/field/team-site-briefing.webp";
+const storyImage = "/images/field/three-operatives-plan-review.webp";
 
 const values = [
   { number: "01", title: "A skilled workforce", description: "Experienced operatives and engineers, supported by training, supervision and clear accountability.", chip: "" },
@@ -24,7 +24,8 @@ export function AboutPage() {
         heading="Our roots date back to 1988."
         lede="Lambs Group is a family-run infrastructure contractor with experience built since 1988. We deliver telecoms, utilities and private works, with minor and major civils and groundworks at the heart of our capabilities."
         image={storyImage}
-        imageAlt="Lambs Group operatives reviewing plans together on a residential street"
+        imageAlt="Three Lambs Group operatives in hi-vis reviewing plans together on a residential street"
+        imageAspect="aspect-[3/2]"
         sectionIndex="- / About"
       />
 

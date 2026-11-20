@@ -11,7 +11,7 @@ import { withBase } from "../../utils/paths";
 import { imgAttrs } from "../../utils/images";
 
 const heroImage = "/images/field/home-hero-mini-excavator-residential.webp";
-const aboutImage = "/images/field/team-site-briefing.webp";
+const aboutImage = "/images/field/three-operatives-plan-review.webp";
 
 const commercialSectors = [
   {
@@ -281,7 +281,7 @@ export function HomePage() {
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
             <div className="lg:col-span-6">
-              <RevealImage src={aboutImage} alt="Lambs Group operatives reviewing plans together on a residential street" aspect="aspect-[4/5]" />
+              <RevealImage src={aboutImage} alt="Three Lambs Group operatives in hi-vis reviewing plans together on a residential street" aspect="aspect-[3/2]" />
             </div>
             <div className="lg:col-span-6">
               <FadeIn><span className="eyebrow mb-8">Who we are</span></FadeIn>

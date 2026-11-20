@@ -9,6 +9,8 @@ interface PageHeroProps {
   lede?: string;
   image?: string;
   imageAlt?: string;
+  /** Tailwind aspect class for the image; defaults to portrait 4:5. */
+  imageAspect?: string;
   sectionIndex?: string;
   children?: ReactNode;
 }
@@ -19,6 +21,7 @@ export function PageHero({
   lede,
   image,
   imageAlt,
+  imageAspect = "aspect-[4/5]",
   sectionIndex,
   children,
 }: PageHeroProps) {
@@ -51,7 +54,7 @@ export function PageHero({
           </div>
           {image && (
             <div className="lg:col-span-5">
-              <RevealImage src={image} alt={imageAlt || ""} aspect="aspect-[4/5]" />
+              <RevealImage src={image} alt={imageAlt || ""} aspect={imageAspect} />
             </div>
           )}
         </div>
