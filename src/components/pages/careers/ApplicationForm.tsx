@@ -4,7 +4,6 @@ import { Button } from "../../Button";
 import { Turnstile } from "../../Turnstile";
 import { withBase } from "../../../utils/paths";
 import { submitForm } from "../../../utils/submit-form";
-import { Todo } from "../../Placeholder";
 import { VACANCIES, type Vacancy } from "../../../data/vacancies";
 
 const GENERAL = "general";
@@ -127,7 +126,6 @@ export function ApplicationForm({ vacancy }: ApplicationFormProps) {
             careers@lambsgroup.co.uk
           </a>
         </p>
-        <p className="text-[12px]"><Todo>careers@lambsgroup.co.uk monitored, and by whom</Todo></p>
       </form>
     </FadeIn>
   );
