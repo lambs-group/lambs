@@ -4,6 +4,7 @@ import { PageShell } from "../sections/PageShell";
 import { PageHero } from "../sections/PageHero";
 import { CTASection } from "../sections/CTASection";
 import { Todo } from "../Placeholder";
+import { RevealImage } from "../RevealImage";
 import { withBase } from "../../utils/paths";
 
 interface PersonCard {
@@ -82,10 +83,8 @@ export function TeamPage() {
 
       <section className="bg-white pt-16 lg:pt-24">
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
-          <div className="border border-dashed border-[var(--color-border-strong)] bg-[var(--color-light-grey)] aspect-[16/6] flex items-center justify-center text-center px-6">
-            <p className="text-[15px]">
-              <Todo>whole-team photograph (office, engineers, operatives and management together), awaiting photo</Todo>
-            </p>
+          <div className="max-w-5xl mx-auto">
+            <RevealImage src="/images/team/office-team-nine.webp" alt="Nine members of the Lambs Group team around a meeting-room table, working together on laptops" aspect="aspect-[3/2]" sizes="(min-width: 1024px) 1000px, 100vw" />
           </div>
         </div>
       </section>

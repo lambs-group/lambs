@@ -5,7 +5,7 @@ import { PageHero } from "../sections/PageHero";
 import { Testimonial } from "../sections/Testimonial";
 import { REFERENCES } from "../../data/references";
 import { CTASection } from "../sections/CTASection";
-import { Todo } from "../Placeholder";
+import { RevealImage } from "../RevealImage";
 
 const storyImage = "/images/field/three-operatives-plan-review.webp";
 
@@ -84,10 +84,8 @@ export function AboutPage() {
       <section className="bg-[var(--color-light-grey)] py-24 lg:py-36">
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
           <FadeIn><span className="eyebrow">One team</span></FadeIn>
-          <div className="mt-10 border border-dashed border-[var(--color-border-strong)] bg-white/60 aspect-[16/7] flex items-center justify-center text-center px-6">
-            <p className="text-[15px]">
-              <Todo>whole-team photograph: office staff, engineers, operatives and management together, mixed rather than separated by role</Todo>
-            </p>
+          <div className="mt-10 max-w-5xl mx-auto">
+            <RevealImage src="/images/team/office-team-six.webp" alt="Six members of the Lambs Group office team gathered around a meeting-room table, smiling at the camera" aspect="aspect-[3/2]" sizes="(min-width: 1024px) 1000px, 100vw" />
           </div>
           <FadeIn delay={200}>
             <p className="mt-6 text-[var(--color-dark-blue)] text-[20px] lg:text-[24px] font-semibold">

@@ -6,11 +6,11 @@ import { PageHero } from "../sections/PageHero";
 import { Testimonial } from "../sections/Testimonial";
 import { REFERENCES } from "../../data/references";
 import { CTASection } from "../sections/CTASection";
-import { Todo } from "../Placeholder";
+import { RevealImage } from "../RevealImage";
 import { imgAttrs } from "../../utils/images";
 
 const stages = [
-  { image: "/images/how-we-deliver/01-brief.webp", alt: "Two colleagues in an office going through a site plan together over a desk, with a laptop and a notebook beside them.", number: "01", title: "Brief", promise: "You call. We listen.", body: "Tell us about your project, including the scope, location, timing and any specific requirements. Our team will review the details and contact you to discuss the next steps.", chip: "" },
+  { image: "/images/how-we-deliver/01-brief.webp", alt: "Two colleagues in the office working together at a laptop", number: "01", title: "Brief", promise: "You call. We listen.", body: "Tell us about your project, including the scope, location, timing and any specific requirements. Our team will review the details and contact you to discuss the next steps.", chip: "" },
   { image: "/images/how-we-deliver/02-survey.webp", alt: "Two surveyors in hi-vis on a residential pavement, one scanning for buried services with a cable locator and the other recording measurements on a tablet beside a measuring wheel.", number: "02", title: "Survey", promise: "We walk the route.", body: "Where required, we visit the site to assess conditions, take measurements and identify practical constraints. We review the available drawings and information to help establish the scope and plan the work.", chip: "Specialist surveyors" },
   { image: "/images/how-we-deliver/03-design.webp", alt: "A designer marking up a detailed utility route drawing at a desk, with a CAD drawing on the laptop behind and material samples beside the plans.", number: "03", title: "Planning & coordination", promise: "We plan the work.", body: "We plan delivery around the agreed scope, site conditions, client drawings and relevant specifications. Materials, resources and programme requirements are coordinated before work begins.", chip: "Coordinated planning" },
   { image: "/images/how-we-deliver/04-mobilise.webp", alt: "Three crew members in hi-vis at the open back of a van, checking a clipboard while loading barriers, a compactor and cones.", number: "04", title: "Mobilise", promise: "We move the crew.", body: "We coordinate the people, plant, equipment and materials required for the work, including permits and access arrangements where applicable. Teams are briefed on the planned works, risks and site requirements before starting.", chip: "Pre-start checks & briefings" },
@@ -96,9 +96,9 @@ export function HowWeDeliverPage() {
               <p className="text-[var(--color-charcoal)] text-lg leading-relaxed max-w-2xl">
                 Office staff, engineers, operatives, supervisors and management work together as one team. Clients have a clear point of contact, with practical support connecting planning, delivery and completion.
               </p>
-              <p className="mt-6 text-[15px]">
-                <Todo>whole-team photograph showing office and site colleagues together, plus caption, awaiting photo</Todo>
-              </p>
+              <div className="mt-8">
+                <RevealImage src="/images/team/office-team-six.webp" alt="Six members of the Lambs Group office team gathered around a meeting-room table, smiling at the camera" aspect="aspect-[3/2]" sizes="(min-width: 1024px) 58vw, 100vw" />
+              </div>
             </div>
           </div>
         </div>

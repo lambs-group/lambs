@@ -196,8 +196,8 @@
     }
   },
   "/images/how-we-deliver/01-brief.webp": {
-    "width": 1280,
-    "height": 853,
+    "width": 2000,
+    "height": 1414,
     "small": {
       "src": "/images/how-we-deliver/01-brief-640.webp",
       "width": 640
@@ -298,6 +298,22 @@
   "/images/team/luke-pennington.webp": {
     "width": 640,
     "height": 640
+  },
+  "/images/team/office-team-nine.webp": {
+    "width": 1550,
+    "height": 1014,
+    "small": {
+      "src": "/images/team/office-team-nine-640.webp",
+      "width": 640
+    }
+  },
+  "/images/team/office-team-six.webp": {
+    "width": 1536,
+    "height": 1024,
+    "small": {
+      "src": "/images/team/office-team-six-640.webp",
+      "width": 640
+    }
   },
   "/images/team/ray-pennington.webp": {
     "width": 800,
