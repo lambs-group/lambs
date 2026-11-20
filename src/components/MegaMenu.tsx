@@ -7,7 +7,7 @@ interface MegaMenuProps {
 
 const commercial = [
   { icon: Radio, title: "Telecoms", blurb: "FTTH, fibre, splicing, surveys.", href: "/telecoms" },
-  { icon: Zap, title: "Utilities", blurb: "Water, gas, power. Mains to meter.", href: "/utilities" },
+  { icon: Zap, title: "Utilities", blurb: "Civils and groundworks for utility networks", href: "/utilities" },
 ];
 
 const domestic = [

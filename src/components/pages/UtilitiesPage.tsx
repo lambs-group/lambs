@@ -9,14 +9,12 @@ import { Testimonial } from "../sections/Testimonial";
 import { Credentials } from "../sections/Credentials";
 
 export const services = [
-  { number: "01", title: "Telecoms infrastructure", description: "Telecoms civils, ducting, chambers, fibre blowing and cabling, supporting new networks and upgrades." },
-  { number: "02", title: "Civils & reinstatement", description: "Minor and major excavation, trenching, groundworks and reinstatement across roads, footpaths and development sites." },
-  { number: "03", title: "Water supply works", description: "New mains laying, service connections, meter installs and network extensions on housing and commercial sites." },
-  { number: "04", title: "Gas supply", description: "Gas mains, service connections, riser works and safe site isolation delivered by trained crews." },
-  { number: "05", title: "Electricity supply", description: "LV and HV ducting routes, service cabinets and connection works coordinated with DNO programmes." },
-  { number: "06", title: "Ducting", description: "Multi-utility ducting installation, marker tape, warning mesh and chamber setting-out." },
-  { number: "07", title: "Jointing", description: "Cable and pipe jointing delivered to operator standards, including LV jointing and pressure testing." },
-  { number: "08", title: "Mains laying & connections", description: "From bulk mains to final service connections. Delivery managed directly by Lambs, with one clear point of contact." },
+  { number: "01", title: "Telecoms civils", description: "Ducting, chambers and civils supporting new telecoms networks and upgrades." },
+  { number: "02", title: "Water, gas and electricity civils", description: "Civils and groundworks supporting water, gas and electricity projects." },
+  { number: "03", title: "Excavation & groundworks", description: "Minor and major excavation, trenching and groundworks across roads, footpaths and development sites." },
+  { number: "04", title: "Ducting & chambers", description: "Multi-utility ducting installation, marker tape, warning mesh and chamber setting-out." },
+  { number: "05", title: "Drainage", description: "Drainage works supporting utility and development projects." },
+  { number: "06", title: "Reinstatement", description: "Reinstatement of roads, footpaths and verges once the work is complete." },
 ];
 
 export function UtilitiesPage() {
@@ -35,7 +33,7 @@ export function UtilitiesPage() {
               </AnimatedHeading>
               <FadeIn delay={260}>
                 <p className="text-[var(--color-charcoal)] text-lg md:text-xl leading-relaxed max-w-3xl">
-                  Lambs Group delivers minor and major civils supporting telecoms, water, gas and electricity infrastructure across the UK. From excavation and ducting to mains laying, service connections and reinstatement, we provide coordinated delivery for housing, commercial, industrial and local authority projects, managed directly by Lambs.
+                  We carry out civils and groundworks for telecoms, water, gas and electricity projects, including excavation, ducting, chambers, drainage and reinstatement.
                 </p>
               </FadeIn>
             </div>

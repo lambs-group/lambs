@@ -24,7 +24,7 @@ const commercialSectors = [
     icon: Zap,
     number: "02",
     title: "Utilities",
-    blurb: "Telecoms, water, gas and electricity infrastructure. Civils, ducting, jointing, mains laying and service connections across housing, commercial, industrial and local authority sites.",
+    blurb: "We carry out civils and groundworks for telecoms, water, gas and electricity projects, including excavation, ducting, chambers, drainage and reinstatement.",
     href: "/utilities",
   },
 ];
