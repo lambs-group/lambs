@@ -82,6 +82,7 @@ export function buildGraph(i: GraphInput) {
       "@type": "GeneralContractor",
       "@id": business,
       name: "Lambs Group",
+      legalName: "Lambs (UK) Telecoms Ltd",
       alternateName: ["S Lamb Construction"],
       description:
         "Family-run infrastructure contractor delivering telecoms, utilities and private works, with civils and groundworks expertise at the heart of every project, since 1988.",
