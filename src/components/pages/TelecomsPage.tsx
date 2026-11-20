@@ -6,6 +6,7 @@ import { PageShell } from "../sections/PageShell";
 import { ServiceList } from "../sections/ServiceList";
 import { CTASection } from "../sections/CTASection";
 import { Testimonial } from "../sections/Testimonial";
+import { REFERENCES } from "../../data/references";
 import { Credentials } from "../sections/Credentials";
 
 export const services = [
@@ -66,8 +67,8 @@ export function TelecomsPage() {
 
       <Testimonial
         tone="grey"
-        quote="Lambs provided my organisation with an exemplary service in terms of safety, operational delivery, responsiveness and flexibility, quality of workmanship and performance metrics and indicators."
-        attribution="Former Openreach Director and Chief Engineer (personal reference)"
+        quote={REFERENCES.openreach.quote}
+        attribution={REFERENCES.openreach.attribution}
       />
 
       <CTASection eyebrow="Planning telecoms works?" heading="Let's walk the route." />

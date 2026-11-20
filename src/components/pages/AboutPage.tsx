@@ -3,6 +3,7 @@ import { FadeIn } from "../FadeIn";
 import { PageShell } from "../sections/PageShell";
 import { PageHero } from "../sections/PageHero";
 import { Testimonial } from "../sections/Testimonial";
+import { REFERENCES } from "../../data/references";
 import { CTASection } from "../sections/CTASection";
 import { Todo } from "../Placeholder";
 
@@ -97,8 +98,8 @@ export function AboutPage() {
 
       <Testimonial
         tone="white"
-        quote="Lambs always sought to do a great job, and their continuity under sub-contracts from Kelly, NMC, Fujitsu, Svella, OCU just bears testimony to the delivery."
-        attribution="ABR Consult Ltd"
+        quote={REFERENCES.abrConsult.quote}
+        attribution={REFERENCES.abrConsult.attribution}
       />
 
       <CTASection eyebrow="Work with us" heading="Experience behind us. Commitment ahead." />

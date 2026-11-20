@@ -6,6 +6,7 @@ import { PageShell } from "../sections/PageShell";
 import { ServiceList } from "../sections/ServiceList";
 import { CTASection } from "../sections/CTASection";
 import { Testimonial } from "../sections/Testimonial";
+import { REFERENCES } from "../../data/references";
 import { Credentials } from "../sections/Credentials";
 
 export const services = [
@@ -60,8 +61,8 @@ export function UtilitiesPage() {
 
       <Testimonial
         tone="white"
-        quote="During our time working together, they consistently demonstrated exceptional project management skills, creative problem-solving, and a strong work ethic."
-        attribution="Director, PG Consultancy Ltd"
+        quote={REFERENCES.pgConsultancy.quote}
+        attribution={REFERENCES.pgConsultancy.attribution}
       />
 
       <CTASection eyebrow="Utilities enquiries" heading="Planning utility works? Let's talk." />

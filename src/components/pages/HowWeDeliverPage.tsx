@@ -4,6 +4,7 @@ import { ScrollProgress } from "../ScrollProgress";
 import { PageShell } from "../sections/PageShell";
 import { PageHero } from "../sections/PageHero";
 import { Testimonial } from "../sections/Testimonial";
+import { REFERENCES } from "../../data/references";
 import { CTASection } from "../sections/CTASection";
 import { Todo } from "../Placeholder";
 import { imgAttrs } from "../../utils/images";
@@ -155,8 +156,8 @@ export function HowWeDeliverPage() {
 
       <Testimonial
         tone="grey"
-        quote="Lambs have further built healthy relationships with several local authorities since working with JN Civils on the Openreach civils contract."
-        attribution="Operations Director, JN Civils"
+        quote={REFERENCES.jnCivils.quote}
+        attribution={REFERENCES.jnCivils.attribution}
       />
 
       <CTASection eyebrow="Work with us" heading="Tell us about your project. We'll take it from there." />
