@@ -6,7 +6,6 @@ import { SectorIndex } from "../SectorIndex";
 import { PageShell } from "../sections/PageShell";
 import { PageHero } from "../sections/PageHero";
 import { CTASection } from "../sections/CTASection";
-import { Todo } from "../Placeholder";
 import { ArrowUpRight } from "lucide-react";
 import { withBase } from "../../utils/paths";
 import { VACANCIES } from "../../data/vacancies";
@@ -112,7 +111,6 @@ export function CareersPage() {
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
           <FadeIn><span className="eyebrow mb-8 block">Life on site</span></FadeIn>
-          <p className="mb-8 text-[14px]"><Todo>add office photos alongside site photos, consistent with the one-team message</Todo></p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {lifeImages.map((img, i) => (
               <FadeIn key={img.src} delay={i * 120}>
