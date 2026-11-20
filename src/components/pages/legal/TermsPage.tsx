@@ -67,7 +67,7 @@ export function TermsPage() {
 
       <H2>Contact</H2>
       <P>
-        {COMPANY.tradingName}, {COMPANY.tradingAddress} <Tbc>update the address for the planned move</Tbc>. Email{" "}
+        {COMPANY.tradingName}, {COMPANY.tradingAddress}. Email{" "}
         <Mail address={COMPANY.email} />, phone {COMPANY.phone}.
       </P>
     </LegalPage>

@@ -1,6 +1,5 @@
 import { AnimatedHeading } from "../AnimatedHeading";
 import { FadeIn } from "../FadeIn";
-import { Todo } from "../Placeholder";
 import { SectorIndex } from "../SectorIndex";
 import { FibreDraw } from "../motion/FibreDraw";
 import { PageShell } from "../sections/PageShell";
@@ -53,11 +52,11 @@ export function TelecomsPage() {
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
           <FadeIn><span className="eyebrow mb-6">Project experience</span></FadeIn>
           <h2 className="mt-6 mb-8 max-w-2xl text-[var(--color-dark-blue)] text-[28px] lg:text-[40px] font-semibold leading-tight">
-            <Todo>heading, once the Fujitsu and Virgin Media work is clarified</Todo>
+            Previous work with Virgin Media and Fujitsu.
           </h2>
           <FadeIn delay={200}>
             <p className="text-[var(--color-charcoal)] text-lg leading-relaxed max-w-2xl">
-              <Todo>historical project experience wording, awaiting Lambs to confirm which work relates to which client</Todo>
+              Lambs Group previously worked on a Virgin Media contract through Fujitsu, delivered under the Motif name. See our project experience for more.
             </p>
           </FadeIn>
         </div>

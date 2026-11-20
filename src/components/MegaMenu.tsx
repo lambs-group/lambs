@@ -11,7 +11,7 @@ const commercial = [
 ];
 
 const domestic = [
-  { icon: Home, title: "Private Works", blurb: "Driveways, resin, block paving, patios, dropped kerbs.", href: "/private-works" },
+  { icon: Home, title: "Private Works", blurb: "Brickwork, patios and landscaping, fencing and drainage.", href: "/private-works" },
 ];
 
 export function MegaMenu({ onClose }: MegaMenuProps) {

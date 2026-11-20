@@ -17,8 +17,7 @@ interface PersonCard {
 }
 
 // Team profiles supplied by Lambs (Lambs_Group_Website_Team_Profiles.docx, 19 Nov 2026): titles and bios are theirs.
-// The two owners lead the page; everyone else follows in Lambs' order. Davey's surname is spelt "Tyre" in the
-// profiles but "Tyrer" in earlier notes, and there is no portrait for him or Harry yet. Emma Howard (Accounts)
+// The two owners lead the page; everyone else follows in Lambs' order. Davey Tyre is deliberately left off (Lambs, 20 Nov 2026), and there is no portrait for Harry yet. Emma Howard (Accounts)
 // is not in the profiles.
 const team: PersonCard[] = [
   { name: "Amanda Lamb", role: "Owner & Managing Director", bio: "Amanda leads Lambs Group and has helped build the business since 1988. She is the main point of contact for senior clients and brings new contracts into the business, from building relationships to negotiating terms. She oversees company finances and commercial decisions, works directly with suppliers and helps run the business alongside the senior team. She also leads the development of Lambs\u2019 Private Works service.", image: "/images/team/amanda-lamb.webp" },
@@ -31,7 +30,6 @@ const team: PersonCard[] = [
   { name: "Ethan Radcliffe", role: "Plant & Vehicle Manager", bio: "Ethan manages the maintenance, inspection and allocation of Lambs\u2019 vehicles and plant. He works with the operations team to make sure crews have the equipment they need for each job and that it is properly maintained.", image: "/images/team/ethan-radcliffe.webp" },
   { name: "Laura Barber", role: "Coordination Team Manager", bio: "Laura leads the coordination team and acts as a link between clients and site crews. She oversees scheduling, job allocation and permits, and coordinates follow-up work when defects are reported.", image: "/images/team/laura-barber.webp" },
   { name: "Harry Lamb", role: "Training Manager", bio: "Harry delivers hands-on training for Lambs\u2019 site crews, drawing on his own experience leading teams in the field. He oversees inductions, street works qualifications and refresher training, helping operatives put safe working practices into use on site.", pending: "portrait awaited" },
-  { name: "Davey Tyre", role: "Stores & Yard Supervisor", bio: "Davey keeps the yard safe and organised and makes sure crews leave with the equipment they need. He also puts his mechanical skills to use in the yard and helps crews on site when needed.", pending: "portrait awaited, and whether the surname is Tyre or Tyrer" },
 ];
 
 const directors = team.slice(0, 2);

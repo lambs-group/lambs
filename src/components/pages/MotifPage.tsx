@@ -1,7 +1,6 @@
 import { PageShell } from "../sections/PageShell";
 import { PageHero } from "../sections/PageHero";
 import { CTASection } from "../sections/CTASection";
-import { Todo } from "../Placeholder";
 import { MotifQC } from "./motif/MotifQC";
 
 // Interim page. The old Motif case study combined two separate workstreams (direct Virgin Media
@@ -16,7 +15,7 @@ export function MotifPage() {
         sectionIndex="- / Project experience"
       >
         <p className="mt-6 text-[16px] leading-relaxed max-w-2xl">
-          <Todo>case study rewrite: which work the Motif name, photographs and figures relate to; scope of the direct Virgin Media work and of the Fujitsu work; historical dates. Awaiting Lambs.</Todo>
+          Previous work: Lambs Group worked on a Virgin Media contract through Fujitsu, delivered under the Motif name. The quality and safety arrangements below reflect how we run telecoms work.
         </p>
       </PageHero>
 

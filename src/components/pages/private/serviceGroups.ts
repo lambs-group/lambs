@@ -1,4 +1,5 @@
-// The Private Works service groups (Lambs feedback 1 Nov 2026, trades added 4 Nov 2026).
+// The Private Works service groups, scaled back for launch (Lambs, 20 Nov 2026): brickwork, patios and landscaping, fencing and drainage.
+// Gas, plumbing, electrical and the wider trades were removed pending registrations; restore from commit 4b8c7bb.
 // Shared by the services grid and the enquiry forms so the wording stays in step.
 // `todo` renders a highlighted [TO CONFIRM] note on the grid card only; it never reaches the forms or schema.
 export interface ServiceGroup {
@@ -8,26 +9,12 @@ export interface ServiceGroup {
 }
 
 export const SERVICE_GROUPS: ServiceGroup[] = [
-  { title: "Driveways & surfacing", blurb: "Tarmac, block paving and resin-bound driveways, including excavation, base preparation, edging and finishing." },
+  { title: "Brickwork & building works", blurb: "Brick and blockwork, extensions, garden and retaining walls, archways, repointing, alterations and repairs." },
   {
-    title: "Patios, paving & landscaping",
-    blurb: "Indian sandstone, porcelain and natural stone patios, feature paving, paths and steps, raised beds, decorative gravel and stone areas, garden renovations and hard landscaping.",
+    title: "Patios & landscaping",
+    blurb: "Patios, feature paving, paths and steps, raised beds, decorative gravel and stone areas, garden renovations and hard landscaping.",
   },
-  { title: "Groundworks, fencing & drainage", blurb: "Excavation, levelling, footings, concrete slabs, foundations, dropped kerbs and masonry repairs, plus concrete fence post replacement, ACO channel drainage, patio drainage and surface-water management." },
-  { title: "Bricklaying & building works", blurb: "Brick and blockwork, extensions, new builds, garden and retaining walls, archways, repointing, structural joinery, alterations and repairs." },
-  { title: "Roofing", blurb: "Pitched and flat roofs, including rubber and fibreglass flat-roof systems." },
-  { title: "Windows, doors & glazing", blurb: "Windows, bifold doors, sliding doors, roof lanterns and skylights, manufactured in house to bespoke designs." },
-  { title: "Joinery & interiors", blurb: "Fitted kitchens and bedrooms, structural joinery, plastering and tiling." },
-  {
-    title: "Plumbing, heating & gas",
-    blurb: "Plumbing and gas engineering for your home.",
-    todo: "gas and plumbing wording and Gas Safe registration, awaiting Lambs",
-  },
-  {
-    title: "Electrical works",
-    blurb: "Electrical installation and works for your home, carried out by qualified electricians working with Lambs (City & Guilds Level 3 Electrotechnical, AM2S assessed).",
-    todo: "electrical scheme registration (e.g. NICEIC or NAPIT) and who certifies the work, awaiting Lambs",
-  },
+  { title: "Fencing & drainage", blurb: "Fence post replacement, ACO channel drainage, patio drainage and surface-water management." },
 ];
 
 export const SERVICE_OPTIONS = [...SERVICE_GROUPS.map((g) => g.title), "Other / not sure"];

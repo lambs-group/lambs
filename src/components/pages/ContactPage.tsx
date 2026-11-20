@@ -93,7 +93,7 @@ export function ContactPage() {
               </FadeIn>
 
               <p className="mb-6 text-[14px]">
-                <Todo>new office address, directions link, telephone and hours, general enquiry email and who receives each form; also the registered office if different. Current details shown below until confirmed.</Todo>
+                <Todo>opening hours, and who receives each form submission</Todo>
               </p>
               <div className="flex flex-col gap-px bg-[var(--color-border-strong)]">
                 {offices.map((office, i) => {

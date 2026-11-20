@@ -13,7 +13,7 @@ export function PrivacyPage() {
         This website is run by {COMPANY.tradingName}, a trading name of <Val v={COMPANY.legalName} label="registered company name" />
         {" "}(company number <Val v={COMPANY.companyNumber} label="Companies House number" />). We are the "controller" of the personal
         information described in this policy, which means we decide how and why it is used. Our registered office is{" "}
-        <Val v={COMPANY.registeredOffice} label="registered office address" /> and we trade from {COMPANY.tradingAddress} <Tbc>update the trading address for the planned move</Tbc>. We are
+        <Val v={COMPANY.registeredOffice} label="registered office address" /> and we trade from {COMPANY.tradingAddress}. We are
         registered with the Information Commissioner's Office (ICO), registration number{" "}
         <Val v={COMPANY.icoRegistration} label="ICO registration number" />.
       </P>
