@@ -44,14 +44,18 @@ interface LegalPageProps {
   eyebrow: string;
   heading: string;
   lede: string;
+  /** e.g. "October 2026". When omitted a [TO CONFIRM] marker is shown. */
+  updated?: string;
   children: ReactNode;
 }
 
-export function LegalPage({ eyebrow, heading, lede, children }: LegalPageProps) {
+export function LegalPage({ eyebrow, heading, lede, updated, children }: LegalPageProps) {
   return (
     <PageShell>
-      <PageHero eyebrow={eyebrow} heading={heading} lede={lede} sectionIndex="Last updated: date to be set when final">
-        <p className="mt-6 text-[14px]"><Tbc>last updated date: use the final completion date; wording reviewed editorially, not legally approved</Tbc></p>
+      <PageHero eyebrow={eyebrow} heading={heading} lede={lede} sectionIndex={updated ? `Last updated: ${updated}` : "Last updated: date to be set when final"}>
+        {!updated && (
+          <p className="mt-6 text-[14px]"><Tbc>last updated date: use the final completion date; wording reviewed editorially, not legally approved</Tbc></p>
+        )}
       </PageHero>
       <section className="bg-white py-16 lg:py-24">
         <div className="max-w-[820px] mx-auto px-5 sm:px-8 lg:px-12 [&>h2:first-child]:mt-0">{children}</div>

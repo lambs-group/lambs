@@ -7,6 +7,7 @@ export function PrivacyPage() {
       eyebrow="Legal"
       heading="Privacy Policy"
       lede="How Lambs Group collects, uses and protects your personal information when you use this website or get in touch with us."
+      updated="October 2026"
     >
       <H2>Who we are</H2>
       <P>
@@ -63,9 +64,9 @@ export function PrivacyPage() {
 
       <H2>How long we keep it</H2>
       <UL>
-        <li>Enquiries and quote requests: <Tbc>retention period, e.g. 12 months after the last contact</Tbc>.</li>
-        <li>Unsuccessful job applications and CVs: <Tbc>retention period, e.g. 6 months after the vacancy closes, unless you ask us to keep your CV on file longer</Tbc>.</li>
-        <li>Records of work, quotes and contracts: for as long as needed to meet legal, tax and insurance requirements.</li>
+        <li>Enquiries and quote requests: for 12 months after our last contact with you, then deleted.</li>
+        <li>Unsuccessful job applications and CVs: for 6 months after the vacancy closes (or, for an open application, after you apply), then deleted, unless you ask us to keep your CV on file for longer.</li>
+        <li>Records of work, quotes and contracts: for as long as needed to meet legal, tax and insurance requirements, which is typically up to six years after the work or contract ends.</li>
         <li>Consent choice: stored in your own browser until you clear it or change it.</li>
       </UL>
 
