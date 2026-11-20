@@ -17,8 +17,7 @@ interface PersonCard {
 }
 
 // Team profiles supplied by Lambs (Lambs_Group_Website_Team_Profiles.docx, 19 Nov 2026): titles and bios are theirs.
-// The two owners lead the page; everyone else follows in Lambs' order. Davey Tyre is deliberately left off (Lambs, 20 Nov 2026),. Emma Howard (Accounts)
-// is not in the profiles.
+// The two owners lead the page; everyone else follows in Lambs' order. Davey Tyre is deliberately left off (Lambs, 20 Nov 2026).
 const team: PersonCard[] = [
   { name: "Amanda Lamb", role: "Owner & Managing Director", bio: "Amanda leads Lambs Group and has helped build the business since 1988. She is the main point of contact for senior clients and brings new contracts into the business, from building relationships to negotiating terms. She oversees company finances and commercial decisions, works directly with suppliers and helps run the business alongside the senior team. She also leads the development of Lambs\u2019 Private Works service.", image: "/images/team/amanda-lamb.webp" },
   { name: "Simon Lamb", role: "Co-owner & Operations Director", bio: "Simon has helped build Lambs Group since 1988. As co-owner and Operations Director, he leads the business alongside Amanda and oversees all aspects of operations. He works closely with the senior team, advising on delivery and stepping in to solve operational problems. He also liaises directly with clients when his input is needed.", image: "/images/team/simon-lamb.webp" },
@@ -120,10 +119,6 @@ export function TeamPage() {
             </div>
           </div>
 
-          <div className="mt-16 space-y-3 text-[15px]">
-            <p><Todo>Emma Howard (Accounts) is not in the latest profiles: confirm she is not to be included</Todo></p>
-            <p><Todo>engineers and operatives to feature, individually or in named team photos, in the same style</Todo></p>
-          </div>
         </div>
       </section>
 

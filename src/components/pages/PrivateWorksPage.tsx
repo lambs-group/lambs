@@ -5,7 +5,6 @@ import { SectorIndex } from "../SectorIndex";
 import { PageShell } from "../sections/PageShell";
 import { CTASection } from "../sections/CTASection";
 import { PrivateServicesGrid } from "./private/PrivateServicesGrid";
-import { Todo } from "../Placeholder";
 import { QuoteForm } from "./private/QuoteForm";
 
 export function PrivateWorksPage() {
@@ -46,9 +45,6 @@ export function PrivateWorksPage() {
               <FadeIn delay={200}>
                 <p className="text-[var(--color-charcoal)] text-lg leading-relaxed mt-8 max-w-2xl">
                   Every project is different. We assess the work, discuss your requirements and provide a clear written quotation setting out what&rsquo;s included. Any changes to the agreed scope and price will be discussed with you before additional work begins.
-                </p>
-                <p className="mt-6 text-[15px] text-[var(--color-charcoal)]">
-                  <Todo>Private Works coverage area from the new base, awaiting Amanda</Todo>
                 </p>
               </FadeIn>
             </div>

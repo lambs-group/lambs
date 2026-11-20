@@ -3,7 +3,6 @@ import { FadeIn } from "../FadeIn";
 import { PageShell } from "../sections/PageShell";
 import { PageHero } from "../sections/PageHero";
 import { CTASection } from "../sections/CTASection";
-import { Todo } from "../Placeholder";
 import { withBase } from "../../utils/paths";
 
 export function CaseStudiesPage() {
@@ -33,10 +32,6 @@ export function CaseStudiesPage() {
               </span>
             </a>
           </FadeIn>
-
-          <div className="mt-12 space-y-3 text-[15px]">
-            <p><Todo>further case studies: major civils, utilities, housebuilder and local authority projects, with approved details and photographs (Jen to gather, Amanda to approve)</Todo></p>
-          </div>
         </div>
       </section>
 

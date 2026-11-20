@@ -73,13 +73,6 @@ export function CareersPage() {
               <FadeIn><span className="eyebrow">Current vacancies</span></FadeIn>
               <AnimatedHeading as="h2" className="mt-6 max-w-md">Current opportunities.</AnimatedHeading>
             </div>
-            <div className="lg:col-span-7 flex lg:justify-end lg:items-end">
-              <FadeIn delay={200}>
-                <p className="text-[14px]">
-                  <Todo>any live vacancies to show here (none listed at present)</Todo>
-                </p>
-              </FadeIn>
-            </div>
           </div>
 
           {vacancies.length === 0 ? (

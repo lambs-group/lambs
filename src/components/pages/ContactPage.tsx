@@ -6,7 +6,6 @@ import { Button } from "../Button";
 import { PageShell } from "../sections/PageShell";
 import { submitForm, type FormType } from "../../utils/submit-form";
 import { Turnstile } from "../Turnstile";
-import { Todo } from "../Placeholder";
 import { SERVICE_OPTIONS } from "./private/serviceGroups";
 
 type Mode = "commercial" | "domestic";
@@ -92,9 +91,6 @@ export function ContactPage() {
                 </h3>
               </FadeIn>
 
-              <p className="mb-6 text-[14px]">
-                <Todo>opening hours, and who receives each form submission</Todo>
-              </p>
               <div className="flex flex-col gap-px bg-[var(--color-border-strong)]">
                 {offices.map((office, i) => {
                   const directions = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(office.lines.concat("UK").join(", "))}`;

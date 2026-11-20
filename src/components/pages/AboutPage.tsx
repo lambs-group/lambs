@@ -101,7 +101,7 @@ export function AboutPage() {
         attribution="ABR Consult Ltd"
       />
 
-      <CTASection eyebrow="Work with us" heading="Experience behind us. Commitment ahead." note="closing line is Amanda's proposal, awaiting her confirmation" />
+      <CTASection eyebrow="Work with us" heading="Experience behind us. Commitment ahead." />
     </PageShell>
   );
 }
