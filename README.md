@@ -3,7 +3,7 @@
 Marketing site for Lambs Group (Warrington). Astro 6 static build, React 19 islands, Tailwind 4.
 
 - Preview: https://lambs-group.github.io/lambs/ (repo `lambs-group/lambs`)
-- Production: https://lambsgroup.co.uk (not yet launched)
+- Production: https://lambsgroup.co.uk (live since 20 Nov 2026, Cloudflare Pages project `lambs`)
 
 ## Commands
 
@@ -42,9 +42,9 @@ Contact, careers and Private Works quote forms POST to the Cloudflare Worker in 
 
 ## Deploying
 
-Pushes to `main` build and deploy to GitHub Pages via `.github/workflows/deploy.yml`.
+Pushes to `main` run `.github/workflows/deploy.yml`, which builds the GitHub Pages preview and the production build for lambsgroup.co.uk (Cloudflare Pages). See "Production deploy" below. To redeploy by hand, always use `--ref main`: `gh workflow run "Deploy to GitHub Pages" --ref main --repo lambs-group/lambs` (the repo's default branch is still the stale `feat/website-redesign`).
 
-For production on `lambsgroup.co.uk`, set `site` to `https://lambsgroup.co.uk` and `base` to `''` in `astro.config.mjs`. Old-site redirects are in the same file and need a host-level 301 file at launch. Also update the sitemap URL in `public/robots.txt` if the domain changes.
+The full handbook (accounts, secrets, where everything lives, go-live and rollback steps) is kept outside the repo in `lambs-handover/Lambs-go-live-runbook.md`.
 
 ## Maintenance ("coming soon") page
 
