@@ -17,7 +17,7 @@ interface PersonCard {
 }
 
 // Team profiles supplied by Lambs (Lambs_Group_Website_Team_Profiles.docx, 19 Nov 2026): titles and bios are theirs.
-// The two owners lead the page; everyone else follows in Lambs' order. Davey Tyre is deliberately left off (Lambs, 20 Nov 2026), and there is no portrait for Harry yet. Emma Howard (Accounts)
+// The two owners lead the page; everyone else follows in Lambs' order. Davey Tyre is deliberately left off (Lambs, 20 Nov 2026),. Emma Howard (Accounts)
 // is not in the profiles.
 const team: PersonCard[] = [
   { name: "Amanda Lamb", role: "Owner & Managing Director", bio: "Amanda leads Lambs Group and has helped build the business since 1988. She is the main point of contact for senior clients and brings new contracts into the business, from building relationships to negotiating terms. She oversees company finances and commercial decisions, works directly with suppliers and helps run the business alongside the senior team. She also leads the development of Lambs\u2019 Private Works service.", image: "/images/team/amanda-lamb.webp" },
@@ -29,7 +29,7 @@ const team: PersonCard[] = [
   { name: "Lee Harnick", role: "Health & Safety Manager", bio: "Lee oversees health, safety, environmental and quality standards across Lambs. He carries out site inspections and quality checks, leads toolbox talks and investigates incidents. He also oversees environmental controls and compliance with the New Roads and Street Works Act. He works with Luke on Lambs\u2019 ISO 9001, ISO 14001 and ISO 45001 certifications and supports the company\u2019s CHAS accreditation.", image: "/images/team/lee-harnick.webp" },
   { name: "Ethan Radcliffe", role: "Plant & Vehicle Manager", bio: "Ethan manages the maintenance, inspection and allocation of Lambs\u2019 vehicles and plant. He works with the operations team to make sure crews have the equipment they need for each job and that it is properly maintained.", image: "/images/team/ethan-radcliffe.webp" },
   { name: "Laura Barber", role: "Coordination Team Manager", bio: "Laura leads the coordination team and acts as a link between clients and site crews. She oversees scheduling, job allocation and permits, and coordinates follow-up work when defects are reported.", image: "/images/team/laura-barber.webp" },
-  { name: "Harry Lamb", role: "Training Manager", bio: "Harry delivers hands-on training for Lambs\u2019 site crews, drawing on his own experience leading teams in the field. He oversees inductions, street works qualifications and refresher training, helping operatives put safe working practices into use on site.", pending: "portrait awaited" },
+  { name: "Harry Lamb", role: "Training Manager", bio: "Harry delivers hands-on training for Lambs\u2019 site crews, drawing on his own experience leading teams in the field. He oversees inductions, street works qualifications and refresher training, helping operatives put safe working practices into use on site.", image: "/images/team/harry-lamb.webp" },
 ];
 
 const directors = team.slice(0, 2);
