@@ -2,7 +2,6 @@ import { FadeIn } from "../../FadeIn";
 import { PageShell } from "../../sections/PageShell";
 import { PageHero } from "../../sections/PageHero";
 import { withBase } from "../../../utils/paths";
-import { Todo } from "../../Placeholder";
 import { VACANCIES } from "../../../data/vacancies";
 import { ApplicationForm } from "./ApplicationForm";
 
@@ -27,7 +26,6 @@ export function ApplyPage() {
                 <span className="eyebrow mb-6">What happens next</span>
                 <ul className="mt-6 flex flex-col gap-4 text-[var(--color-charcoal)] text-[15px] leading-relaxed">
                   <li className="flex items-start gap-4"><span className="mt-2 w-2 h-2 flex-shrink-0 bg-[var(--color-cyan)]" />Our team will review your details and contact you if there is a suitable opportunity.</li>
-                  <li className="flex items-start gap-4"><span className="mt-2 w-2 h-2 flex-shrink-0 bg-[var(--color-cyan)]" /><Todo>who receives applications, whether careers@lambsgroup.co.uk is monitored, and the retention process</Todo></li>
                   <li className="flex items-start gap-4">
                     <span className="mt-2 w-2 h-2 flex-shrink-0 bg-[var(--color-cyan)]" />
                     <span>
