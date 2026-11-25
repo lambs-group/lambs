@@ -11,7 +11,7 @@ export function CaseStudiesPage() {
       <PageHero
         eyebrow="Our Work"
         heading="Decades of experience. Proven delivery."
-        lede="Explore examples of Lambs Group\u2019s work across telecoms, utilities, civils and groundworks. Our experience spans major infrastructure programmes, smaller works and private projects, built over decades of working with contractors, developers and local authorities."
+        lede="Explore examples of Lambs Group’s work across telecoms, utilities, civils and groundworks. Our experience spans major infrastructure programmes, smaller works and private projects, built over decades of working with contractors, developers and local authorities."
         sectionIndex="- / Our Work"
       />
 
